@@ -1,0 +1,282 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!! This AT file for AutoDock force field !!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Define bq_ s 0
+    Bq 
+    atom 1: coor=?
+End
+
+Define CT sp3 0
+	C
+	atom 1: coor=4
+End
+
+Define c_center sp2 0
+	C[=O][-*][-C[-N]]
+	atom 1: coor=3
+	atom 2: coor=1
+	atom 3: coor=?, elem=O N
+	atom 4: coor=4
+	atom 5: coor=3
+End
+
+Define o_center sp2 0
+	O[=C[-*][-C[-N]]]
+	atom 1: coor=1
+	atom 2: coor=3
+	atom 3: coor=?, elem=O N
+	atom 4: coor=4
+	atom 5: coor=3
+End
+
+Define n_center sp3 0
+	N[-C[-C[=O][-*]]]
+	atom 1: coor=3
+	atom 2: coor=4
+	atom 3: coor=3
+	atom 4: coor=1
+	atom 5: coor=?, elem=O N
+End
+
+Define CA sp2 0
+	C
+	atom 1: coor=3
+End
+
+Define C sp2 0
+	C[=O]
+	atom 1: coor=3
+	atom 2: coor=1
+End
+
+Define CB sp2 0
+	C
+	atom 1: coor=3, local = CF
+End
+
+Define CN sp2 0
+	C[~N]
+	atom 1: coor=3, local = CF
+	atom 2: coor=?, arom=ar1 ar2
+End
+
+Define C* sp2 0
+	C
+	atom 1: coor=3, arom=ar1 ar2, local = CL
+End
+
+Define CC sp2 0
+	C[~N]
+	atom 1: coor=3, arom=ar1 ar2, local = CL
+	atom 2: coor=2, arom=ar1 ar2
+End
+
+Define CR sp2 0
+	C[~N]
+	atom 1: coor=3, arom=ar1 ar2 
+	atom 2: coor=2, arom=ar1 ar2
+End
+
+Define CW sp2 0
+	C[~N]
+	atom 1: coor=3, arom=ar2 
+	atom 2: coor=3, arom=ar2
+End
+
+Define HC s 0
+	H
+	atom 1: coor=1
+End
+
+Define H1 s 0
+	H[-C[-*]]
+	atom 1: coor=1
+	atom 2: coor=4
+	atom 3: coor=?, elem=O N S
+End
+
+Define HA s 0
+	H[-C]
+	atom 1: coor=1
+	atom 2: coor=3
+End
+
+Define H4 s 0
+	H[-C[-N]]
+	atom 1: coor=1
+	atom 2: coor=3, arom=ar2
+	atom 3: coor=3, arom=ar2
+End
+
+Define H5 s 0
+	H[-C[=N]]
+	atom 1: coor=1
+	atom 2: coor=3, arom=ar2
+	atom 3: coor=2, arom=ar2
+End
+
+Define H s 0
+	H[-N]
+	atom 1: coor=1
+	atom 2: coor=?
+End
+
+Define HO s 0
+	H[-O]
+	atom 1: coor=1
+	atom 2: coor=?
+End
+
+Define HS s 0
+	H[-S]
+	atom 1: coor=1
+	atom 2: coor=?
+End
+
+Define N3 sp3 0
+	N
+	atom 1: coor=?
+End
+
+Define N2 s3 0
+	N[*C]
+	atom 1: coor=?
+	atom 2: coor=3
+End
+
+Define N sp3 0
+	N[-C[=O]]
+	atom 1: coor=?
+	atom 2: coor=3
+	atom 3: coor=1
+End
+
+Define NA sp3 0
+	N
+	atom 1: coor=3, arom=ar2
+End
+
+Define NB sp2 0
+	N
+	atom 1: coor=2, arom=ar1 ar2
+End
+
+Define O2 sp3 0
+	O
+	atom 1: coor=?
+End
+
+Define OH sp3 0
+	O[-H]
+	atom 1: coor=2
+	atom 2: coor=1
+End
+
+Define O sp2 0
+	O[=C]
+	atom 1: coor=1
+	atom 2: coor=3
+End
+
+Define S sp3 0
+	S
+	atom 1: coor=?
+End
+
+Define SH sp3 0
+	S[-H]
+	atom 1: coor=2
+	atom 2: coor=1
+End
+
+Define F s 0
+	F
+	atom 1: coor=1
+End
+
+####################################################### 
+### The following section for Relationship Tree #######
+#######################################################
+
+ProcedureTree:
+(c_center)
+(o_center)
+(n_center)
+(CT)
+(CA
+	(C)
+	(CB
+		(CN)
+	)
+	(C*
+		(CC)
+	)
+	(CR)
+	(CW)
+)
+(HC
+	(H)
+	(HO)
+	(HS)
+	(H5)
+	(H4)
+	(H1)
+)
+(N3
+	(NB)
+	(NA)
+	(N2
+		(N)
+	)
+)
+(O2
+	(O)
+	(OH)
+)
+(S
+	(SH)
+)
+(F)
+End
+
+####################################################### 
+###### The following section for EquivalTable #########
+#######################################################
+#Type  ATC     NONB    BINC   BOND      A_C      A_S            T_C            T_S            O_C            O_S 
+EquivalTable:
+#Type          ATC            NONB           BINC           BOND           A_C            A_S            T_C            T_S            O_C            O_S          
+c_center       C      C       C      C      C         C        C        C       C       C                                          
+o_center       O      O        O     O      O         O        O        O       O        O 
+n_center       N      N        N      N     N         N         N       N       N        N 
+CT             CT     CT       CT     CT       CT     CT        CT     CT       CT     CT
+CA             CA     CA       CA     CA       CA       CA     CA     CA       CA      CA
+C             C     C       C     C       C       C     C     C       C      C
+C*             C*     C*       C*     C*       C*       C*     C*     C*       C*      C*
+CC             CC     CC      CC     CC      CC     CC      CC     CC      CC     CC
+CB       CB        CB       CB        CB       CB        CB       CB        CB       CB        CB
+CN       CN        CN       CN        CN       CN        CN       CN        CN       CN        CN
+CR       CR        CR       CR        CR       CR        CR       CR        CR       CR        CR
+CW       CW        CW       CW        CW       CW        CW       CW        CW       CW        CW
+HC       HC        HC       HC        HC       HC        HC       HC        HC       HC        HC
+H        H         H        H         H        H         H        H         H        H         H
+HO       HO        HO       HO        HO       HO        HO       HO        HO       HO        HO
+HS       HS        HS       HS        HS       HS        HS       HS        HS       HS        HS
+H1       H1        H1       H1        H1       H1        H1       H1        H1       H1        H1
+H5       H5        H5       H5        H5       H5        H5       H5        H5       H5        H5
+H4       H4        H4       H4        H4       H4        H4       H4        H4       H4        H4
+N3       N3        N3       N3        N3       N3        N3       N3        N3       N3        N3
+N2       N2        N2       N2        N2       N2        N2       N2        N2       N2        N2
+N        N         N        N         N        N         N        N         N        N         N
+NB       NB        NB       NB        NB       NB        NB       NB        NB       NB        NB
+NA       NA        NA       NA        NA       NA        NA       NA        NA       NA        NA
+O2       O2        O2       O2        O2       O2        O2       O2        O2       O2        O2
+O        O         O        O         O        O         O        O         O        O         O
+OH       OH        OH       OH        OH       OH        OH       OH        OH       OH        OH
+S        S         S        S         S        S         S        S         S        S         S
+SH       SH        SH       SH        SH       SH        SH       SH        SH       SH        SH
+F        F         F        F         F        F         F        F         F        F         F
+End
+
+Improper:
+C N c_center n_center CA C* CC CB CN CR CW N2   
+End

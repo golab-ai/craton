@@ -1,0 +1,344 @@
+path:
+  tmp: tmp
+  intermedia: intermedia
+  atom_type: data/atom_type
+  force_field: data/force_field
+  setting: data/setting
+  expt_data: data/expt_data
+  molecule: data/molecule
+  crystal: data/crystal
+  template: data/template
+
+EnvironmentSetting:
+  number_processor: null  #int = multiprocessing.cpu_count()
+  schrodinger_path: null # Optional[str] = os.environ.get("SCHRODINGER_PATH", None)
+  output_directory: . # Path = Path("output")
+  hpc_resource: local # str = share_setting.hpc
+  partition: compute # str = "compute"
+  ncpu: 64
+  ngpu: 0
+  nodes: 1
+  CFFF: 
+    - "module use /cpfs01/projects-HDD/cfff-4405968bce88_HDD/public/apps/modulefiles"
+    - "module load gmx"
+    - "module load g09"
+    - "module load CentOS/7.9/gcc/9.2.0"
+    - "module load CentOS/7.9/openmpi/4.1.4"
+
+AlignmentSetting:
+  align_flag: False
+  align_index: 0
+  align_backend: "schrodinger"
+  mutation: null
+  sequences: null
+  modify: null
+
+PairNetworkSetting:
+  bias_nodes: null
+  topology: "normal"
+  core: null
+  nbunch: null
+  user_pair_list: null
+  gpickle_file: null
+
+BuildingSetting:
+  box_size: null
+  density: null
+  concentration: null
+  counter_ion: true
+  slab_direction: null
+  slab_deepth: null
+  membrane_density: null
+  membrane_site: null
+  membrane_site_aided: null
+  membrane_site_rotation: true
+
+ForceFieldSetting:
+  FUNCTION_GROUP_TYPING_FILE: data/atom_type/fg_V2.def
+  DEFAULT_TYPING_FILE: data/atom_type/PLFF_V1.json
+  DEFAULT_FORCE_FIELD_FILE: data/force_field/PLFF.ff.json
+  DEFAULT_FORCE_FIELD_FILE_VDW: data/force_field/PLFF.vdw.ff.json
+  GAFF_TYPING_FILE: data/atom_type/gaff2.json
+  COMPEN_TYPING_FILE: data/atom_type/PLFF_V1.json
+  COMPEN_FORCE_FIELD_FILE: data/force_field/PLFF.ff.json
+  #GAFF_COVER_TYPING_FILE: data/atom_type/gaff_conver.def
+  GAFF_FORCE_FIELD_FILE: data/force_field/gaff2.ff.json
+  EMPIRICAL_TYPING_FILE: data/atom_type/empirical.json
+  EMPIRICAL_FORCE_FIELD_FILE: data/force_field/empirical.ff.json
+  PROTEIN_FORCE_FIELD_FILE: data/force_field/amber99sb.ff.json
+  PROTEIN_TYPING_FILE: data/atom_type/protein.def
+  DOCK_ATOM_TYPING_FILE: data/atom_type/autodock.json
+  charge_method: null
+  binc_target: null
+  virtual_site_file: null
+  protein_force_field: "amber99sb"
+  use_scalevdw: true
+
+FFFitting:
+  using_force_field_file: null
+  search_conformation: ["Q0","Q1","Q4"]
+  fitting_method: st
+  fitting_molecules: null
+  charge_method: null
+  only_validation_flag: false
+  fitting_scan_para_flag: false
+  fitting_terms: ["bondterm", "angleterm", "dihedralterm", "improperterm", "binc"]
+  target_prop: ["energy", "force", "hessian", "penalty_torsion"]
+  optimizer: openmm
+  validation_figure_flag: true
+  validation_terms: ["energy", "pes", "esp_charge", "Bonds", "Angles", "Dihedrals", "rmsd", "Pair1n","hessian","freq"]
+  optimize_flag: true
+
+MoleculeFileSetting:
+  ligands: null
+  coligands: null
+  protein: null
+  molecules: null
+  chunk: null
+  solute: null
+  solvent: water
+  cation: Na+
+  anion: Cl-
+  alion: ANA
+  surfactant: null
+
+DockSetting:
+  dock_atom_file:
+
+MDSetting:
+  mdengine: gmx
+  simulation_type: "normal"
+  simulation_time: 1.0  # (ns)
+  debug: False
+  md_setting_file: null
+  md:  #the parameters for molecular dynamics calculation
+    property: normal
+    jobs: [mini, eq_nvt, eq_npt, prod_npt]
+    integrator: [steep, md, md, md]
+    nsteps: [5000, 100000, 100000, 1000000]
+    timestep: [0.001, 0.001, 0.002, 0.002]
+    constraint_used: [no, yes, yes, yes]
+    restraint_used: [no, no, no, no]
+    minimize: 
+      emtol: 500
+    temperature:
+      temperature_coupl: v-rescale
+      temperature_group: system
+      temperature: 298.0
+      temperature_tau: 1.0
+    pressure:
+      pressure_coupl: [no, no, berendsen, parrinello-rahman]
+      pressure: 1
+      pressure_coupl_type: isotropic
+      pressure_tau: 5
+      pressure_compressibility: 4.5e-5
+    energy:
+      coulomb_type: [cutoff, PME, PME, PME]
+      cutoff_scheme: verlet
+      rlist: 0.9
+      coul_cut: 0.9
+      vdw_cut: 0.9
+      vdw_long: EnerPres
+    velocity:
+      velocity_generate: yes
+      velocity_generate_temp: 298.0
+    constraint:
+      constraints: h-bonds
+      constraint-algorithm: LINCS
+      disre: simple
+      disre-fc: 5000
+    output:
+      nstxout: 0
+      nstvout: 0
+      nstfout: 0
+      nstxout-compressed: 10000
+      nstenergy: 1000
+      nstlog: 1000
+
+FEPMDSetting:
+  simulation_time: 5.0
+  md:
+    free_energy_auixed:
+      mixed_lambda: false  # mix the vdw lambda and coul lambda
+      is_relative: false
+      absolute_intra_flag: true
+    free_energy:
+      free_energy: yes
+      calc_lambda_neighbors: -1
+      nstdhdl: 100
+      sc-alpha: 0.5
+      sc-coul: no
+      sc-power: 1
+      sc-sigma: 0.3
+      vdw_lambdas: null
+      coul_lambdas: null
+
+PullMDSetting:
+  md:
+    pull_auixed:
+      pull_obj: dimer
+      pmf: ture
+      pmf_method: simple
+      pull_init_distance: 2.0
+      pull_final_distance: 10.0
+      pull_interval: 2.0
+      pull_windows: 1
+      pull_direction: 2
+    pull:
+      pull: yes
+      pull-ngroups: 2
+      pull-group1-name: null
+      pull-group2-name: null
+      pull-ncoords: 1
+      pull-coord1-groups: [1, 2]
+      pull-coord1-geometry: distance
+      pull-coord1-type: umbrella
+      pull-coord1-k: 5000.0
+      pull-coord1-rate: 0.004  #0
+      pull-coord1-init: 0.98  
+
+HFEFEPMDSetting:
+  md:
+    free_energy_auixed:
+      mixed_lambda: false  # mix the vdw lambda and coul lambda
+      is_relative: false
+      absolute_intra_flag: true
+    free_energy:
+      couple-lambda0: vdw-q
+      couple-lambda1: none
+      couple-intramol: yes
+      bonded_lambdas: null
+      vdw_lambdas:  [0,   0,    0,    0,    0,    0,    0.2,  0.4,  0.5,  0.6, 0.7,  0.75, 0.8,  0.85, 0.9, 1]
+      coul_lambdas: [0,   0.2,  0.4,  0.6,  0.8,  1,    1,    1,    1,    1,   1,    1,    1,    1,    1,   1]
+
+RBFEFEPMDSetting:
+  md:
+    free_energy_auixed:
+      mixed_lambda: true  # mix the vdw lambda and coul lambda
+      is_relative: true
+      absolute_intra_flag: false
+      fep_hrex: true
+      neural_system: true
+    free_energy:
+      #experiment_file: null
+      #use_rest2: False
+      coul_lambdas: null
+      vdw_lambdas: null
+      bonded_lambdas: null
+
+ABFEFEPMDSetting:
+  md:
+    free_energy_auixed:
+      mixed_lambda: false
+      is_relative: false
+      absolute_intra_flag: true
+    free_energy:
+      nstdhdl: 500
+      couple-lambda0: vdw-q
+      couple-lambda1: none
+      couple-intramol: yes
+      bonded_lambdas: null
+      vdw_lambdas:  [0.0, 0.00, 0.0, 0.00, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.00, 0.0, 0.00, 0.0, 0.00, 0.0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.98, 1.0]
+      coul_lambdas: [0.0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0, 1.00, 1.0, 1.00, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.00, 1.0, 1.00, 1.0, 1.00, 1.00, 1.0]
+
+QMSetting:
+  stage: Q0
+  ignore_alkane: true
+  keyword: [geom=PrintInputOrient]
+
+Q0QMSetting:
+  stage: Q0
+  qmjobs: [optfreqcharge]
+  #jobs:sp opt optfreq charge optcharge optfreqcharge scan fixopt
+  #keyword:iop(6/33=2) iop(6/42=6) iop(6/7=3) iop(6/8=1) iop(6/9=1) iop(6/10=1)
+  opt_method_basisset: [b3lyp/def2SVP]
+  keyword: [geom=PrintInputOrient]
+  cpucores: 16
+  charge_model: chelpg
+  #fix_term: 2 3 30.0
+  scan_style: ['split']
+
+Q6QMSetting:
+  stage: Q6
+  qmjobs: [optfreqcharge]
+  #jobs:sp opt optfreq charge optcharge optfreqcharge scan fixopt
+  #keyword:iop(6/33=2) iop(6/42=6) iop(6/7=3) iop(6/8=1) iop(6/9=1) iop(6/10=1)
+  keyword: [geom=PrintInputOrient]
+  opt_method_basisset: [b3lyp/def2SVP]
+  cpucores: 16
+  charge_model: chelpg
+  #fix_term: 2 3 30.0
+  scan_style: ['split']
+
+Q1QMSetting:
+  stage: Q1
+  ignore_alkane: true
+  qmjobs: [scan]
+  #qmjobs:sp opt optfreq charge optcharge optfreqcharge scan fixopt
+  opt_method_basisset: [b3lyp/def2SVP]
+  keyword: [geom=PrintInputOrient]
+  #sp_method_basisset: mp2/aug-cc-PVTZ mp2/aug-cc-PVQZ CCSD(T)/aug-cc-PVTZ
+  scan_setting: [12, 30.0]
+  scan_term : [all-flexible]
+  cpucores: 16
+  charge_model: chelpg
+  #fix_term: [2, 3, 30.0]
+  scan_style: [split]
+
+Q8QMSetting:
+  stage: Q8
+  inter_val: [-0.1,0.2,-5.0,5.0]
+  ignore_ring: true
+  exists_type: null
+  qmjobs: [scan]
+  #qmjobs:sp opt optfreq charge optcharge optfreqcharge scan fixopt
+  opt_method_basisset: [b3lyp/def2SVP]
+  keyword: [geom=PrintInputOrient]
+  #sp_method_basisset: mp2/aug-cc-PVTZ mp2/aug-cc-PVQZ CCSD(T)/aug-cc-PVTZ
+  cpucores: 16
+  charge_model: chelpg
+  #fix_term: [2, 3, 30.0]
+  scan_style: [split]
+
+Q2QMSetting:
+  stage: Q2
+  qmjobs: [sp]
+  #jobs:sp opt optfreq charge optcharge optfreqcharge scan fixopt
+  #opt_method_basisset: b3lyp/def2SVP
+  sp_method_basisset: [b3lyp/def2SVP]
+  keyword: [geom=PrintInputOrient]
+  #sp_method_basisset:M062X/def2TZVP
+  #scan_setting:12 30.0
+  #scan_term : all-flexible
+  cpucores: 16
+  #charge_model:chelpg
+  #fix_term : 2 3 30.0
+  #scan_style : split
+
+Q4QMSetting:
+  stage: Q4
+  qmjobs: [optfreqcharge]
+  #jobs:sp opt optfreq charge optcharge optfreqcharge scan fixopt
+  opt_method_basisset: [b3lyp/def2SVP]
+  keyword: [geom=PrintInputOrient]
+  #sp_method_basisset: mp2/aug-cc-PVTZ mp2/aug-cc-PVQZ CCSD(T)/aug-cc-PVTZ
+  #scan_setting:12 30.0
+  #scan_term : all-flexible
+  cpucores: 16
+  #charge_model:chelpg
+  #fix_term: 2 3 30.0
+  #scan_style: split
+
+Q10QMSetting:
+  stage: Q10
+  qmjobs: [freqcharge]
+  #jobs:sp opt optfreq charge optcharge optfreqcharge scan fixopt
+  keyword: [iop(6/33=2), iop(6/42=6), iop(6/7=3), iop(6/8=1), iop(6/9=1), iop(6/10=1), geom=PrintInputOrient]
+  #opt_method_basisset: b3lyp/def2SVP
+  sp_method_basisset: [m062x/cc-PVTZ] 
+  #scan_setting:12 30.0
+  #scan_term : all-flexible
+  cpucores: 16
+  charge_model: chelpg
+  #fix_term: 2 3 30.0
+  #scan_style:'split'

@@ -1,0 +1,19 @@
+;[ defaults ]
+;nbfunc comb-rule gen-pairs fudgeLJ fudgeQQ
+;1   2   yes   0.5   0.8333   
+;
+;[ atomtypes ]
+;cl_-   35.45    0.0000  A   4.40104e-01  4.18400e-01
+
+[ moleculetype ]
+; molname	nrexcl
+Cl-		2
+
+[ atoms ]
+; id	at type	res nr 	residu name	at name		cg nr	charge
+1     cl_-  1       CLA              Cl             1       -1.000
+
+
+[ bonds ]
+	
+

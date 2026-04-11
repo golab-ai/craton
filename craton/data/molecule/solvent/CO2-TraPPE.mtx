@@ -1,0 +1,48 @@
+molecule_name
+CO2
+
+Atoms
+ID element formal_charge connectivity@list bond_type@list coordinates@list atom_name local plate score bond_type_aromatic@list connectivity_type@list has_ring@list has_ring_size@list has_ring_property@list atom_fg atom_fg_id atom_fg_tag atom_cluster atom_cluster_id atom_cluster_tag point_charge esp_charge mulliken_charge ff_charge atom_type_name nonb_atom_type binc_atom_type atc_atom_type atom_type_ID binc_style@list binc_parameter@list binc_score@list binc_str@list binc_count@list pstyle parameter@list fix_parameter@list pscore ptag pcount
+0 O 0 :1: :2: :-1.160:0.000:0.000: None EN no None :1: :S: : : : None None None None None None -0.35 None None -0.35 o_co2 o_co2 o_co2 o_co2 None :binc: :-0.35: :100.0: :MSM: :100:100: LJ12_6 :3.05:0.15695: : 100.0 MSM 100 
+1 C 0 :0:2: :2:2: :0.000:0.000:0.000: None LM no None :1:1: :S:S: : : : None None None None None None 0.7 None None 0.7 c_co2 c_co2 c_co2 c_co2 None :binc:binc: :0.35:0.35: :100.0:100.0: :MSM:MSM: :100: LJ12_6 :2.8:0.05364: : 100.0 MSM 100 
+2 O 0 :1: :2: :1.160:0.000:0.000: None EN no None :1: :S: : : : None None None None None None -0.35 None None -0.35 o_co2 o_co2 o_co2 o_co2 None :binc: :-0.35: :100.0: :MSM: :100:100: LJ12_6 :3.05:0.15695: : 100.0 MSM 100 
+
+Bonds
+a1 a2 value style a1_atom_type a2_atom_type a1_atom_type_used a2_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 None bond o_co2 c_co2 o_co2 c_co2 o_co2$c_co2 harmonic :1.16:600.0: : 100.0 100 tip3p 
+1 2 None bond c_co2 o_co2 c_co2 o_co2 o_co2$c_co2 harmonic :1.16:600.0: : 100.0 100 tip3p 
+
+Angles
+a1 a2 a3 value style value_a a1_atom_type a2_atom_type a3_atom_type a1_atom_type_used a2_atom_type_used a3_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 2 None angle None o_co2 c_co2 o_co2 o_co2 c_co2 o_co2 o_co2$c_co2$o_co2 harmonic :180.0:300.0: : nan nan G 
+
+smiles
+O=C=O
+
+inchi_key
+CURLTUGMZLYLDI-UHFFFAOYSA-N
+
+inchi
+InChI=1S/H2O/h1H2
+
+molecule_mass
+44.00
+
+formula
+CO2
+
+heavy_atoms
+3
+
+net_charge
+0
+
+density
+0.8
+
+steps@list
+:topol:structure:atom type:force field:
+
+gmx_residue_name
+SOL
+

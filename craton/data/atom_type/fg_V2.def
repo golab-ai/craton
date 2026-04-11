@@ -1,0 +1,681 @@
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!! The following section for carbon atom !!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Define c_ s 0
+    C 
+    atom 1: coor=?
+End
+
+
+###The section for carbon atom with one connectivity###
+Define c_1 s 0
+    C 
+    atom 1: coor=1
+End
+
+Define co:C s 0 ! ZCO
+		C[#O]
+		atom 1: coor=1
+		atom 2: coor=1
+End
+		
+###The section for carbon atom with two connectivity###
+Define yne:C sp 0
+    C 
+    atom 1: coor=2
+End
+
+Define yne_conju:C sp 0! ZC
+		C
+		atom 1: coor=2, conjugation=yes
+End
+
+Define cy:C sp 0 !ZC
+		C[#N]
+		atom 1: coor=2
+		atom 2: coor=1
+End
+
+Define cum:C su 0 ! ZC
+		C[=*][=*]
+		atom 1: coor=2
+		atom 2: coor=?,elem=C O N S P2
+		atom 3: coor=?,elem=C O N S P
+End
+
+###The section for carbon atom with three connectivity#
+Define ene:C sp2 0
+    C 
+    atom 1: coor=3
+End
+
+Define ene_conju:C sp 0! ZC
+		C
+		atom 1: coor=3, conjugation=yes
+End
+
+Define ke:C sp2 0
+		C[=O]
+		atom 1: coor=3
+		atom 2: coor=1
+End
+
+Define fl:C sp2 0
+		C[=O][-H]
+		atom 1: coor=3
+		atom 2: coor=1
+		atom 3: coor=1
+End
+
+Define im:C sp2 0
+		C[=N]
+		atom 1: coor=3
+		atom 2: coor=?
+End
+
+Define aim:C sp2 0
+		C[~N]
+		atom 1: coor=3
+		atom 2: coor=?
+End
+
+Define hz:C sp2 0
+		C[=N[-N]]
+		atom 1: coor=3
+		atom 2: coor=?
+		atom 3: coor=?
+End
+
+Define ox:C sp2 0
+		C[=N[-O]]
+		atom 1: coor=3
+		atom 2: coor=?
+		atom 3: coor=?
+End
+
+Define tk:C sp2 0
+		C[=S]
+		atom 1: coor=3
+		atom 2: coor=?
+End
+		
+####the section for carbon with four connectivity######
+Define ane:C sp3 0
+		C 
+		atom 1: coor=4
+End
+
+Define qc:C sp3 0
+		C 
+		atom 1: coor=4
+End
+
+Define tc:C sp3 0
+		C[-H] 
+		atom 1: coor=4
+		atom 2: coor=1
+End
+
+Define sc:C sp3 0
+		C[-H][-H]
+		atom 1: coor=4
+		atom 2: coor=1
+		atom 3: coor=1
+End
+
+Define me:C sp3 0
+		C[-H][-H][-H]
+		atom 1: coor=4
+		atom 2: coor=1
+		atom 3: coor=1
+		atom 4: coor=1
+End
+
+Define ey:C sp3 0
+		C[-H][-H][-C[-H][-H][-H]]
+		atom 1: coor=4
+		atom 2: coor=1
+		atom 3: coor=1
+		atom 4: coor=4
+		atom 5: coor=1
+		atom 6: coor=1
+		atom 7: coor=1
+End
+
+Define pr:C sp3 0
+		C[-H][-H][-C[-H][-H][-C[-H][-H][-H]]]
+		atom 1: coor=4
+		atom 2: coor=1
+		atom 3: coor=1
+		atom 4: coor=4
+		atom 5: coor=1
+		atom 6: coor=1
+		atom 7: coor=4
+		atom 8: coor=1
+		atom 9: coor=1
+		atom 10: coor=1
+End
+
+Define bu:C sp3 0
+		C[-H][-H][-C[-H][-H][-C[-H][-H][-C[-H][-H][-H]]]]
+		atom 1: coor=4
+		atom 2: coor=1
+		atom 3: coor=1
+		atom 4: coor=4
+		atom 5: coor=1
+		atom 6: coor=1
+		atom 7: coor=4
+		atom 8: coor=1
+		atom 9: coor=1
+		atom 10: coor=4
+		atom 11: coor=1
+		atom 12: coor=1
+		atom 13: coor=1
+End
+
+Define ipr:C sp3 0
+		C[-H][-C[-H][-H][-H]][-C[-H][-H][-H]]
+		atom 1: coor=4
+		atom 2: coor=1
+		atom 3: coor=4
+		atom 4: coor=1
+		atom 5: coor=1
+		atom 6: coor=1
+		atom 7: coor=4
+		atom 8: coor=1
+		atom 9: coor=1
+		atom 10: coor=1
+End
+
+Define ibu:C sp3 0
+		C[-H][-H][-C[-H][-C[-H][-H][-H]][-C[-H][-H][-H]]]
+		atom 1: coor=4
+		atom 2: coor=1
+		atom 3: coor=1
+		atom 4: coor=4
+		atom 5: coor=1
+		atom 6: coor=4
+		atom 7: coor=1
+		atom 8: coor=1
+		atom 9: coor=1
+		atom 10: coor=4
+		atom 11: coor=1
+		atom 12: coor=1
+		atom 13: coor=1
+End
+
+Define tbu:C sp3 0
+		C[-C[-H][-H][-H]][-C[-H][-H][-H]][-C[-H][-H][-H]]
+		atom 1: coor=4
+		atom 2: coor=4
+		atom 3: coor=1
+		atom 4: coor=1
+		atom 5: coor=1
+		atom 6: coor=4
+		atom 7: coor=1
+		atom 8: coor=1
+		atom 9: coor=1
+		atom 10: coor=4
+		atom 11: coor=1
+		atom 12: coor=1
+		atom 13: coor=1
+End
+
+####################################################### 
+##### The following section for Hydrogen atom #########
+#######################################################
+Define h_ s 0 
+    H 
+    atom 1: coor=?
+End
+
+Define h_1 s 0
+    H 
+    atom 1: coor=1
+End
+
+
+####################################################### 
+###### The following section for Oxygen atom ##########
+#######################################################
+Define o_ s 0 
+		O
+		atom 1: coor=?
+End
+
+###the section for oxygen with one connectivity########
+Define o_1 sp2 0
+		O
+		atom 1: coor=1
+End
+
+Define ai:O sp2 0
+		O
+		atom 1: coor=1, charge = -1
+End
+
+###the section for oxygen with two connectivity########
+Define et:O sp3 0
+		O
+		atom 1: coor=2
+End
+
+Define al:O sp3 0
+		O[-H]
+		atom 1: coor=2
+		atom 2: coor=1
+End
+
+####################################
+
+####################################################### 
+##### The following section for Nitrogen atom #########
+#######################################################
+Define n_ s 0
+		N
+		atom 1: coor=?
+End
+
+Define n_4 sp3 +
+		N
+		atom 1: coor=4
+End
+
+Define amp:N sp3 +
+		N
+		atom 1: coor=4, charge=1
+End
+
+######################################################
+##### new atom type for amine ion with oxygen or other element atoms###
+######################################################
+Define amo:N sp3 +
+		N[-O]
+		atom 1: coor=4
+		atom 2: coor=1
+End
+
+###the section for nitrogen with three connectivity####
+Define te:N sp3 0
+		N
+		atom 1: coor=3
+End
+
+Define imp:N sp2 +
+		N
+		atom 1: coor=3, charge=1
+End
+
+
+Define se:N sp3 0
+		N[-H]
+		atom 1: coor=3
+		atom 2: coor=1
+End
+
+Define am:N sp3 0
+		N[-H][-H]
+		atom 1: coor=3
+		atom 2: coor=1
+		atom 3: coor=1
+End
+
+############################################
+#######new atom type for nitrate with charge expression style###
+############################################
+Define na:N spd2 0
+		N[*O][=*]
+		atom 1: coor=3
+		atom 2: coor=1
+		atom 3: coor=?,elem=C O N S
+End
+
+###the section for nitrogen with two connectivity######
+Define n_2 sp2 0
+		N
+		atom 1: coor=2
+End
+
+Define da:N sp2 0
+		N[#N]
+		atom 1: coor=2,charge=1
+		atom 2: coor=1
+End
+
+Define az:N sp2 0
+		N[=N]
+		atom 1: coor=2
+		atom 2: coor=2
+End
+
+######## this n_2ni is previous n_2o
+Define ni:N sp2 0
+		N[=O]
+		atom 1: coor=2
+		atom 2: coor=1
+End
+
+
+Define num:N sp2 0
+		N[=*][=*]
+		atom 1: coor=2
+		atom 2: coor=?,elem=C O N S P 
+		atom 3: coor=?,elem=C O N S P
+End
+
+Define ic:N sp 0
+		N[#*]
+		atom 1: coor=2
+		atom 2: coor=?,elem=C O N S P 
+End
+
+###the section for nitrogen with one connectivity######
+Define n_1 sp 0
+		N
+		atom 1: coor=1
+End
+
+####################################################### 
+###### The following section for Sulfur atom ##########
+#######################################################
+Define s_ s 0
+		S
+		atom 1: coor=?
+End
+
+###the section for Sulfur with one connectivity########
+Define s_1 sp2 0
+		S
+		atom 1: coor=1
+End
+
+Define si:S sp3 -
+		S
+		atom 1: coor=1,charge=-1
+End
+
+######the section for Sulfur with two connectivity#####
+Define sm:S sp3 0
+		S
+		atom 1: coor=2
+End
+
+Define th:S sp3 0
+		S[-H]
+		atom 1: coor=2
+		atom 2: coor=1
+End	
+
+######the section for Sulfur with three connectivity#####
+Define s_3 spd 0
+		S
+		atom 1: coor=3 
+End
+
+Define so:S spd 0
+		S[=*]
+		atom 1: coor=3
+		atom 2: coor=?,elem=C O N S
+End
+
+######the section for Sulfur with four connectivity#####
+Define s_4 spd2 0
+		S
+		atom 1: coor=4
+End
+
+Define sa:S spd2 0
+		S[=*][=*]
+		atom 1: coor=4
+		atom 2: coor=?,elem=C O N S
+		atom 3: coor=?,elem=C O N S
+End
+
+####################################################### 
+#### The following section for Phosphorus atom ########
+#######################################################
+Define p_ s 0
+		P
+		atom 1: coor=?
+End
+
+
+###the section for Phosphorus with four connectivity###
+Define p_4 sp3 +
+		P
+		atom 1: coor=4
+End
+
+Define p4p:P sp3 + 
+		P
+		atom 1: coor=4,charge=1
+End
+
+Define pa:P sp3 0
+		P[=*]
+		atom 1: coor=4
+		atom 2: coor=?,elem=C O N S 
+End
+
+###the section for Phosphorus with three connectivity##
+
+Define tm:P sp2 0
+		P
+		atom 1: coor=3
+End
+
+Define sm:P sp2 0
+		P[-H]
+		atom 1: coor=3
+		atom 2: coor=1
+End
+
+Define ph:P sp2 0
+		P[-H][-H]
+		atom 1: coor=3
+		atom 2: coor=1
+		atom 3: coor=1
+End
+
+Define p_2 sp2 0
+		P
+		atom 1: coor=2
+End
+
+
+####################################################### 
+##### The following section for Fluorine atom #########
+#######################################################
+Define f:F s 0
+		F
+		atom 1: coor=?
+End
+
+####################################################### 
+##### The following section for Chlorine atom #########
+#######################################################
+Define cl:Cl s 0
+		Cl 
+		atom 1: coor=?
+End
+
+####################################################### 
+###### The following section for Bromine atom #########
+#######################################################
+Define br:Br s 0
+		Br
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Iodine atom #########
+#######################################################
+Define i:I s 0
+		I
+		atom 1: coor=?
+End
+
+####################################################### 
+######## The following section for Boron atom #########
+#######################################################
+Define b:B s 0
+		B
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Silicon atom ########
+#######################################################
+Define si:Si s 0
+		Si
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Arsenic atom ########
+#######################################################
+Define as_ s 0
+		As
+		atom 1: coor=?
+End
+
+
+Define as_ s 0
+		As
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Selenium atom #######
+#######################################################
+Define se_ s 0
+		Se
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Tellurium atom ######
+#######################################################
+Define te_ s 0
+		Te
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Sodium atom #########
+#######################################################
+Define na_ s 0
+		Na
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Al atom #########
+#######################################################
+Define al:Al s 0
+		Al
+		atom 1: coor=?
+End
+
+####################################################### 
+####### The following section for Fe atom #########
+#######################################################
+Define fe:Fe s 0
+		Fe
+		atom 1: coor=?
+End
+
+####################################################### 
+### The following section for Relationship Tree #######
+#######################################################
+
+ProcedureTree:
+(c_
+	(c_1(co:C))
+	(yne:C
+		(cy:C)
+		(cum:C)
+		(yne_conju:C)
+	)
+	(ene:C
+		(ke:C(fl:C))
+		(aim:C)
+		(im:C(ox:C)(hz:C))
+		(tk:C)
+		(ene_conju:C)
+	)
+	(qc:C
+		(tc:C
+			(sc:C
+				(me:C)
+			)
+		)
+	)
+)
+(h_(h_1))
+(o_
+	(o_1
+		(ai:O)
+	)
+	(et:O
+		(al:O)
+	)
+)
+(n_
+	(n_1)
+	(n_2
+		(da:N)
+		(num:N)
+		(ic:N)
+		(ni:N)
+		(az:N)
+	)
+	(te:N
+		(imp:N)
+		(na:N)
+		(se:N
+			(am:N)
+		)
+	)
+	(n_4
+		(amo:N)
+		(amp:N)
+	)
+)
+(s_
+	(s_1
+		(si:S)
+	)
+	(sm:S
+		(th:S)
+	)
+	(s_3
+		(so:S)
+	)
+	(s_4
+		(sa:S)
+	)
+)
+(p_
+	(p_2)
+	(p_4
+		(p4p:P)
+		(pa:P)
+	)
+	(tm:P
+		(sm:P
+			(ph:P)
+		)
+	)
+)
+(f:F)
+(cl:Cl)
+(br:Br)
+(i:I)
+(b:B)
+(si:Si)
+(al:Al)
+(fe:Fe)
+End
+

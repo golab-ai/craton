@@ -1,0 +1,166 @@
+molecule_name
+LFQSCWFLJHTTHZ-UHFFFAOYSA-N
+
+Atoms
+ID element formal_charge connectivity@list bond_type@list coordinates@list atom_name local plate score bond_type_aromatic@list connectivity_type@list has_ring@list has_ring_size@list has_ring_property@list atom_fg atom_fg_id atom_fg_tag atom_cluster atom_cluster_id atom_cluster_tag point_charge esp_charge mulliken_charge ff_charge atom_type_name nonb_atom_type binc_atom_type atc_atom_type atom_type_ID binc_style binc_parameters@list binc_score binc_str pstyle vdw_parameters@list vdw_score vdw_str
+0 C 0 1:3:4:5 1:1:1:1 -0.9535:0.0478:0.0425 None LT no None 1:1:1:1 S:S:S:S None None None None None None None None None -0.2855 None None -0.2855 c_4h3 c_4h3 c_4 c_4 None binc:binc:binc:binc -0.0155:-0.09:-0.09:-0.09 nan:nan:nan:nan Fit:V:V:V LJ12_6 3.3977:0.1078 nan G 
+1 C 0 0:2:6:7 1:1:1:1 0.4891:-0.3204:-0.1886 None LM no None 1:1:1:1 S:S:S:S None None None None None None None None None 0.30219999999999997 None None 0.30219999999999997 c_4o c_4o c_4o c_4 None binc:binc:binc:binc 0.0155:0.2421:0.0223:0.0223 nan:nan:nan:nan Fit:Fit:Fit:Fit LJ12_6 3.3977:0.1078 nan gaff 
+2 O 0 1:8 1:1 1.277:0.3248:0.7377 None LT no None 1:1 S:S None None None None None None None None None -0.6471 None None -0.6471 o_2h o_2h o_2h o_2 None binc:binc -0.2421:-0.405 nan:nan Fit:V LJ12_6 3.2429:0.093 nan gaff 
+3 H 0 0 1 -1.357:0.734:-0.7332 None EN no None 1 S None None None None None None None None None 0.09 None None 0.09 h_1 h_1 h_1 h_1 None binc 0.09 nan V LJ12_6 2.6002:0.0208 nan G 
+4 H 0 0 1 -1.5933:-0.8626:0.0218 None EN no None 1 S None None None None None None None None None 0.09 None None 0.09 h_1 h_1 h_1 h_1 None binc 0.09 nan V LJ12_6 2.6002:0.0208 nan G 
+5 H 0 0 1 -1.071:0.5964:1.0112 None EN no None 1 S None None None None None None None None None 0.09 None None 0.09 h_1 h_1 h_1 h_1 None binc 0.09 nan V LJ12_6 2.6002:0.0208 nan G 
+6 H 0 1 1 0.7879:-0.1377:-1.2385 None EN no None 1 S None None None None None None None None None -0.0223 None None -0.0223 h_1 h_1 h_1 h_1 None binc -0.0223 nan Fit LJ12_6 2.6002:0.0208 nan G 
+7 H 0 1 1 0.5896:-1.429:-0.0413 None EN no None 1 S None None None None None None None None None -0.0223 None None -0.0223 h_1 h_1 h_1 h_1 None binc -0.0223 nan Fit LJ12_6 2.6002:0.0208 nan G 
+8 H 0 2 1 1.8313:1.0466:0.3885 None EN no None 1 S None None None None None None None None None 0.405 None None 0.405 h_1o h_1o h_1o h_1 None binc 0.405 nan V LJ12_6 0.5379:0.0047 nan gaff 
+
+Bonds
+a1 a2 value style atom_type_name atom_type_used_name para
+0 1 None harmonic c_4h3$c_4o c_4$c_4o 1.5371:244.146 
+0 3 None harmonic c_4h3$h_1 c_4$h_1 1.1035:376.5952 
+0 4 None harmonic c_4h3$h_1 c_4$h_1 1.1035:376.5952 
+0 5 None harmonic c_4h3$h_1 c_4$h_1 1.1035:376.5952 
+1 2 None harmonic c_4o$o_2h c_4o$o_2 1.413:291.8416 
+1 6 None harmonic c_4o$h_1 c_4o$h_1 1.1065:394.716 
+1 7 None harmonic c_4o$h_1 c_4o$h_1 1.1065:394.716 
+2 8 None harmonic o_2h$h_1o h_1o$o_2 0.9668:591.6855 
+
+Angles
+a1 a2 a3 value style atom_type_name atom_type_used_name para
+0 1 2 None harmonic c_4h3$c_4o$o_2h c_4$c_4o$o_2 1.9195637258916716:80.4099 
+0 1 6 None harmonic c_4h3$c_4o$h_1 c_4$c_4o$h_1 1.9005239290816653:49.2114 
+0 1 7 None harmonic c_4h3$c_4o$h_1 c_4$c_4o$h_1 1.9005239290816653:49.2114 
+1 0 3 None harmonic c_4o$c_4h3$h_1 c_4$c_4$h_1 1.912959400002125:42.0215 
+1 0 4 None harmonic c_4o$c_4h3$h_1 c_4$c_4$h_1 1.912959400002125:42.0215 
+1 0 5 None harmonic c_4o$c_4h3$h_1 c_4$c_4$h_1 1.912959400002125:42.0215 
+1 2 8 None harmonic c_4o$o_2h$h_1o c_4$o_2$h_1o 1.8809169002647612:94.0757 
+2 1 6 None harmonic o_2h$c_4o$h_1 h_1$c_4o$o_2 1.9195480179284035:59.5237 
+2 1 7 None harmonic o_2h$c_4o$h_1 h_1$c_4o$o_2 1.9195480179284035:59.5237 
+3 0 4 None harmonic h_1$c_4h3$h_1 h_1$c_4$h_1 1.866400996875924:40.5999 
+3 0 5 None harmonic h_1$c_4h3$h_1 h_1$c_4$h_1 1.866400996875924:40.5999 
+4 0 5 None harmonic h_1$c_4h3$h_1 h_1$c_4$h_1 1.866400996875924:40.5999 
+6 1 7 None harmonic h_1$c_4o$h_1 h_1$c_4o$h_1 1.8782517824969656:36.8619 
+
+Dihedrals
+a1 a2 a3 a4 value style atom_type_name atom_type_used_name para
+0 1 2 8 None amber c_4h3$c_4o$o_2h$h_1o c_4$c_4o$o_2$h_1o -0.2137:-0.3304:0.1786:0.0 
+2 1 0 3 None amber o_2h$c_4o$c_4h3$h_1 h_1$c_4$c_4o$o_2 0.0:0.0:0.2445:0.0 
+2 1 0 4 None amber o_2h$c_4o$c_4h3$h_1 h_1$c_4$c_4o$o_2 0.0:0.0:0.2445:0.0 
+2 1 0 5 None amber o_2h$c_4o$c_4h3$h_1 h_1$c_4$c_4o$o_2 0.0:0.0:0.2445:0.0 
+3 0 1 6 None amber h_1$c_4h3$c_4o$h_1 h_1$c_4$c_4o$h_1 0.0:0.0:0.1238:0.0 
+3 0 1 7 None amber h_1$c_4h3$c_4o$h_1 h_1$c_4$c_4o$h_1 0.0:0.0:0.1238:0.0 
+4 0 1 6 None amber h_1$c_4h3$c_4o$h_1 h_1$c_4$c_4o$h_1 0.0:0.0:0.1238:0.0 
+4 0 1 7 None amber h_1$c_4h3$c_4o$h_1 h_1$c_4$c_4o$h_1 0.0:0.0:0.1238:0.0 
+5 0 1 6 None amber h_1$c_4h3$c_4o$h_1 h_1$c_4$c_4o$h_1 0.0:0.0:0.1238:0.0 
+5 0 1 7 None amber h_1$c_4h3$c_4o$h_1 h_1$c_4$c_4o$h_1 0.0:0.0:0.1238:0.0 
+6 1 2 8 None amber h_1$c_4o$o_2h$h_1o h_1$c_4o$o_2$h_1o 0.0:0.0:0.3796:0.0 
+7 1 2 8 None amber h_1$c_4o$o_2h$h_1o h_1$c_4o$o_2$h_1o 0.0:0.0:0.3796:0.0 
+
+Pair14
+a1 a2 value style atom_type_name atom_type_used_name para
+0 8 None LJ12_6 c_4h3$h_1o c_4h3$h_1o 1.9678:0.01125455463356947 
+2 3 None LJ12_6 o_2h$h_1 o_2h$h_1 2.92155:0.021990907211845535 
+2 4 None LJ12_6 o_2h$h_1 o_2h$h_1 2.92155:0.021990907211845535 
+2 5 None LJ12_6 o_2h$h_1 o_2h$h_1 2.92155:0.021990907211845535 
+3 6 None LJ12_6 h_1$h_1 h_1$h_1 2.6002:0.0104 
+3 7 None LJ12_6 h_1$h_1 h_1$h_1 2.6002:0.0104 
+4 6 None LJ12_6 h_1$h_1 h_1$h_1 2.6002:0.0104 
+4 7 None LJ12_6 h_1$h_1 h_1$h_1 2.6002:0.0104 
+5 6 None LJ12_6 h_1$h_1 h_1$h_1 2.6002:0.0104 
+5 7 None LJ12_6 h_1$h_1 h_1$h_1 2.6002:0.0104 
+6 8 None LJ12_6 h_1$h_1o h_1$h_1o 1.56905:0.0049436828377233104 
+7 8 None LJ12_6 h_1$h_1o h_1$h_1o 1.56905:0.0049436828377233104 
+
+Pair1n
+a1 a2 value style atom_type_name atom_type_used_name para
+3 8 None LJ12_6 h_1$h_1o h_1$h_1o 1.56905:0.009887365675446621 
+4 8 None LJ12_6 h_1$h_1o h_1$h_1o 1.56905:0.009887365675446621 
+5 8 None LJ12_6 h_1$h_1o h_1$h_1o 1.56905:0.009887365675446621 
+
+smiles
+CCO
+
+inchi_key
+LFQSCWFLJHTTHZ-UHFFFAOYSA-N
+
+inchi
+InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3
+
+molecule_name
+LFQSCWFLJHTTHZ-UHFFFAOYSA-N
+
+iupac_name
+None
+
+nick_name
+None
+
+drug_name
+None
+
+internal_name
+None
+
+molecule_mass
+46.06900000000002
+
+formula
+C2OH6
+
+heavy_atoms
+3
+
+net_charge
+0
+
+multiple
+None
+
+function_group@list
+
+function_group_label
+None
+
+torsions@list_2d
+
+torsion_number
+None
+
+constrain_term@list
+
+constrain_value
+None
+
+rings@dict
+
+ring_number
+0
+
+ring_size@list
+
+
+ring_property@list
+
+
+ring_blocks@list_2d
+
+energy
+None
+
+force@list
+
+hessian@list
+
+frequency@list
+
+elem_frag@dict
+
+csf_frag@dict
+
+rsf_frag@dict
+
+sssr_frag@dict
+
+scaffold_frag@dict
+
+tf_frag@dict
+

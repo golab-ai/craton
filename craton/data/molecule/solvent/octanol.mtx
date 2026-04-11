@@ -1,0 +1,554 @@
+molecule_name
+octanol
+
+Atoms
+ID element formal_charge connectivity@list bond_type@list coordinates@list atom_name local plate score bond_type_aromatic@list connectivity_type@list has_ring@list has_ring_size@list has_ring_property@list atom_fg atom_fg_id atom_fg_tag atom_cluster atom_cluster_id atom_cluster_tag point_charge esp_charge mulliken_charge ff_charge atom_type_name nonb_atom_type binc_atom_type atc_atom_type atom_type_ID binc_style@list binc_parameter@list binc_score@list binc_str@list binc_count@list pstyle parameter@list fix_parameter@list vdw_score ptag pcount
+0 C 0 :1:9:10:11: :1:1:1:1: :4.1436:-0.086:-0.4997: None LT no None :1:1:1:1: :S:S:S:S: : : : None None None None None None -0.27 None None -0.27 c_4h3 c_4h3_8 c_4 c_4 None :binc:binc:binc:binc: :0.0:-0.09:-0.09:-0.09: :nan:nan:nan:nan: :Fit:V:V:V: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan G nan 
+1 C 0 :0:2:12:13: :1:1:1:1: :2.6929:-0.5762:-0.4642: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None -0.18 None None -0.18 c_4h2 c_4h2_8 c_4 c_4 None :binc:binc:binc:binc: :0.0:0.0:-0.09:-0.09: :nan:nan:nan:nan: :Fit:Fit:V:V: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan G nan 
+2 C 0 :1:3:14:15: :1:1:1:1: :1.9745:0.3209:0.5096: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None -0.18 None None -0.18 c_4h2 c_4h2_8 c_4 c_4 None :binc:binc:binc:binc: :0.0:0.0:-0.09:-0.09: :nan:nan:nan:nan: :Fit:Fit:V:V: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan G nan 
+3 C 0 :2:4:16:17: :1:1:1:1: :0.511:-0.032:0.6663: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None -0.18 None None -0.18 c_4h2 c_4h2_8 c_4 c_4 None :binc:binc:binc:binc: :0.0:0.0:-0.09:-0.09: :nan:nan:nan:nan: :Fit:Fit:V:V: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan G nan 
+4 C 0 :3:5:18:19: :1:1:1:1: :-0.2012:0.0837:-0.6505: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None -0.18 None None -0.18 c_4h2 c_4h2_8 c_4 c_4 None :binc:binc:binc:binc: :0.0:0.0:-0.09:-0.09: :nan:nan:nan:nan: :Fit:Fit:V:V: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan G nan 
+5 C 0 :4:6:20:21: :1:1:1:1: :-1.648:-0.2513:-0.5874: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None -0.18 None None -0.18 c_4h2 c_4h2_8 c_4 c_4 None :binc:binc:binc:binc: :0.0:0.0:-0.09:-0.09: :nan:nan:nan:nan: :Fit:Fit:V:V: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan G nan 
+6 C 0 :5:7:22:23: :1:1:1:1: :-2.3862:0.6595:0.3653: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None -0.1955 None None -0.1955 c_4h2 c_4h2_8 c_4 c_4 None :binc:binc:binc:binc: :0.0:-0.0155:-0.09:-0.09: :nan:nan:nan:nan: :Fit:Fit:V:V: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan G nan 
+7 C 0 :6:8:24:25: :1:1:1:1: :-3.8704:0.3042:0.4116: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None 0.30219999999999997 None None 0.30219999999999997 c_4o c_4o_8 c_4o c_4 None :binc:binc:binc:binc: :0.0155:0.2421:0.0223:0.0223: :nan:nan:nan:nan: :Fit:Fit:Fit:Fit: :nan:nan:nan:nan: LJ12_6 :3.3977:0.1078: : nan gaff nan 
+8 O 0 :7:26: :1:1: :-3.9947:-1.0045:0.8404: None LT no None :1:1: :S:S: : : : None None None None None None -0.6471 None None -0.6471 o_2h o_2h_8 o_2h o_2 None :binc:binc: :-0.2421:-0.405: :nan:nan: :Fit:V: :nan:nan: LJ12_6 :3.2429:0.093: : nan gaff nan 
+9 H 0 :0: :1: :4.5454:-0.175:-1.5411: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+10 H 0 :0: :1: :4.1709:0.9947:-0.25: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+11 H 0 :0: :1: :4.7746:-0.6394:0.2288: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+12 H 0 :1: :1: :2.7319:-1.6285:-0.1141: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+13 H 0 :1: :1: :2.3174:-0.5241:-1.4908: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+14 H 0 :2: :1: :2.075:1.3568:0.1804: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+15 H 0 :2: :1: :2.4912:0.215:1.4864: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+16 H 0 :3: :1: :0.0783:0.7598:1.3457: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+17 H 0 :3: :1: :0.3469:-0.9986:1.1422: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+18 H 0 :4: :1: :-0.1256:1.1512:-1.0045: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+19 H 0 :4: :1: :0.2854:-0.5705:-1.4101: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+20 H 0 :5: :1: :-1.8558:-1.3058:-0.3362: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+21 H 0 :5: :1: :-2.0736:-0.0585:-1.6117: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+22 H 0 :6: :1: :-1.9251:0.5074:1.3784: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+23 H 0 :6: :1: :-2.245:1.7038:0.0311: None EN no None :1: :S: : : : None None None None None None 0.09 None None 0.09 h_1 h_1_8 h_1 h_1 None :binc: :0.09: :nan: :V: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+24 H 0 :7: :1: :-4.3:0.4242:-0.6042: None EN no None :1: :S: : : : None None None None None None -0.0223 None None -0.0223 h_1 h_1_8 h_1 h_1 None :binc: :-0.0223: :nan: :Fit: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+25 H 0 :7: :1: :-4.4169:1.0181:1.0606: None EN no None :1: :S: : : : None None None None None None -0.0223 None None -0.0223 h_1 h_1_8 h_1 h_1 None :binc: :-0.0223: :nan: :Fit: :nan: LJ12_6 :2.6002:0.0208: : nan G nan 
+26 H 0 :8: :1: :-4.0965:-1.6488:0.1212: None EN no None :1: :S: : : : None None None None None None 0.405 None None 0.405 h_1o h_1o_8 h_1o h_1 None :binc: :0.405: :nan: :V: :nan: LJ12_6 :0.5379:0.0047: : nan gaff nan 
+
+Bonds
+a1 a2 value style a1_atom_type a2_atom_type a1_atom_type_used a2_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 None bond c_4h3 c_4h2 c_4h3_8 c_4h2_8 c_4$c_4 harmonic :1.5387:279.024: : nan nan Fit 
+0 9 None bond c_4h3 h_1 c_4h3_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+0 10 None bond c_4h3 h_1 c_4h3_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+0 11 None bond c_4h3 h_1 c_4h3_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+1 2 None bond c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4$c_4 harmonic :1.5387:279.024: : nan nan Fit 
+1 12 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+1 13 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+2 3 None bond c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4$c_4 harmonic :1.5387:279.024: : nan nan Fit 
+2 14 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+2 15 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+3 4 None bond c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4$c_4 harmonic :1.5387:279.024: : nan nan Fit 
+3 16 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+3 17 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+4 5 None bond c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4$c_4 harmonic :1.5387:279.024: : nan nan Fit 
+4 18 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+4 19 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+5 6 None bond c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4$c_4 harmonic :1.5387:279.024: : nan nan Fit 
+5 20 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+5 21 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+6 7 None bond c_4h2 c_4o c_4h2_8 c_4o_8 c_4$c_4o harmonic :1.5371:244.146: : nan nan Fit 
+6 22 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+6 23 None bond c_4h2 h_1 c_4h2_8 h_1_8 c_4$h_1 harmonic :1.1035:376.5952: : nan nan Fit 
+7 8 None bond c_4o o_2h c_4o_8 o_2h_8 c_4o$o_2 harmonic :1.413:291.8416: : nan nan Fit 
+7 24 None bond c_4o h_1 c_4o_8 h_1_8 c_4o$h_1 harmonic :1.1065:394.716: : nan nan Fit 
+7 25 None bond c_4o h_1 c_4o_8 h_1_8 c_4o$h_1 harmonic :1.1065:394.716: : nan nan Fit 
+8 26 None bond o_2h h_1o o_2h_8 h_1o_8 h_1o$o_2 harmonic :0.9668:591.6855: : nan nan Fit 
+
+Angles
+a1 a2 a3 value style value_a a1_atom_type a2_atom_type a3_atom_type a1_atom_type_used a2_atom_type_used a3_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 2 None angle None c_4h3 c_4h2 c_4h2 c_4h3_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4 harmonic :113.1859:51.9104: : nan nan Fit 
+0 1 12 None angle None c_4h3 c_4h2 h_1 c_4h3_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+0 1 13 None angle None c_4h3 c_4h2 h_1 c_4h3_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+1 0 9 None angle None c_4h2 c_4h3 h_1 c_4h2_8 c_4h3_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+1 0 10 None angle None c_4h2 c_4h3 h_1 c_4h2_8 c_4h3_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+1 0 11 None angle None c_4h2 c_4h3 h_1 c_4h2_8 c_4h3_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+1 2 3 None angle None c_4h2 c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4 harmonic :113.1859:51.9104: : nan nan Fit 
+1 2 14 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+1 2 15 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+2 1 12 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+2 1 13 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+2 3 4 None angle None c_4h2 c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4 harmonic :113.1859:51.9104: : nan nan Fit 
+2 3 16 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+2 3 17 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+3 2 14 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+3 2 15 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+3 4 5 None angle None c_4h2 c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4 harmonic :113.1859:51.9104: : nan nan Fit 
+3 4 18 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+3 4 19 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+4 3 16 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+4 3 17 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+4 5 6 None angle None c_4h2 c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4 harmonic :113.1859:51.9104: : nan nan Fit 
+4 5 20 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+4 5 21 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+5 4 18 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+5 4 19 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+5 6 7 None angle None c_4h2 c_4h2 c_4o c_4h2_8 c_4h2_8 c_4o_8 c_4$c_4$c_4 harmonic :113.1859:51.9104: : nan nan Fit 
+5 6 22 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+5 6 23 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+6 5 20 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+6 5 21 None angle None c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+6 7 8 None angle None c_4h2 c_4o o_2h c_4h2_8 c_4o_8 o_2h_8 c_4$c_4o$o_2 harmonic :109.9829:80.4099: : nan nan Fit 
+6 7 24 None angle None c_4h2 c_4o h_1 c_4h2_8 c_4o_8 h_1_8 c_4$c_4o$h_1 harmonic :108.892:49.2114: : nan nan Fit 
+6 7 25 None angle None c_4h2 c_4o h_1 c_4h2_8 c_4o_8 h_1_8 c_4$c_4o$h_1 harmonic :108.892:49.2114: : nan nan Fit 
+7 6 22 None angle None c_4o c_4h2 h_1 c_4o_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+7 6 23 None angle None c_4o c_4h2 h_1 c_4o_8 c_4h2_8 h_1_8 c_4$c_4$h_1 harmonic :109.6045:42.0215: : nan nan Fit 
+7 8 26 None angle None c_4o o_2h h_1o c_4o_8 o_2h_8 h_1o_8 c_4$o_2$h_1o harmonic :107.7686:94.0757: : nan nan Fit 
+8 7 24 None angle None o_2h c_4o h_1 o_2h_8 c_4o_8 h_1_8 h_1$c_4o$o_2 harmonic :109.982:59.5237: : nan nan Fit 
+8 7 25 None angle None o_2h c_4o h_1 o_2h_8 c_4o_8 h_1_8 h_1$c_4o$o_2 harmonic :109.982:59.5237: : nan nan Fit 
+9 0 10 None angle None h_1 c_4h3 h_1 h_1_8 c_4h3_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+9 0 11 None angle None h_1 c_4h3 h_1 h_1_8 c_4h3_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+10 0 11 None angle None h_1 c_4h3 h_1 h_1_8 c_4h3_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+12 1 13 None angle None h_1 c_4h2 h_1 h_1_8 c_4h2_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+14 2 15 None angle None h_1 c_4h2 h_1 h_1_8 c_4h2_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+16 3 17 None angle None h_1 c_4h2 h_1 h_1_8 c_4h2_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+18 4 19 None angle None h_1 c_4h2 h_1 h_1_8 c_4h2_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+20 5 21 None angle None h_1 c_4h2 h_1 h_1_8 c_4h2_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+22 6 23 None angle None h_1 c_4h2 h_1 h_1_8 c_4h2_8 h_1_8 h_1$c_4$h_1 harmonic :106.9369:40.5999: : nan nan Fit 
+24 7 25 None angle None h_1 c_4o h_1 h_1_8 c_4o_8 h_1_8 h_1$c_4o$h_1 harmonic :107.6159:36.8619: : nan nan Fit 
+
+Dihedrals
+a1 a2 a3 a4 value value_a style a1_atom_type a2_atom_type a3_atom_type a4_atom_type a1_atom_type_used a2_atom_type_used a3_atom_type_used a4_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 2 3 None None dihedral c_4h3 c_4h2 c_4h2 c_4h2 c_4h3_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$c_4 amber :0.3914:0.0:0.1452:180.0:0.1075:0.0:0.0:180.0: : nan nan Fit 
+0 1 2 14 None None dihedral c_4h3 c_4h2 c_4h2 h_1 c_4h3_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+0 1 2 15 None None dihedral c_4h3 c_4h2 c_4h2 h_1 c_4h3_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+1 2 3 4 None None dihedral c_4h2 c_4h2 c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$c_4 amber :0.3914:0.0:0.1452:180.0:0.1075:0.0:0.0:180.0: : nan nan Fit 
+1 2 3 16 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+1 2 3 17 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+2 3 4 5 None None dihedral c_4h2 c_4h2 c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$c_4 amber :0.3914:0.0:0.1452:180.0:0.1075:0.0:0.0:180.0: : nan nan Fit 
+2 3 4 18 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+2 3 4 19 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+3 4 5 6 None None dihedral c_4h2 c_4h2 c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$c_4 amber :0.3914:0.0:0.1452:180.0:0.1075:0.0:0.0:180.0: : nan nan Fit 
+3 4 5 20 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+3 4 5 21 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+4 5 6 7 None None dihedral c_4h2 c_4h2 c_4h2 c_4o c_4h2_8 c_4h2_8 c_4h2_8 c_4o_8 c_4$c_4$c_4$c_4 amber :0.3914:0.0:0.1452:180.0:0.1075:0.0:0.0:180.0: : nan nan Fit 
+4 5 6 22 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+4 5 6 23 None None dihedral c_4h2 c_4h2 c_4h2 h_1 c_4h2_8 c_4h2_8 c_4h2_8 h_1_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+5 6 7 8 None None dihedral c_4h2 c_4h2 c_4o o_2h c_4h2_8 c_4h2_8 c_4o_8 o_2h_8 c_4$c_4$c_4o$o_2 amber :-0.7453:0.0:0.3816:180.0:-0.0397:0.0:0.0:180.0: : nan nan Fit 
+5 6 7 24 None None dihedral c_4h2 c_4h2 c_4o h_1 c_4h2_8 c_4h2_8 c_4o_8 h_1_8 c_4$c_4$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.3315:0.0:0.0:180.0: : nan nan Fit 
+5 6 7 25 None None dihedral c_4h2 c_4h2 c_4o h_1 c_4h2_8 c_4h2_8 c_4o_8 h_1_8 c_4$c_4$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.3315:0.0:0.0:180.0: : nan nan Fit 
+6 7 8 26 None None dihedral c_4h2 c_4o o_2h h_1o c_4h2_8 c_4o_8 o_2h_8 h_1o_8 c_4$c_4o$o_2$h_1o amber :-0.2137:0.0:-0.3304:180.0:0.1786:0.0:0.0:180.0: : nan nan Fit 
+9 0 1 2 None None dihedral h_1 c_4h3 c_4h2 c_4h2 h_1_8 c_4h3_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+10 0 1 2 None None dihedral h_1 c_4h3 c_4h2 c_4h2 h_1_8 c_4h3_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+11 0 1 2 None None dihedral h_1 c_4h3 c_4h2 c_4h2 h_1_8 c_4h3_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+12 1 0 9 None None dihedral h_1 c_4h2 c_4h3 h_1 h_1_8 c_4h2_8 c_4h3_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+12 1 0 10 None None dihedral h_1 c_4h2 c_4h3 h_1 h_1_8 c_4h2_8 c_4h3_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+12 1 0 11 None None dihedral h_1 c_4h2 c_4h3 h_1 h_1_8 c_4h2_8 c_4h3_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+12 1 2 3 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+13 1 0 9 None None dihedral h_1 c_4h2 c_4h3 h_1 h_1_8 c_4h2_8 c_4h3_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+13 1 0 10 None None dihedral h_1 c_4h2 c_4h3 h_1 h_1_8 c_4h2_8 c_4h3_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+13 1 0 11 None None dihedral h_1 c_4h2 c_4h3 h_1 h_1_8 c_4h2_8 c_4h3_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+13 1 2 3 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+14 2 1 12 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+14 2 1 13 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+14 2 3 4 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+15 2 1 12 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+15 2 1 13 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+15 2 3 4 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+16 3 2 14 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+16 3 2 15 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+16 3 4 5 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+17 3 2 14 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+17 3 2 15 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+17 3 4 5 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+18 4 3 16 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+18 4 3 17 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+18 4 5 6 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+19 4 3 16 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+19 4 3 17 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+19 4 5 6 None None dihedral h_1 c_4h2 c_4h2 c_4h2 h_1_8 c_4h2_8 c_4h2_8 c_4h2_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+20 5 4 18 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+20 5 4 19 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+20 5 6 7 None None dihedral h_1 c_4h2 c_4h2 c_4o h_1_8 c_4h2_8 c_4h2_8 c_4o_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+21 5 4 18 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+21 5 4 19 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+21 5 6 7 None None dihedral h_1 c_4h2 c_4h2 c_4o h_1_8 c_4h2_8 c_4h2_8 c_4o_8 c_4$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.145:0.0:0.0:180.0: : nan nan Fit 
+22 6 5 20 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+22 6 5 21 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+22 6 7 8 None None dihedral h_1 c_4h2 c_4o o_2h h_1_8 c_4h2_8 c_4o_8 o_2h_8 h_1$c_4$c_4o$o_2 amber :0.0:0.0:0.0:180.0:0.2445:0.0:0.0:180.0: : nan nan Fit 
+23 6 5 20 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+23 6 5 21 None None dihedral h_1 c_4h2 c_4h2 h_1 h_1_8 c_4h2_8 c_4h2_8 h_1_8 h_1$c_4$c_4$h_1 amber :0.0:0.0:0.0:180.0:0.1219:0.0:0.0:180.0: : nan nan Fit 
+23 6 7 8 None None dihedral h_1 c_4h2 c_4o o_2h h_1_8 c_4h2_8 c_4o_8 o_2h_8 h_1$c_4$c_4o$o_2 amber :0.0:0.0:0.0:180.0:0.2445:0.0:0.0:180.0: : nan nan Fit 
+24 7 6 22 None None dihedral h_1 c_4o c_4h2 h_1 h_1_8 c_4o_8 c_4h2_8 h_1_8 h_1$c_4$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.1238:0.0:0.0:180.0: : nan nan Fit 
+24 7 6 23 None None dihedral h_1 c_4o c_4h2 h_1 h_1_8 c_4o_8 c_4h2_8 h_1_8 h_1$c_4$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.1238:0.0:0.0:180.0: : nan nan Fit 
+25 7 6 22 None None dihedral h_1 c_4o c_4h2 h_1 h_1_8 c_4o_8 c_4h2_8 h_1_8 h_1$c_4$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.1238:0.0:0.0:180.0: : nan nan Fit 
+25 7 6 23 None None dihedral h_1 c_4o c_4h2 h_1 h_1_8 c_4o_8 c_4h2_8 h_1_8 h_1$c_4$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.1238:0.0:0.0:180.0: : nan nan Fit 
+26 8 7 24 None None dihedral h_1o o_2h c_4o h_1 h_1o_8 o_2h_8 c_4o_8 h_1_8 h_1$c_4o$o_2$h_1o amber :0.0:0.0:0.0:180.0:0.3796:0.0:0.0:180.0: : nan nan Fit 
+26 8 7 25 None None dihedral h_1o o_2h c_4o h_1 h_1o_8 o_2h_8 c_4o_8 h_1_8 h_1$c_4o$o_2$h_1o amber :0.0:0.0:0.0:180.0:0.3796:0.0:0.0:180.0: : nan nan Fit 
+
+Pair14
+a1 a2 value style a1_atom_type a2_atom_type a1_atom_type_used a2_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 3 None None c_4h3 c_4h2 c_4h3_8 c_4h2_8 c_4h2_8$c_4h3_8 LJ12_6 :3.3977:0.0539: : nan nan G 
+0 14 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+0 15 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+1 4 None None c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8$c_4h2_8 LJ12_6 :3.3977:0.0539: : nan nan G 
+1 16 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+1 17 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+2 5 None None c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8$c_4h2_8 LJ12_6 :3.3977:0.0539: : nan nan G 
+2 9 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+2 10 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+2 11 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+2 18 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+2 19 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+3 6 None None c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8$c_4h2_8 LJ12_6 :3.3977:0.0539: : nan nan G 
+3 12 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+3 13 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+3 20 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+3 21 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+4 7 None None c_4h2 c_4o c_4h2_8 c_4o_8 c_4h2_8$c_4o_8 LJ12_6 :3.3977:0.0539: : nan nan G 
+4 14 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+4 15 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+4 22 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+4 23 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+5 8 None None c_4h2 o_2h c_4h2_8 o_2h_8 c_4h2_8$o_2h_8 LJ12_6 :3.3203:0.050063459728628426: : nan nan G 
+5 16 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+5 17 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+5 24 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+5 25 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+6 18 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+6 19 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan G 
+6 26 None None c_4h2 h_1o c_4h2_8 h_1o_8 c_4h2_8$h_1o_8 LJ12_6 :1.9678:0.01125455463356947: : nan nan G 
+7 20 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan gaff 
+7 21 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.023676148335402866: : nan nan gaff 
+8 22 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.021990907211845535: : nan nan gaff 
+8 23 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.021990907211845535: : nan nan gaff 
+9 12 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+9 13 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+10 12 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+10 13 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+11 12 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+11 13 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+12 14 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+12 15 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+13 14 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+13 15 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+14 16 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+14 17 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+15 16 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+15 17 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+16 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+16 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+17 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+17 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+18 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+18 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+19 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+19 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+20 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+20 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+21 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+21 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+22 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+22 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+23 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+23 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0104: : nan nan G 
+24 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.0049436828377233104: : nan nan G 
+25 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.0049436828377233104: : nan nan G 
+
+Pair1n
+a1 a2 value style a1_atom_type a2_atom_type a1_atom_type_used a2_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 4 None None c_4h3 c_4h2 c_4h3_8 c_4h2_8 c_4h2_8$c_4h3_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+0 5 None None c_4h3 c_4h2 c_4h3_8 c_4h2_8 c_4h2_8$c_4h3_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+0 6 None None c_4h3 c_4h2 c_4h3_8 c_4h2_8 c_4h2_8$c_4h3_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+0 7 None None c_4h3 c_4o c_4h3_8 c_4o_8 c_4h3_8$c_4o_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+0 8 None None c_4h3 o_2h c_4h3_8 o_2h_8 c_4h3_8$o_2h_8 LJ12_6 :3.3203:0.10012691945725685: : nan nan G 
+0 16 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 17 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 18 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 19 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 20 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 21 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 22 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 23 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 24 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 25 None None c_4h3 h_1 c_4h3_8 h_1_8 c_4h3_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+0 26 None None c_4h3 h_1o c_4h3_8 h_1o_8 c_4h3_8$h_1o_8 LJ12_6 :1.9678:0.02250910926713894: : nan nan G 
+1 5 None None c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8$c_4h2_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+1 6 None None c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8$c_4h2_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+1 7 None None c_4h2 c_4o c_4h2_8 c_4o_8 c_4h2_8$c_4o_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+1 8 None None c_4h2 o_2h c_4h2_8 o_2h_8 c_4h2_8$o_2h_8 LJ12_6 :3.3203:0.10012691945725685: : nan nan G 
+1 18 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 19 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 20 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 21 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 22 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 23 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 24 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 25 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+1 26 None None c_4h2 h_1o c_4h2_8 h_1o_8 c_4h2_8$h_1o_8 LJ12_6 :1.9678:0.02250910926713894: : nan nan G 
+2 6 None None c_4h2 c_4h2 c_4h2_8 c_4h2_8 c_4h2_8$c_4h2_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+2 7 None None c_4h2 c_4o c_4h2_8 c_4o_8 c_4h2_8$c_4o_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+2 8 None None c_4h2 o_2h c_4h2_8 o_2h_8 c_4h2_8$o_2h_8 LJ12_6 :3.3203:0.10012691945725685: : nan nan G 
+2 20 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+2 21 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+2 22 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+2 23 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+2 24 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+2 25 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+2 26 None None c_4h2 h_1o c_4h2_8 h_1o_8 c_4h2_8$h_1o_8 LJ12_6 :1.9678:0.02250910926713894: : nan nan G 
+3 7 None None c_4h2 c_4o c_4h2_8 c_4o_8 c_4h2_8$c_4o_8 LJ12_6 :3.3977:0.1078: : nan nan G 
+3 8 None None c_4h2 o_2h c_4h2_8 o_2h_8 c_4h2_8$o_2h_8 LJ12_6 :3.3203:0.10012691945725685: : nan nan G 
+3 9 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+3 10 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+3 11 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+3 22 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+3 23 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+3 24 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+3 25 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+3 26 None None c_4h2 h_1o c_4h2_8 h_1o_8 c_4h2_8$h_1o_8 LJ12_6 :1.9678:0.02250910926713894: : nan nan G 
+4 8 None None c_4h2 o_2h c_4h2_8 o_2h_8 c_4h2_8$o_2h_8 LJ12_6 :3.3203:0.10012691945725685: : nan nan G 
+4 9 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+4 10 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+4 11 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+4 12 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+4 13 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+4 24 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+4 25 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+4 26 None None c_4h2 h_1o c_4h2_8 h_1o_8 c_4h2_8$h_1o_8 LJ12_6 :1.9678:0.02250910926713894: : nan nan G 
+5 9 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+5 10 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+5 11 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+5 12 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+5 13 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+5 14 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+5 15 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+5 26 None None c_4h2 h_1o c_4h2_8 h_1o_8 c_4h2_8$h_1o_8 LJ12_6 :1.9678:0.02250910926713894: : nan nan G 
+6 9 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 10 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 11 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 12 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 13 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 14 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 15 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 16 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+6 17 None None c_4h2 h_1 c_4h2_8 h_1_8 c_4h2_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan G 
+7 9 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 10 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 11 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 12 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 13 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 14 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 15 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 16 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 17 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 18 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+7 19 None None c_4o h_1 c_4o_8 h_1_8 c_4o_8$h_1_8 LJ12_6 :2.99895:0.04735229667080573: : nan nan gaff 
+8 9 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 10 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 11 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 12 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 13 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 14 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 15 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 16 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 17 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 18 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 19 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 20 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+8 21 None None o_2h h_1 o_2h_8 h_1_8 h_1_8$o_2h_8 LJ12_6 :2.92155:0.04398181442369107: : nan nan gaff 
+9 14 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 15 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 16 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 17 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+9 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+10 14 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 15 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 16 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 17 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+10 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+11 14 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 15 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 16 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 17 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+11 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+12 16 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 17 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+12 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+13 16 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 17 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+13 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+14 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+14 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+15 18 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 19 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+15 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+16 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+16 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+16 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+16 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+16 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+16 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+16 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+17 20 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+17 21 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+17 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+17 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+17 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+17 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+17 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+18 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+18 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+18 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+18 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+18 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+19 22 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+19 23 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+19 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+19 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+19 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+20 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+20 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+20 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+21 24 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+21 25 None None h_1 h_1 h_1_8 h_1_8 h_1_8$h_1_8 LJ12_6 :2.6002:0.0208: : nan nan G 
+21 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+22 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+23 26 None None h_1 h_1o h_1_8 h_1o_8 h_1_8$h_1o_8 LJ12_6 :1.56905:0.009887365675446621: : nan nan G 
+
+smiles
+CCCCCCCCO
+
+inchi_key
+KBPLFHHGFOOTCA-UHFFFAOYSA-N
+
+inchi
+InChI=1S/C8H18O/c1-2-3-4-5-6-7-8-9/h9H,2-8H2,1H3
+
+molecule_name
+octanol
+
+iupac_name
+
+nick_name
+
+drug_name
+
+internal_name
+
+molecule_mass
+130.23099999999994
+
+formula
+C8OH18
+
+heavy_atoms
+9
+
+net_charge
+0
+
+multiple
+
+function_group@list
+
+function_group_label
+
+torsions@list_2d
+
+torsion_number
+
+rings@dict
+::
+
+ring_number
+0
+
+ring_size@list
+:
+
+ring_property@list
+:
+
+ring_blocks@list_2d
+::
+
+energy
+
+force@list
+
+hessian@list
+
+frequency@list
+
+elem_frag
+::
+
+csf_frag
+::
+
+rsf_frag
+::
+
+sssr_frag
+::
+
+scaffold_frag
+::
+
+tf_frag
+::
+
+density
+0.824
+
+steps@list
+:topol:structure:atom type:force field:
+

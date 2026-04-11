@@ -1,0 +1,1942 @@
+{
+    "root": {
+        "At_Name": "root",
+        "Expression": "*",
+        "Hybrid": "*",
+        "elem": [
+            "?"
+        ],
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "?"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "has_improper": [
+            "c_sp2",
+            "c_sp2-3",
+            "c_sp2-4",
+            "c_sp2-5"
+        ],
+        "equ_table": {},
+        "primitive_charge": {},
+        "rings_special": [],
+        "conjugation": [],
+        "linear_center": [],
+        "degenerated_improper": [],
+        "degenerated_dihedral": [],
+        "planer_dihedral": [],
+        "same": {},
+        "AtomTypeDecoChar": {
+            "RING": "~",
+            "ENDO": "@",
+            "CONJ": "^",
+            "DEG": "Y"
+        },
+        "_at_file": "empirical.def",
+        "parent": "root",
+        "children": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ]
+    },
+    "bq_": {
+        "At_Name": "bq_",
+        "Expression": "Bq",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "Bq"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_"
+        ],
+        "equ_table": {
+            "at": "bq_",
+            "atc": "bq_",
+            "nonb": "bq_",
+            "binc": "bq_",
+            "bond": "bq_",
+            "a_c": "bq_",
+            "a_s": "bq_",
+            "d_c": "bq_",
+            "d_s": "bq_",
+            "i_c": "bq_",
+            "i_s": "bq_"
+        }
+    },
+    "c_": {
+        "At_Name": "c_",
+        "Expression": "C",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "C"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "c_s",
+            "c_sp",
+            "c_sp2",
+            "c_sp3"
+        ],
+        "sibling": [
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "c_",
+            "atc": "c_",
+            "nonb": "c_",
+            "binc": "c_",
+            "bond": "c_",
+            "a_c": "c_",
+            "a_s": "c_",
+            "d_c": "c_",
+            "d_s": "c_",
+            "i_c": "c_",
+            "i_s": "c_"
+        }
+    },
+    "c_s": {
+        "At_Name": "c_s",
+        "Expression": "C",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "C"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "c_",
+        "children": [],
+        "sibling": [
+            "c_sp",
+            "c_sp2",
+            "c_sp3"
+        ],
+        "equ_table": {
+            "at": "c_s",
+            "atc": "c_s",
+            "nonb": "c_s",
+            "binc": "c_s",
+            "bond": "c_s",
+            "a_c": "c_s",
+            "a_s": "c_s",
+            "d_c": "c_s",
+            "d_s": "c_s",
+            "i_c": "c_s",
+            "i_s": "c_s"
+        }
+    },
+    "c_sp": {
+        "At_Name": "c_sp",
+        "Expression": "C",
+        "Hybrid": "sp",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    2
+                ],
+                "elem": [
+                    "C"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "c_",
+        "children": [],
+        "sibling": [
+            "c_s",
+            "c_sp2",
+            "c_sp3"
+        ],
+        "equ_table": {
+            "at": "c_sp",
+            "atc": "c_sp",
+            "nonb": "c_sp",
+            "binc": "c_sp",
+            "bond": "c_sp",
+            "a_c": "c_sp",
+            "a_s": "c_sp",
+            "d_c": "c_sp",
+            "d_s": "c_sp",
+            "i_c": "c_sp",
+            "i_s": "c_sp"
+        }
+    },
+    "c_sp2": {
+        "At_Name": "c_sp2",
+        "Expression": "C",
+        "Hybrid": "sp2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    3
+                ],
+                "elem": [
+                    "C"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "c_",
+        "children": [],
+        "sibling": [
+            "c_s",
+            "c_sp",
+            "c_sp3"
+        ],
+        "equ_table": {
+            "at": "c_sp2",
+            "atc": "c_sp2",
+            "nonb": "c_sp2",
+            "binc": "c_sp2",
+            "bond": "c_sp2",
+            "a_c": "c_sp2",
+            "a_s": "c_sp2",
+            "d_c": "c_sp2",
+            "d_s": "c_sp2",
+            "i_c": "c_sp2",
+            "i_s": "c_sp2"
+        }
+    },
+    "c_sp2a": {
+        "At_Name": "c_sp2a",
+        "Expression": "C",
+        "Hybrid": "sp2",
+        "Arom": "a",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    3
+                ],
+                "elem": [
+                    "C"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [],
+        "sibling": []
+    },
+    "c_sp3": {
+        "At_Name": "c_sp3",
+        "Expression": "C",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    4
+                ],
+                "elem": [
+                    "C"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "c_",
+        "children": [],
+        "sibling": [
+            "c_s",
+            "c_sp",
+            "c_sp2"
+        ],
+        "equ_table": {
+            "at": "c_sp3",
+            "atc": "c_sp3",
+            "nonb": "c_sp3",
+            "binc": "c_sp3",
+            "bond": "c_sp3",
+            "a_c": "c_sp3",
+            "a_s": "c_sp3",
+            "d_c": "c_sp3",
+            "d_s": "c_sp3",
+            "i_c": "c_sp3",
+            "i_s": "c_sp3"
+        }
+    },
+    "h_": {
+        "At_Name": "h_",
+        "Expression": "H",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "H"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "h_s"
+        ],
+        "sibling": [
+            "c_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "h_",
+            "atc": "h_",
+            "nonb": "h_",
+            "binc": "h_",
+            "bond": "h_",
+            "a_c": "h_",
+            "a_s": "h_",
+            "d_c": "h_",
+            "d_s": "h_",
+            "i_c": "h_",
+            "i_s": "h_"
+        }
+    },
+    "h_s": {
+        "At_Name": "h_s",
+        "Expression": "H",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "H"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "h_",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "h_s",
+            "atc": "h_s",
+            "nonb": "h_s",
+            "binc": "h_s",
+            "bond": "h_s",
+            "a_c": "h_s",
+            "a_s": "h_s",
+            "d_c": "h_s",
+            "d_s": "h_s",
+            "i_c": "h_s",
+            "i_s": "h_s"
+        }
+    },
+    "h_sp": {
+        "At_Name": "h_sp",
+        "Expression": "H[-*]",
+        "Hybrid": "sp",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "H"
+                ]
+            },
+            "1": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "O",
+                    "N"
+                ]
+            }
+        },
+        "At_Connect": [
+            [
+                0,
+                1,
+                "1"
+            ]
+        ],
+        "Extend_depth": 2,
+        "parent": "root",
+        "children": [],
+        "sibling": []
+    },
+    "o_": {
+        "At_Name": "o_",
+        "Expression": "O",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "O"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "o_sp2",
+            "o_sp3"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "o_",
+            "atc": "o_",
+            "nonb": "o_",
+            "binc": "o_",
+            "bond": "o_",
+            "a_c": "o_",
+            "a_s": "o_",
+            "d_c": "o_",
+            "d_s": "o_",
+            "i_c": "o_",
+            "i_s": "o_"
+        }
+    },
+    "o_sp2": {
+        "At_Name": "o_sp2",
+        "Expression": "O",
+        "Hybrid": "sp2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "O"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "o_",
+        "children": [],
+        "sibling": [
+            "o_sp3"
+        ],
+        "equ_table": {
+            "at": "o_sp2",
+            "atc": "o_sp2",
+            "nonb": "o_sp2",
+            "binc": "o_sp2",
+            "bond": "o_sp2",
+            "a_c": "o_sp2",
+            "a_s": "o_sp2",
+            "d_c": "o_sp2",
+            "d_s": "o_sp2",
+            "i_c": "o_sp2",
+            "i_s": "o_sp2"
+        }
+    },
+    "o_sp3": {
+        "At_Name": "o_sp3",
+        "Expression": "O",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    2
+                ],
+                "elem": [
+                    "O"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "o_",
+        "children": [],
+        "sibling": [
+            "o_sp2"
+        ],
+        "equ_table": {
+            "at": "o_sp3",
+            "atc": "o_sp3",
+            "nonb": "o_sp3",
+            "binc": "o_sp3",
+            "bond": "o_sp3",
+            "a_c": "o_sp3",
+            "a_s": "o_sp3",
+            "d_c": "o_sp3",
+            "d_s": "o_sp3",
+            "i_c": "o_sp3",
+            "i_s": "o_sp3"
+        }
+    },
+    "n_": {
+        "At_Name": "n_",
+        "Expression": "N",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "N"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "n_sp",
+            "n_sp2",
+            "n_sp3",
+            "n_sp3+"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "n_",
+            "atc": "n_",
+            "nonb": "n_",
+            "binc": "n_",
+            "bond": "n_",
+            "a_c": "n_",
+            "a_s": "n_",
+            "d_c": "n_",
+            "d_s": "n_",
+            "i_c": "n_",
+            "i_s": "n_"
+        }
+    },
+    "n_sp3+": {
+        "At_Name": "n_sp3+",
+        "Expression": "N",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "+",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    4
+                ],
+                "elem": [
+                    "N"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "n_",
+        "children": [],
+        "sibling": [
+            "n_sp",
+            "n_sp2",
+            "n_sp3"
+        ],
+        "equ_table": {
+            "at": "n_sp3+",
+            "atc": "n_sp3+",
+            "nonb": "n_sp3+",
+            "binc": "n_sp3+",
+            "bond": "n_sp3+",
+            "a_c": "n_sp3+",
+            "a_s": "n_sp3+",
+            "d_c": "n_sp3+",
+            "d_s": "n_sp3+",
+            "i_c": "n_sp3+",
+            "i_s": "n_sp3+"
+        }
+    },
+    "n_sp3": {
+        "At_Name": "n_sp3",
+        "Expression": "N",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    3
+                ],
+                "elem": [
+                    "N"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "n_",
+        "children": [],
+        "sibling": [
+            "n_sp",
+            "n_sp2",
+            "n_sp3+"
+        ],
+        "equ_table": {
+            "at": "n_sp3",
+            "atc": "n_sp3",
+            "nonb": "n_sp3",
+            "binc": "n_sp3",
+            "bond": "n_sp3",
+            "a_c": "n_sp3",
+            "a_s": "n_sp3",
+            "d_c": "n_sp3",
+            "d_s": "n_sp3",
+            "i_c": "n_sp3",
+            "i_s": "n_sp3"
+        }
+    },
+    "n_sp2": {
+        "At_Name": "n_sp2",
+        "Expression": "N",
+        "Hybrid": "sp2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    2
+                ],
+                "elem": [
+                    "N"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "n_",
+        "children": [],
+        "sibling": [
+            "n_sp",
+            "n_sp3",
+            "n_sp3+"
+        ],
+        "equ_table": {
+            "at": "n_sp2",
+            "atc": "n_sp2",
+            "nonb": "n_sp2",
+            "binc": "n_sp2",
+            "bond": "n_sp2",
+            "a_c": "n_sp2",
+            "a_s": "n_sp2",
+            "d_c": "n_sp2",
+            "d_s": "n_sp2",
+            "i_c": "n_sp2",
+            "i_s": "n_sp2"
+        }
+    },
+    "n_sp": {
+        "At_Name": "n_sp",
+        "Expression": "N",
+        "Hybrid": "sp",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "N"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "n_",
+        "children": [],
+        "sibling": [
+            "n_sp2",
+            "n_sp3",
+            "n_sp3+"
+        ],
+        "equ_table": {
+            "at": "n_sp",
+            "atc": "n_sp",
+            "nonb": "n_sp",
+            "binc": "n_sp",
+            "bond": "n_sp",
+            "a_c": "n_sp",
+            "a_s": "n_sp",
+            "d_c": "n_sp",
+            "d_s": "n_sp",
+            "i_c": "n_sp",
+            "i_s": "n_sp"
+        }
+    },
+    "n_spd2": {
+        "At_Name": "n_spd2",
+        "Expression": "N[=*][=*]",
+        "Hybrid": "spd2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    3
+                ],
+                "elem": [
+                    "N"
+                ]
+            },
+            "1": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "O",
+                    "N",
+                    "S",
+                    "C"
+                ]
+            },
+            "2": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "O",
+                    "N",
+                    "S",
+                    "C"
+                ]
+            }
+        },
+        "At_Connect": [
+            [
+                0,
+                1,
+                "2"
+            ],
+            [
+                0,
+                2,
+                "2"
+            ]
+        ],
+        "Extend_depth": 2,
+        "parent": "root",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "n_spd2",
+            "atc": "n_spd2",
+            "nonb": "n_spd2",
+            "binc": "n_spd2",
+            "bond": "n_spd2",
+            "a_c": "n_spd2",
+            "a_s": "n_spd2",
+            "d_c": "n_spd2",
+            "d_s": "n_spd2",
+            "i_c": "n_spd2",
+            "i_s": "n_spd2"
+        }
+    },
+    "s_": {
+        "At_Name": "s_",
+        "Expression": "S",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "S"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "s_sp2",
+            "s_sp3",
+            "s_spd",
+            "s_spd2"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "s_",
+            "atc": "s_",
+            "nonb": "s_",
+            "binc": "s_",
+            "bond": "s_",
+            "a_c": "s_",
+            "a_s": "s_",
+            "d_c": "s_",
+            "d_s": "s_",
+            "i_c": "s_",
+            "i_s": "s_"
+        }
+    },
+    "s_sp2": {
+        "At_Name": "s_sp2",
+        "Expression": "S",
+        "Hybrid": "sp2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "S"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "s_",
+        "children": [],
+        "sibling": [
+            "s_sp3",
+            "s_spd",
+            "s_spd2"
+        ],
+        "equ_table": {
+            "at": "s_sp2",
+            "atc": "s_sp2",
+            "nonb": "s_sp2",
+            "binc": "s_sp2",
+            "bond": "s_sp2",
+            "a_c": "s_sp2",
+            "a_s": "s_sp2",
+            "d_c": "s_sp2",
+            "d_s": "s_sp2",
+            "i_c": "s_sp2",
+            "i_s": "s_sp2"
+        }
+    },
+    "s_sp3": {
+        "At_Name": "s_sp3",
+        "Expression": "S",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    2
+                ],
+                "elem": [
+                    "S"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "s_",
+        "children": [],
+        "sibling": [
+            "s_sp2",
+            "s_spd",
+            "s_spd2"
+        ],
+        "equ_table": {
+            "at": "s_sp3",
+            "atc": "s_sp3",
+            "nonb": "s_sp3",
+            "binc": "s_sp3",
+            "bond": "s_sp3",
+            "a_c": "s_sp3",
+            "a_s": "s_sp3",
+            "d_c": "s_sp3",
+            "d_s": "s_sp3",
+            "i_c": "s_sp3",
+            "i_s": "s_sp3"
+        }
+    },
+    "s_spd": {
+        "At_Name": "s_spd",
+        "Expression": "S",
+        "Hybrid": "spd",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    3
+                ],
+                "elem": [
+                    "S"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "s_",
+        "children": [],
+        "sibling": [
+            "s_sp2",
+            "s_sp3",
+            "s_spd2"
+        ],
+        "equ_table": {
+            "at": "s_spd",
+            "atc": "s_spd",
+            "nonb": "s_spd",
+            "binc": "s_spd",
+            "bond": "s_spd",
+            "a_c": "s_spd",
+            "a_s": "s_spd",
+            "d_c": "s_spd",
+            "d_s": "s_spd",
+            "i_c": "s_spd",
+            "i_s": "s_spd"
+        }
+    },
+    "s_spd2": {
+        "At_Name": "s_spd2",
+        "Expression": "S",
+        "Hybrid": "spd2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    4
+                ],
+                "elem": [
+                    "S"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "s_",
+        "children": [],
+        "sibling": [
+            "s_sp2",
+            "s_sp3",
+            "s_spd"
+        ],
+        "equ_table": {
+            "at": "s_spd2",
+            "atc": "s_spd2",
+            "nonb": "s_spd2",
+            "binc": "s_spd2",
+            "bond": "s_spd2",
+            "a_c": "s_spd2",
+            "a_s": "s_spd2",
+            "d_c": "s_spd2",
+            "d_s": "s_spd2",
+            "i_c": "s_spd2",
+            "i_s": "s_spd2"
+        }
+    },
+    "p_": {
+        "At_Name": "p_",
+        "Expression": "P",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "P"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "p_s",
+            "p_sp3",
+            "p_sp3d2"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "p_",
+            "atc": "p_",
+            "nonb": "p_",
+            "binc": "p_",
+            "bond": "p_",
+            "a_c": "p_",
+            "a_s": "p_",
+            "d_c": "p_",
+            "d_s": "p_",
+            "i_c": "p_",
+            "i_s": "p_"
+        }
+    },
+    "p_sp3d2": {
+        "At_Name": "p_sp3d2",
+        "Expression": "P",
+        "Hybrid": "sp3d2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    4
+                ],
+                "elem": [
+                    "P"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "p_",
+        "children": [],
+        "sibling": [
+            "p_s",
+            "p_sp3"
+        ],
+        "equ_table": {
+            "at": "p_sp3d2",
+            "atc": "p_sp3d2",
+            "nonb": "p_sp3d2",
+            "binc": "p_sp3d2",
+            "bond": "p_sp3d2",
+            "a_c": "p_sp3d2",
+            "a_s": "p_sp3d2",
+            "d_c": "p_sp3d2",
+            "d_s": "p_sp3d2",
+            "i_c": "p_sp3d2",
+            "i_s": "p_sp3d2"
+        }
+    },
+    "p_sp3": {
+        "At_Name": "p_sp3",
+        "Expression": "P",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    3
+                ],
+                "elem": [
+                    "P"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "p_",
+        "children": [],
+        "sibling": [
+            "p_s",
+            "p_sp3d2"
+        ],
+        "equ_table": {
+            "at": "p_sp3",
+            "atc": "p_sp3",
+            "nonb": "p_sp3",
+            "binc": "p_sp3",
+            "bond": "p_sp3",
+            "a_c": "p_sp3",
+            "a_s": "p_sp3",
+            "d_c": "p_sp3",
+            "d_s": "p_sp3",
+            "i_c": "p_sp3",
+            "i_s": "p_sp3"
+        }
+    },
+    "p_s": {
+        "At_Name": "p_s",
+        "Expression": "P",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    2
+                ],
+                "elem": [
+                    "P"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "p_",
+        "children": [],
+        "sibling": [
+            "p_sp3",
+            "p_sp3d2"
+        ],
+        "equ_table": {
+            "at": "p_s",
+            "atc": "p_s",
+            "nonb": "p_s",
+            "binc": "p_s",
+            "bond": "p_s",
+            "a_c": "p_s",
+            "a_s": "p_s",
+            "d_c": "p_s",
+            "d_s": "p_s",
+            "i_c": "p_s",
+            "i_s": "p_s"
+        }
+    },
+    "f_": {
+        "At_Name": "f_",
+        "Expression": "F",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "F"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "f_s"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "f_",
+            "atc": "f_",
+            "nonb": "f_",
+            "binc": "f_",
+            "bond": "f_",
+            "a_c": "f_",
+            "a_s": "f_",
+            "d_c": "f_",
+            "d_s": "f_",
+            "i_c": "f_",
+            "i_s": "f_"
+        }
+    },
+    "f_s": {
+        "At_Name": "f_s",
+        "Expression": "F",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "F"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "f_",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "f_s",
+            "atc": "f_s",
+            "nonb": "f_s",
+            "binc": "f_s",
+            "bond": "f_s",
+            "a_c": "f_s",
+            "a_s": "f_s",
+            "d_c": "f_s",
+            "d_s": "f_s",
+            "i_c": "f_s",
+            "i_s": "f_s"
+        }
+    },
+    "cl_": {
+        "At_Name": "cl_",
+        "Expression": "Cl",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "Cl"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "cl_s"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "br_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "cl_",
+            "atc": "cl_",
+            "nonb": "cl_",
+            "binc": "cl_",
+            "bond": "cl_",
+            "a_c": "cl_",
+            "a_s": "cl_",
+            "d_c": "cl_",
+            "d_s": "cl_",
+            "i_c": "cl_",
+            "i_s": "cl_"
+        }
+    },
+    "cl_s": {
+        "At_Name": "cl_s",
+        "Expression": "Cl",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "Cl"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "cl_",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "cl_s",
+            "atc": "cl_s",
+            "nonb": "cl_s",
+            "binc": "cl_s",
+            "bond": "cl_s",
+            "a_c": "cl_s",
+            "a_s": "cl_s",
+            "d_c": "cl_s",
+            "d_s": "cl_s",
+            "i_c": "cl_s",
+            "i_s": "cl_s"
+        }
+    },
+    "br_": {
+        "At_Name": "br_",
+        "Expression": "Br",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "Br"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "br_s"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "i_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "br_",
+            "atc": "br_",
+            "nonb": "br_",
+            "binc": "br_",
+            "bond": "br_",
+            "a_c": "br_",
+            "a_s": "br_",
+            "d_c": "br_",
+            "d_s": "br_",
+            "i_c": "br_",
+            "i_s": "br_"
+        }
+    },
+    "br_s": {
+        "At_Name": "br_s",
+        "Expression": "Br",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "Br"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "br_",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "br_s",
+            "atc": "br_s",
+            "nonb": "br_s",
+            "binc": "br_s",
+            "bond": "br_s",
+            "a_c": "br_s",
+            "a_s": "br_s",
+            "d_c": "br_s",
+            "d_s": "br_s",
+            "i_c": "br_s",
+            "i_s": "br_s"
+        }
+    },
+    "i_": {
+        "At_Name": "i_",
+        "Expression": "I",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "I"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "i_s"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "b_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "i_",
+            "atc": "i_",
+            "nonb": "i_",
+            "binc": "i_",
+            "bond": "i_",
+            "a_c": "i_",
+            "a_s": "i_",
+            "d_c": "i_",
+            "d_s": "i_",
+            "i_c": "i_",
+            "i_s": "i_"
+        }
+    },
+    "i_s": {
+        "At_Name": "i_s",
+        "Expression": "I",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    1
+                ],
+                "elem": [
+                    "I"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "i_",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "i_s",
+            "atc": "i_s",
+            "nonb": "i_s",
+            "binc": "i_s",
+            "bond": "i_s",
+            "a_c": "i_s",
+            "a_s": "i_s",
+            "d_c": "i_s",
+            "d_s": "i_s",
+            "i_c": "i_s",
+            "i_s": "i_s"
+        }
+    },
+    "b_": {
+        "At_Name": "b_",
+        "Expression": "B",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "B"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "b_sp2",
+            "b_sp3"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "si_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "b_",
+            "atc": "b_",
+            "nonb": "b_",
+            "binc": "b_",
+            "bond": "b_",
+            "a_c": "b_",
+            "a_s": "b_",
+            "d_c": "b_",
+            "d_s": "b_",
+            "i_c": "b_",
+            "i_s": "b_"
+        }
+    },
+    "b_sp2": {
+        "At_Name": "b_sp2",
+        "Expression": "B",
+        "Hybrid": "sp2",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    3
+                ],
+                "elem": [
+                    "B"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "b_",
+        "children": [],
+        "sibling": [
+            "b_sp3"
+        ],
+        "equ_table": {
+            "at": "b_sp2",
+            "atc": "b_sp2",
+            "nonb": "b_sp2",
+            "binc": "b_sp2",
+            "bond": "b_sp2",
+            "a_c": "b_sp2",
+            "a_s": "b_sp2",
+            "d_c": "b_sp2",
+            "d_s": "b_sp2",
+            "i_c": "b_sp2",
+            "i_s": "b_sp2"
+        }
+    },
+    "b_sp3": {
+        "At_Name": "b_sp3",
+        "Expression": "B",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    4
+                ],
+                "elem": [
+                    "B"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "b_",
+        "children": [],
+        "sibling": [
+            "b_sp2"
+        ],
+        "equ_table": {
+            "at": "b_sp3",
+            "atc": "b_sp3",
+            "nonb": "b_sp3",
+            "binc": "b_sp3",
+            "bond": "b_sp3",
+            "a_c": "b_sp3",
+            "a_s": "b_sp3",
+            "d_c": "b_sp3",
+            "d_s": "b_sp3",
+            "i_c": "b_sp3",
+            "i_s": "b_sp3"
+        }
+    },
+    "si_": {
+        "At_Name": "si_",
+        "Expression": "Si",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "Si"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [
+            "si_sp3"
+        ],
+        "sibling": [
+            "c_",
+            "h_",
+            "o_",
+            "n_",
+            "s_",
+            "p_",
+            "f_",
+            "cl_",
+            "br_",
+            "i_",
+            "b_",
+            "bq_"
+        ],
+        "equ_table": {
+            "at": "si_",
+            "atc": "si_",
+            "nonb": "si_",
+            "binc": "si_",
+            "bond": "si_",
+            "a_c": "si_",
+            "a_s": "si_",
+            "d_c": "si_",
+            "d_s": "si_",
+            "i_c": "si_",
+            "i_s": "si_"
+        }
+    },
+    "si_sp3": {
+        "At_Name": "si_sp3",
+        "Expression": "Si",
+        "Hybrid": "sp3",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    4
+                ],
+                "elem": [
+                    "Si"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "si_",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "si_sp3",
+            "atc": "si_sp3",
+            "nonb": "si_sp3",
+            "binc": "si_sp3",
+            "bond": "si_sp3",
+            "a_c": "si_sp3",
+            "a_s": "si_sp3",
+            "d_c": "si_sp3",
+            "d_s": "si_sp3",
+            "i_c": "si_sp3",
+            "i_s": "si_sp3"
+        }
+    },
+    "as_": {
+        "At_Name": "as_",
+        "Expression": "As",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "As"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "as_",
+            "atc": "as_",
+            "nonb": "as_",
+            "binc": "as_",
+            "bond": "as_",
+            "a_c": "as_",
+            "a_s": "as_",
+            "d_c": "as_",
+            "d_s": "as_",
+            "i_c": "as_",
+            "i_s": "as_"
+        }
+    },
+    "se_": {
+        "At_Name": "se_",
+        "Expression": "Se",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "Se"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "se_",
+            "atc": "se_",
+            "nonb": "se_",
+            "binc": "se_",
+            "bond": "se_",
+            "a_c": "se_",
+            "a_s": "se_",
+            "d_c": "se_",
+            "d_s": "se_",
+            "i_c": "se_",
+            "i_s": "se_"
+        }
+    },
+    "te_": {
+        "At_Name": "te_",
+        "Expression": "Te",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "Te"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "te_",
+            "atc": "te_",
+            "nonb": "te_",
+            "binc": "te_",
+            "bond": "te_",
+            "a_c": "te_",
+            "a_s": "te_",
+            "d_c": "te_",
+            "d_s": "te_",
+            "i_c": "te_",
+            "i_s": "te_"
+        }
+    },
+    "na_": {
+        "At_Name": "na_",
+        "Expression": "Na",
+        "Hybrid": "s",
+        "Arom": "",
+        "Charge": "",
+        "At_Attrs": {
+            "0": {
+                "coor": [
+                    "?"
+                ],
+                "elem": [
+                    "Na"
+                ]
+            }
+        },
+        "At_Connect": [],
+        "Extend_depth": 0,
+        "parent": "root",
+        "children": [],
+        "sibling": [],
+        "equ_table": {
+            "at": "na_",
+            "atc": "na_",
+            "nonb": "na_",
+            "binc": "na_",
+            "bond": "na_",
+            "a_c": "na_",
+            "a_s": "na_",
+            "d_c": "na_",
+            "d_s": "na_",
+            "i_c": "na_",
+            "i_s": "na_"
+        }
+    }
+}

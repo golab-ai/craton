@@ -1,0 +1,185 @@
+molecule_name
+LYCAIKOWRPUZTN-UHFFFAOYSA-N
+
+Atoms
+ID element mass formal_charge connectivity@list bond_type@list coordinates@list atom_name local plate score bond_type_aromatic@list connectivity_type@list has_ring@list has_ring_size@list has_ring_property@list atom_fg atom_fg_id atom_fg_tag atom_cluster atom_cluster_id atom_cluster_tag point_charge esp_charge mulliken_charge ff_charge atom_type_name nonb_atom_type binc_atom_type atc_atom_type atom_type_ID binc_style@list binc_parameter@list binc_score@list binc_str@list binc_count@list pstyle parameter@list fix_parameter@list vdw_score ptag pcount
+0 O 15.999 0 :1:4: :1:1: :-1.7114:0.2684:-0.3867: None LT no None :1:1: :S:S: : : : None None None None None None -0.6471 None None -0.6471 o_2h o_2h o_2h o_2 None :binc:binc: :-0.2421:-0.405: :nan:nan: :Fit:V: :nan:nan: LJ12_6 :2.95:0.1673: : nan fit nan 
+1 C 12.011 0 :0:2:5:6: :1:1:1:1: :-0.4846:-0.3867:-0.3143: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None 0.2867 None None 0.2867 c_4o c_4o c_4o c_4 None :binc:binc:binc:binc: :0.2421:0.0:0.0223:0.0223: :nan:nan:nan:nan: :Fit:Fit:Fit:Fit: :nan:nan:nan:nan: LJ12_6 :3.5:0.0717: : nan fit nan 
+2 C 12.011 0 :1:3:7:8: :1:1:1:1: :0.6026:0.5814:0.0973: None LM no None :1:1:1:1: :S:S:S:S: : : : None None None None None None 0.2867 None None 0.2867 c_4o c_4o c_4o c_4 None :binc:binc:binc:binc: :0.0:0.2421:0.0223:0.0223: :nan:nan:nan:nan: :Fit:Fit:Fit:Fit: :nan:nan:nan:nan: LJ12_6 :3.5:0.0717: : nan fit nan 
+3 O 15.999 0 :2:9: :1:1: :1.8426:-0.0492:0.1775: None LT no None :1:1: :S:S: : : : None None None None None None -0.6471 None None -0.6471 o_2h o_2h o_2h o_2 None :binc:binc: :-0.2421:-0.405: :nan:nan: :Fit:V: :nan:nan: LJ12_6 :2.95:0.1673: : nan fit nan 
+4 H 1.008 0 :0: :1: :-2.186:0.2496:0.4998: None EN no None :1: :S: : : : None None None None None None 0.405 None None 0.405 h_1o h_1o h_1o h_1 None :binc: :0.405: :nan: :V: :nan: LJ12_6 :0.49:0.03: : nan fit nan 
+5 H 1.008 0 :1: :1: :-0.2893:-0.8756:-1.28: None EN no None :1: :S: : : : None None None None None None -0.0223 None None -0.0223 h_1 h_1 h_1 h_1 None :binc: :-0.0223: :nan: :Fit: :nan: LJ12_6 :2.46:0.03: : nan fit nan 
+6 H 1.008 0 :1: :1: :-0.5626:-1.156:0.5046: None EN no None :1: :S: : : : None None None None None None -0.0223 None None -0.0223 h_1 h_1 h_1 h_1 None :binc: :-0.0223: :nan: :Fit: :nan: LJ12_6 :2.46:0.03: : nan fit nan 
+7 H 1.008 0 :2: :1: :0.32:0.9553:1.1122: None EN no None :1: :S: : : : None None None None None None -0.0223 None None -0.0223 h_1 h_1 h_1 h_1 None :binc: :-0.0223: :nan: :Fit: :nan: LJ12_6 :2.46:0.03: : nan fit nan 
+8 H 1.008 0 :2: :1: :0.7012:1.4279:-0.5852: None EN no None :1: :S: : : : None None None None None None -0.0223 None None -0.0223 h_1 h_1 h_1 h_1 None :binc: :-0.0223: :nan: :Fit: :nan: LJ12_6 :2.46:0.03: : nan fit nan 
+9 H 1.008 0 :3: :1: :1.7675:-1.0152:0.1749: None EN no None :1: :S: : : : None None None None None None 0.405 None None 0.405 h_1o h_1o h_1o h_1 None :binc: :0.405: :nan: :V: :nan: LJ12_6 :0.49:0.03: : nan fit nan 
+
+Bonds
+a1 a2 value style a1_atom_type a2_atom_type a1_atom_type_used a2_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 None bond o_2h c_4o o_2 c_4o c_4o$o_2 harmonic :1.413:291.8416: : nan nan Fit 
+0 4 None bond o_2h h_1o o_2 h_1o h_1o$o_2 harmonic :0.9668:591.6855: : nan nan Fit 
+1 2 None bond c_4o c_4o c_4o c_4o c_4o$c_4o harmonic :1.5323:244.146: : nan nan Fit 
+1 5 None bond c_4o h_1 c_4o h_1 c_4o$h_1 harmonic :1.1065:394.716: : nan nan Fit 
+1 6 None bond c_4o h_1 c_4o h_1 c_4o$h_1 harmonic :1.1065:394.716: : nan nan Fit 
+2 3 None bond c_4o o_2h c_4o o_2 c_4o$o_2 harmonic :1.413:291.8416: : nan nan Fit 
+2 7 None bond c_4o h_1 c_4o h_1 c_4o$h_1 harmonic :1.1065:394.716: : nan nan Fit 
+2 8 None bond c_4o h_1 c_4o h_1 c_4o$h_1 harmonic :1.1065:394.716: : nan nan Fit 
+3 9 None bond o_2h h_1o o_2 h_1o h_1o$o_2 harmonic :0.9668:591.6855: : nan nan Fit 
+
+Angles
+a1 a2 a3 value style value_a a1_atom_type a2_atom_type a3_atom_type a1_atom_type_used a2_atom_type_used a3_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 2 None angle None o_2h c_4o c_4o o_2 c_4o c_4 c_4$c_4o$o_2 harmonic :109.9829:80.4099: : nan nan Fit 
+0 1 5 None angle None o_2h c_4o h_1 o_2 c_4o h_1 h_1$c_4o$o_2 harmonic :109.982:59.5237: : nan nan Fit 
+0 1 6 None angle None o_2h c_4o h_1 o_2 c_4o h_1 h_1$c_4o$o_2 harmonic :109.982:59.5237: : nan nan Fit 
+1 0 4 None angle None c_4o o_2h h_1o c_4 o_2 h_1o c_4$o_2$h_1o harmonic :107.7686:94.0757: : nan nan Fit 
+1 2 3 None angle None c_4o c_4o o_2h c_4 c_4o o_2 c_4$c_4o$o_2 harmonic :109.9829:80.4099: : nan nan Fit 
+1 2 7 None angle None c_4o c_4o h_1 c_4 c_4o h_1 c_4$c_4o$h_1 harmonic :108.892:49.2114: : nan nan Fit 
+1 2 8 None angle None c_4o c_4o h_1 c_4 c_4o h_1 c_4$c_4o$h_1 harmonic :108.892:49.2114: : nan nan Fit 
+2 1 5 None angle None c_4o c_4o h_1 c_4 c_4o h_1 c_4$c_4o$h_1 harmonic :108.892:49.2114: : nan nan Fit 
+2 1 6 None angle None c_4o c_4o h_1 c_4 c_4o h_1 c_4$c_4o$h_1 harmonic :108.892:49.2114: : nan nan Fit 
+2 3 9 None angle None c_4o o_2h h_1o c_4 o_2 h_1o c_4$o_2$h_1o harmonic :107.7686:94.0757: : nan nan Fit 
+3 2 7 None angle None o_2h c_4o h_1 o_2 c_4o h_1 h_1$c_4o$o_2 harmonic :109.982:59.5237: : nan nan Fit 
+3 2 8 None angle None o_2h c_4o h_1 o_2 c_4o h_1 h_1$c_4o$o_2 harmonic :109.982:59.5237: : nan nan Fit 
+5 1 6 None angle None h_1 c_4o h_1 h_1 c_4o h_1 h_1$c_4o$h_1 harmonic :107.6159:36.8619: : nan nan Fit 
+7 2 8 None angle None h_1 c_4o h_1 h_1 c_4o h_1 h_1$c_4o$h_1 harmonic :107.6159:36.8619: : nan nan Fit 
+
+Dihedrals
+a1 a2 a3 a4 value value_a style a1_atom_type a2_atom_type a3_atom_type a4_atom_type a1_atom_type_used a2_atom_type_used a3_atom_type_used a4_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 1 2 3 None None dihedral o_2h c_4o c_4o o_2h o_2 c_4o c_4o o_2 o_2$c_4o$c_4o$o_2 amber :0.4322:0.0:-1.0911:180.0:2.7664:0.0:0.0:180.0: : nan nan Fit 
+0 1 2 7 None None dihedral o_2h c_4o c_4o h_1 o_2 c_4o c_4o h_1 h_1$c_4o$c_4o$o_2 amber :0.0:0.0:0.0:180.0:-1.0151:0.0:0.0:180.0: : nan nan Fit 
+0 1 2 8 None None dihedral o_2h c_4o c_4o h_1 o_2 c_4o c_4o h_1 h_1$c_4o$c_4o$o_2 amber :0.0:0.0:0.0:180.0:-1.0151:0.0:0.0:180.0: : nan nan Fit 
+1 2 3 9 None None dihedral c_4o c_4o o_2h h_1o c_4 c_4o o_2 h_1o c_4$c_4o$o_2$h_1o amber :-0.2137:0.0:-0.3304:180.0:0.1786:0.0:0.0:180.0: : nan nan Fit 
+4 0 1 2 None None dihedral h_1o o_2h c_4o c_4o h_1o o_2 c_4o c_4 c_4$c_4o$o_2$h_1o amber :-0.2137:0.0:-0.3304:180.0:0.1786:0.0:0.0:180.0: : nan nan Fit 
+5 1 0 4 None None dihedral h_1 c_4o o_2h h_1o h_1 c_4o o_2 h_1o h_1$c_4o$o_2$h_1o amber :0.0:0.0:0.0:180.0:0.3796:0.0:0.0:180.0: : nan nan Fit 
+5 1 2 3 None None dihedral h_1 c_4o c_4o o_2h h_1 c_4o c_4o o_2 h_1$c_4o$c_4o$o_2 amber :0.0:0.0:0.0:180.0:-1.0151:0.0:0.0:180.0: : nan nan Fit 
+6 1 0 4 None None dihedral h_1 c_4o o_2h h_1o h_1 c_4o o_2 h_1o h_1$c_4o$o_2$h_1o amber :0.0:0.0:0.0:180.0:0.3796:0.0:0.0:180.0: : nan nan Fit 
+6 1 2 3 None None dihedral h_1 c_4o c_4o o_2h h_1 c_4o c_4o o_2 h_1$c_4o$c_4o$o_2 amber :0.0:0.0:0.0:180.0:-1.0151:0.0:0.0:180.0: : nan nan Fit 
+7 2 1 5 None None dihedral h_1 c_4o c_4o h_1 h_1 c_4o c_4o h_1 h_1$c_4o$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.7119:0.0:0.0:180.0: : nan nan Fit 
+7 2 1 6 None None dihedral h_1 c_4o c_4o h_1 h_1 c_4o c_4o h_1 h_1$c_4o$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.7119:0.0:0.0:180.0: : nan nan Fit 
+8 2 1 5 None None dihedral h_1 c_4o c_4o h_1 h_1 c_4o c_4o h_1 h_1$c_4o$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.7119:0.0:0.0:180.0: : nan nan Fit 
+8 2 1 6 None None dihedral h_1 c_4o c_4o h_1 h_1 c_4o c_4o h_1 h_1$c_4o$c_4o$h_1 amber :0.0:0.0:0.0:180.0:0.7119:0.0:0.0:180.0: : nan nan Fit 
+9 3 2 7 None None dihedral h_1o o_2h c_4o h_1 h_1o o_2 c_4o h_1 h_1$c_4o$o_2$h_1o amber :0.0:0.0:0.0:180.0:0.3796:0.0:0.0:180.0: : nan nan Fit 
+9 3 2 8 None None dihedral h_1o o_2h c_4o h_1 h_1o o_2 c_4o h_1 h_1$c_4o$o_2$h_1o amber :0.0:0.0:0.0:180.0:0.3796:0.0:0.0:180.0: : nan nan Fit 
+
+Pair14
+a1 a2 value style a1_atom_type a2_atom_type a1_atom_type_used a2_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 3 None None o_2h o_2h o_2h o_2h o_2h$o_2h LJ12_6 :2.95:0.08365: : nan nan fit 
+0 7 None None o_2h h_1 o_2h h_1 h_1$o_2h LJ12_6 :2.705:0.03542245050811702: : nan nan fit 
+0 8 None None o_2h h_1 o_2h h_1 h_1$o_2h LJ12_6 :2.705:0.03542245050811702: : nan nan fit 
+1 9 None None c_4o h_1o c_4o h_1o c_4o$h_1o LJ12_6 :1.995:0.02318943725061046: : nan nan fit 
+2 4 None None c_4o h_1o c_4o h_1o c_4o$h_1o LJ12_6 :1.995:0.02318943725061046: : nan nan fit 
+3 5 None None o_2h h_1 o_2h h_1 h_1$o_2h LJ12_6 :2.705:0.03542245050811702: : nan nan fit 
+3 6 None None o_2h h_1 o_2h h_1 h_1$o_2h LJ12_6 :2.705:0.03542245050811702: : nan nan fit 
+4 5 None None h_1o h_1 h_1o h_1 h_1$h_1o LJ12_6 :1.475:0.015: : nan nan fit 
+4 6 None None h_1o h_1 h_1o h_1 h_1$h_1o LJ12_6 :1.475:0.015: : nan nan fit 
+5 7 None None h_1 h_1 h_1 h_1 h_1$h_1 LJ12_6 :2.46:0.015: : nan nan fit 
+5 8 None None h_1 h_1 h_1 h_1 h_1$h_1 LJ12_6 :2.46:0.015: : nan nan fit 
+6 7 None None h_1 h_1 h_1 h_1 h_1$h_1 LJ12_6 :2.46:0.015: : nan nan fit 
+6 8 None None h_1 h_1 h_1 h_1 h_1$h_1 LJ12_6 :2.46:0.015: : nan nan fit 
+7 9 None None h_1 h_1o h_1 h_1o h_1$h_1o LJ12_6 :1.475:0.015: : nan nan fit 
+8 9 None None h_1 h_1o h_1 h_1o h_1$h_1o LJ12_6 :1.475:0.015: : nan nan fit 
+
+Pair1n
+a1 a2 value style a1_atom_type a2_atom_type a1_atom_type_used a2_atom_type_used atom_type_used_name pstyle parameter@list fix_parameter@list pscore pcount ptag
+0 9 None None o_2h h_1o o_2h h_1o h_1o$o_2h LJ12_6 :1.7200000000000002:0.07084490101623404: : nan nan fit 
+3 4 None None o_2h h_1o o_2h h_1o h_1o$o_2h LJ12_6 :1.7200000000000002:0.07084490101623404: : nan nan fit 
+4 7 None None h_1o h_1 h_1o h_1 h_1$h_1o LJ12_6 :1.475:0.03: : nan nan fit 
+4 8 None None h_1o h_1 h_1o h_1 h_1$h_1o LJ12_6 :1.475:0.03: : nan nan fit 
+4 9 None None h_1o h_1o h_1o h_1o h_1o$h_1o LJ12_6 :0.49:0.03: : nan nan fit 
+5 9 None None h_1 h_1o h_1 h_1o h_1$h_1o LJ12_6 :1.475:0.03: : nan nan fit 
+6 9 None None h_1 h_1o h_1 h_1o h_1$h_1o LJ12_6 :1.475:0.03: : nan nan fit 
+
+smiles
+OCCO
+
+inchi_key
+LYCAIKOWRPUZTN-UHFFFAOYSA-N
+
+inchi
+InChI=1S/C2H6O2/c3-1-2-4/h3-4H,1-2H2
+
+molecule_name
+LYCAIKOWRPUZTN-UHFFFAOYSA-N
+
+iupac_name
+
+nick_name
+
+drug_name
+
+internal_name
+
+molecule_mass
+62.06800000000002
+
+formula
+C2O2H6
+
+heavy_atoms
+4
+
+net_charge
+0
+
+multiple
+
+function_group@list
+
+function_group_label
+
+torsions@list_2d
+
+torsion_number
+
+rings@dict
+::
+
+ring_number
+0
+
+ring_size@list
+:
+
+ring_property@list
+:
+
+ring_blocks@list_2d
+::
+
+energy
+
+force@list
+
+hessian@list
+
+frequency@list
+
+elem_frag
+::
+
+csf_frag
+::
+
+rsf_frag
+::
+
+sssr_frag
+::
+
+scaffold_frag
+::
+
+tf_frag
+::
+
+density
+1.11
+
+f_cut_atoms@list
+:2:3:
+
+r_cut_atoms@list
+:0:4:
+
+steps@list
+:topol:structure:atom type:
