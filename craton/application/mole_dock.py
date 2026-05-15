@@ -34,7 +34,10 @@ class MolDock:
             self.box_size = None
         else:
             self.center = center
-            self.box_size = box_size
+            if box_size is None:
+                self.box_size = [30.0, 30.0, 30.0]
+            else:
+                self.box_size = box_size
 
         self.charge_method = charge_method
         self.dock_atf = self.config["ForceFieldSetting"]["DOCK_ATOM_TYPING_FILE"]
