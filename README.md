@@ -76,13 +76,16 @@ craton ff fitting <fit_type> <input_files> -o <output_directory> ...
 ## Install
 
 ```bash
-git clone https://github.com/Gewu-Intelligence/craton.git
+git clone https://github.com/golab-ai/craton.git
 cd craton
 conda env create -f env.yaml
-conda activate craton
-pip install -e .
+conda activate craton && pip install -e .
 git config --local core.autocrlf false
 git config --local core.eol lf
 ```
 
-- If the default Conda channel is unreachable, copy `.condarc` to your home directory to use the Tsinghua mirror.
+- If the default Conda channel is unreachable
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+```
