@@ -96,7 +96,7 @@ def check_md_setting(config):
     #logger.info(f"the run simulation time is {simulation_time} ns")
     if simulation_time:
         timestep = config["MDSetting"]["md"]["timestep"]
-        config["MDSetting"]["md"]["nsteps"][-1] = int(simulation_time * 1e3 / timestep[-1])
+        config["MDSetting"]["md"]["nsteps"][-1] = int( float(simulation_time) * 1e3 / timestep[-1])
     if config["MDSetting"]["debug"]:
         config["MDSetting"]["md"]["nsteps"] = [1000 for _ in config["MDSetting"]["md"]["jobs"]] 
     return config
