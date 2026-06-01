@@ -146,7 +146,7 @@ class GmxSlurm:
                 else:
                      text += f"srun --mpi=pmi2 -n {ntasks} -c {ntomp} gmx_mpi mdrun -pin on -quiet -deffnm {job} -ntomp {ntomp}"
             else:  
-                text += f"mpirun -np {ntomp*ntasks} gmx_mpi mdrun -quiet -deffnm {job} -ntomp 1"
+                text += f"mpirun -np {ntasks} gmx_mpi mdrun -quiet -deffnm {job} -ntomp {ntomp}"
                 if ngpu == 0:
                     text += f" -nb cpu -pme cpu -pmefft cpu -bonded cpu -update cpu"
                 elif ngpu == 1:
@@ -156,7 +156,7 @@ class GmxSlurm:
             if ntasks > 1:
                 text += f" -multidir {ntasks_string}"
                 if ii >= 2 and fep_hrex:
-                    text += f" -replex 500 -fephrex -notunepme "
+                    text += f" -replex 500 -fephrex -dlb no -notunepme "
             text += "\n"
         text += "\n\n"
         with open(f"{sm.output_dir}/job.sh","w") as f:
