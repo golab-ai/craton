@@ -62,7 +62,7 @@ class MolData:
                 datas["bond_type"][atom2].append(bond_type)
         
         # regex for the pattern "> <>"
-        regexp = re.compile(">\s+<(.*)>")
+        regexp = re.compile(r">\s+<(.*)>")
         for i in range(len(input_script)):
             result = regexp.match(input_script[i])
             if result:
@@ -108,7 +108,7 @@ class MolData:
             for ii in range(3,len(ss),2):
                 datas["formal_charge"][int(ss[ii]) - 1] = int(ss[ii + 1])
 
-        regexp = re.compile(">\s+<(.*)>")
+        regexp = re.compile(r">\s+<(.*)>")
         for i in range(len(input_script)):
             result = regexp.match(input_script[i])
             if result:
