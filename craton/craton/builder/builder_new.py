@@ -528,7 +528,6 @@ class Builder:
                 rr[1] = self.get_number_of_layer(box,rr[2],direction,others=others)
 
     def _chunk_run(self,ii,jj,chunk):
-        #
         if chunk["chunk_type"] == "merge":
             chunk["box_size"] = self.get_box_size_molecule_position([rr[0] for rr in chunk["component"]])
             chunk["xyz_file"] = f"chunk-{ii}-{jj}.xyz"
@@ -776,6 +775,11 @@ class Builder:
             if slab["chunk"] is not None:
                 chunk_centers = self._get_chunk_center(slab["box_size"],slab["chunk_accum"])
                 for jj ,chunk in enumerate(slab["chunk"]):
+                    mole_coord = [[atom.coor for atom in  mol[0].Atoms] for mol in chunk["molecules"]]
+                    mole_coord = [item for sublist in mole_coord for item in sublist]
+                    mole_box_center = (np.max(mole_coord, axis=0) + np.min(mole_coord, axis=0))/2
+                    mole_center = np.mean(mole_coord, axis=0)
+                    chunk_centers[jj] = chunk_centers[jj] + mole_center - mole_box_center
                     chunks.append([None,1,None,None,chunk["xyz_file"],chunk_centers[jj]])
 
             for attr in self.__attrs[1:6]:

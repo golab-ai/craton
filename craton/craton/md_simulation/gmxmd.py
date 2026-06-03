@@ -73,12 +73,9 @@ class GmxSlurm:
         else:
             ntasks = len(tasks)
 
-        ncpu = sm.env_setting["ncpu"]
+        ncpu = int(sm.env_setting["ncpu"])
         ngpu = sm.env_setting["ngpu"]
-        cpu_per_task = ncpu // ntasks
-        if ntasks == 1:
-            if cpu_per_task > 64:
-                cpu_per_task = 64
+        cpu_per_task = max(1, ncpu // ntasks)
 
         text = "#!/bin/bash\n"
         text += f"#SBATCH --job-name={sm.name}\n"
@@ -146,7 +143,10 @@ class GmxSlurm:
                 else:
                      text += f"srun --mpi=pmi2 -n {ntasks} -c {ntomp} gmx_mpi mdrun -pin on -quiet -deffnm {job} -ntomp {ntomp}"
             else:  
-                text += f"mpirun -np {ntasks} gmx_mpi mdrun -quiet -deffnm {job} -ntomp {ntomp}"
+                if ntasks == 1:
+                    text += f"mpirun -np {ntomp} gmx_mpi mdrun -quiet -deffnm {job} -ntomp 1"
+                else:
+                    text += f"mpirun -np {ntasks} gmx_mpi mdrun -quiet -deffnm {job} -ntomp {ntomp}"
                 if ngpu == 0:
                     text += f" -nb cpu -pme cpu -pmefft cpu -bonded cpu -update cpu"
                 elif ngpu == 1:

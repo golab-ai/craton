@@ -53,13 +53,13 @@ class SlabStyle:
             for rr in self.chunks:  
                 text += f"structure {rr[4]}\n"
                 text += f"  number {rr[1]}\n"
-                #text += f"  center\n"
-                #ss = " ".join([str(round(ss,3)) for ss in rr[5]] + ["0.0","0.0","0.0"])
-                #text += f"    fixed {ss}\n"
-                box = self.box
-                box_position = [ff + 1.0 for ff in box[:3]] + [ff - 1.0 for ff in box[3:]]
-                text_box = " ".join([str(round(ss,3)) for ss in box_position])
-                text += f"  inside box {text_box}\n"
+                text += f"  center\n"
+                ss = " ".join([str(round(ss,3)) for ss in rr[5]] + ["0.0","0.0","0.0"])
+                text += f"    fixed {ss}\n"
+                # box = self.box
+                # box_position = [ff + 1.0 for ff in box[:3]] + [ff - 1.0 for ff in box[3:]]
+                # text_box = " ".join([str(round(ss,3)) for ss in box_position])
+                # text += f"  inside box {text_box}\n"
                 text += "end structure\n\n"
         return text,packmol_input,packmol_output,self.output_dir
         

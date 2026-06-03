@@ -36,9 +36,10 @@ QM_SIMULATION_TYPES = ["Q0","Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10","
 @click.option("-n", "--molecule_number", default=None, help="the molecule number of auto-qmcalc")
 @click.option("-p", "--property", default="normal", help="property, such as density")
 @click.option("-eng", "--mdengine", default="gmx", help="md engine, such as gmx, lmp")
+@click.option("--ncpu", "ncpu", default=None, type=int, help="number of CPUs (EnvironmentSetting.ncpu, e.g. SLURM cpus-per-task)")
 @click.option("-f", "--yaml_file", type=click.File("r"), help="if need more fined control, please specify a yaml file")
 def run_simulaiton(
-    simulation_type, ligands, protein, molecules, coligands, repeat, output_directory, simulation_time, charge_method, molecule_number,property,mdengine,yaml_file
+    simulation_type, ligands, protein, molecules, coligands, repeat, output_directory, simulation_time, charge_method, molecule_number,property,mdengine,ncpu,yaml_file
 ):
     """Preparing Gromacs MD molecule_dynamics files, most of setting are defined in the 'default_settings.py' file.
     If need more fined control, you can specify a yaml file, the template of which could
@@ -92,6 +93,9 @@ def run_simulaiton(
         }}
 
     total_config = create_repeat_config(_config)
+    if ncpu is not None:
+        for bb in total_config.values():
+            bb["ncpu"] = ncpu
 
     for aa,bb in total_config.items():
         if bb["simulation_type"] in MD_SIMULATION_TYPES:
