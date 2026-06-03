@@ -400,7 +400,7 @@ class GauOutputLink1:
         self.conform_type = self._CONFORM_TYPE[self.style]
 
     def _content_parse(self):
-        """
+        r"""
         First get the command title and line number of final result.
         Every line may or may not starts with a space.
 

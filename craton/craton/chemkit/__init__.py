@@ -111,7 +111,7 @@ def run_get_moleinfo_from_pubchem(input,input_type="smiles",output_type="name"):
         ddd = pcp.get_synonyms(smiles, 'smiles')
         for dd in ddd:
             for d in dd["Synonym"]:
-                match = re.match('(\d{2,7}-\d\d-\d)',d)
+                match = re.match(r'(\d{2,7}-\d\d-\d)',d)
                 
                 if match:
                     cas.append(match.group(1))

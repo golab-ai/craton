@@ -254,10 +254,10 @@ class ForceFieldFitting:
 def run_auto_force_field_fitting(init_force_field_file,output_dir,jobs,validation_flag=False):
     input_force_field_file = [init_force_field_file]
     for ii,job in enumerate(jobs):
-        ss = job.split("\/")
+        ss = job.split("/")
         input_force_field_file.append(f"{output_dir}/{ii}-{ss[-1]}/total_ff.ff")
     for ii,job in enumerate(jobs):
-        ss = job.split("\/")
+        ss = job.split("/")
         config = {
                     "output_directory":f"{output_dir}/{ii}-{ss[-1]}",
                     "DEFAULT_FORCE_FIELD_FILE":init_force_field_file,
