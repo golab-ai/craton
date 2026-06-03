@@ -72,8 +72,11 @@ source /cpfs01/xingyun/hpc/VASP/Basekit/setvars.sh --force
 
     def _write_slurm_file(self,sm):
         text,ntasks,ntomp = self._get_slure_header_string(sm)
-        # text += "mpirun -np 1 lmp < lmp.in > lmp.out"
-        text += f"srun --mpi=pmi2 -n 64 -c 1 lmp_mpi -in lmp.in"
+        hpc = sm.env_setting["hpc_resource"]
+        if hpc == "CFFF":
+            text += f"srun --mpi=pmi2 -n {ntasks} -c 1 lmp_mpi -in lmp.in"
+        else:
+            text += "mpirun -np {ntasks} lmp_mpi < lmp.in > lmp.out"
         text += "\n\n"
         with open(f"{sm.output_dir}/job.sh","w") as outf:
             outf.write(text)
