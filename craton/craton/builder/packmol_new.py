@@ -71,6 +71,7 @@ class Packmol:
                 text=True,
             )
             if p.stdout:
+                print("---------- Last 200 lines of packmol stdout ----------")
                 for line in p.stdout.splitlines()[-200:]:
                     print(line)
             #if style != "layer":
