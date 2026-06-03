@@ -63,9 +63,16 @@ class Packmol:
             return
 
         with open(input, "r") as f:
-            ###pass
-            ################ p = subprocess.run([packmol_path], stdin=f,cwd=self.output_dir)
-            p = subprocess.run([packmol_path], stdin=f, stdout=subprocess.DEVNULL, cwd=output_dir)
+            p = subprocess.run(
+                [packmol_path],
+                stdin=f,
+                stdout=subprocess.PIPE,
+                cwd=output_dir,
+                text=True,
+            )
+            if p.stdout:
+                for line in p.stdout.splitlines()[-200:]:
+                    print(line)
             #if style != "layer":
             #    assert p.returncode == 0
 
