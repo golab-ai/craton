@@ -7,6 +7,13 @@ from pathlib import Path
 
 import sys
 
+CRATON_DIR = Path(__file__).parent
+ROOT_DIR = CRATON_DIR.parent.parent.parent
+DATABASE_EXISTS = Path(f"{ROOT_DIR}/database").exists()
+if DATABASE_EXISTS:
+    from ..database import DataDB
+    dbobj = DataDB()
+
 JOB_TYPE = {
                 "RFE":["rbfe","rhfe","rlogp","rlogs","mem-rbfe","cov-rbfe","pep-rbfe","rna-rbfe"],
                 "AFE":["abfe","ahfe"],
@@ -125,6 +132,7 @@ class MDSimulation:
                 molecules = MX.molecule_create(molecule_input,template_path = self.molecule_paths, show_figure=False,parallel=False)
                 molecules = MX.molecule_structure(molecules)
                 for molecule in molecules:
+                    molecule.molecule_role = key
                     if molecule.style not in ["pdb","protein","template","dna","rna","DNA","RNA","Protein"]:
                         if not hasattr(molecule,"gmx_residue_name"):
                             molecule.gmx_residue_name = self._default_gmx_res[key] if key in self._default_gmx_res else molecule.mole_name[:2]
@@ -198,6 +206,8 @@ class MDSimulation:
         MX.write_md_input_files(self.sms)
     def bash_script(self):
         MX.write_bash_files(self.sms)
+    def insert_mdinfo_to_db(self):
+        pass
     def md_run(self):
         pass
     def analyze_result(self):
@@ -220,6 +230,7 @@ class MDSimulation:
         self.save_job_info()
         self.md_input_files()
         self.bash_script()
+        self.insert_mdinfo_to_db()
         self.md_run()
         self.analyze_result()
 

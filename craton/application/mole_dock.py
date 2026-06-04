@@ -48,11 +48,11 @@ class MolDock:
 
     @staticmethod
     def pocket(protein_file,output_directory="."):
-        protein_file = protein_file.split("/")[-1]
-        pre_file_name = protein_file[:-4]
+        Path(output_directory).mkdir(exist_ok=True)
+        protein_file_name = protein_file.split("/")[-1]
+        pre_file_name = protein_file_name[:-4]
         csv_file = f"{output_directory}/{pre_file_name}_pocket.csv"
         cavity_file = f"{output_directory}/{pre_file_name}_pocket_cavity.pdb"
-        
         os.system(f"python {py_file} {protein_file} -o {csv_file} --cavity-pdb {cavity_file}")
         return csv_file
         
