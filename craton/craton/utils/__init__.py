@@ -5,6 +5,7 @@ from .figure import DrawFigure as DF
 from .pubchem_query import run
 from .fetch_pdb import pdb
 from .fetch_uniprot import uniprot
+from pathlib import Path
 
 
 def _show_figure(XX,figure_type,args=None):
@@ -23,6 +24,8 @@ def _show_figure(XX,figure_type,args=None):
     return file_name
 
 def _pubchem_info(strs,typ,print_flag=True,opath="."):
+    output_path = Path(opath)
+    output_path.mkdir(parents=True, exist_ok=True)
     if not isinstance(strs,list):
         strs = [strs]
     infos = []

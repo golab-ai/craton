@@ -683,8 +683,8 @@ def protein_ring_and_charge_group(protein):
             rings[f"{res.group_str}_6"] = [an for an in res.atoms if protein.Atoms[an].name in ring_label["DNA_ar1"]] + ["ar1"]
         elif res.group_name in ["U","C","DT","DC","U3","C3","DT3","DC3","U5","C5","DT5","DC5","UN","CN","DTN","DCN"]:
             rings[f"{res.group_str}_nonar"] = [an for an in res.atoms if protein.Atoms[an].name in ring_label["DNA_nonar"]] + ["nonar"]
-            rings[f"{res.group_str}_6"] = [an for an in res.atoms if protein.Atoms[an].name in ring_label["DNA_ar1"]] + ["ar1"]    
-            
+            rings[f"{res.group_str}_6"] = [an for an in res.atoms if protein.Atoms[an].name in ring_label["DNA_ar1"]] + ["ar1"]
+        
     charge_group = {}
     for res in Groups:
         if res.group_name in ["ARG", "HIS", "LYS", "GLU", "ASP","HIP"]:

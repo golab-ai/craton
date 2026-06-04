@@ -19,6 +19,8 @@ DEFAULT_COMPEN_FORCE_FIELD_FILE = CRATON_CONFIGURE["ForceFieldSetting"]["COMPEN_
 amino_acid_json_f = f'{CRATON_CONFIGURE["path"]["template"]}/amino_acid.json'
 non_normal_amino_acid_json_f = f'{CRATON_CONFIGURE["path"]["template"]}/non_normal_amino_acid.json'
 
+modify_group_f = f'{CRATON_CONFIGURE["path"]["template"]}/modify_group.json'
+
 amino_acid = json.loads(open(amino_acid_json_f).read())
 non_normal_amino_acid_total = json.loads(open(non_normal_amino_acid_json_f).read())
 non_AA_register = non_normal_amino_acid_total["registered"]
@@ -29,7 +31,7 @@ for kk,vv in non_normal_amino_acid_total.items():
         amino_acid[kk] = vv
         non_normal_amino_acid[kk] = vv
 
-
+modify_groups = json.loads(open(modify_group_f).read())
 
 TERMINAL_RESIDUE = ["ACE","NME","MEC","MEN","NHE","NH2"]
 CUTOFF_RESIDUE = 2.2

@@ -36,6 +36,9 @@ class MolPrepare:
         protein = MX.protein_prepare(protein)
         if ofilename is None:
             ofilename = protein.mole_name
+        else:
+            if ofilename.endswith(".pdb"):
+                ofilename = ofilename[:-4]
         MX.format_convert(protein,otype="pdb",ofilename=ofilename,opath=opath)
 
     @staticmethod
@@ -53,18 +56,31 @@ class MolPrepare:
         protein2 = MX.protein_process(protein,change)
         if ofilename is None:
             ofilename = f"{protein2.mole_name}_{residue}_{mutation}"
+        else:
+            if ofilename.endswith(".pdb"):
+                ofilename = ofilename[:-4]
         MX.format_convert(protein2,otype="pdb",ofilename=ofilename,opath=opath)
 
     @staticmethod
     def protein_modify(protein_file,residue,modify_fg,ofilename=None,opath="."):
-        
         if modify_fg not in ["pho","suf","met","n-met"]:
-            print("the modify target set is error, the modify type must be in pho suf, met, n-met, now is {_tmp}")
+            print(f"the modify target set is error, the modify type must be in pho suf, met, n-met, now is {modify_fg}")
             sys.exit(1)
         change = [[[[residue,modify_fg]],"modify"]]
-        protein = MX.protein_prepare(protein_file)
+        if isinstance(protein_file, str):
+            protein = MX.molecule_create(protein_file)[0]
+        else:
+            protein = protein_file
+        protein = MX.protein_prepare(protein)
+        from craton.craton.chemkit.structure.structure import protein_ring_and_charge_group
+        protein = protein_ring_and_charge_group(protein)
 
         protein2 = MX.protein_process(protein,change)
+        if ofilename is not None:
+            if ofilename.endswith(".pdb"):
+                ofilename = ofilename[:-4]
+        else:
+            ofilename = f"{protein2.mole_name}_{residue}_{modify_fg}"
         MX.format_convert(protein2,otype="pdb",ofilename=ofilename,opath=opath)
 
     @staticmethod

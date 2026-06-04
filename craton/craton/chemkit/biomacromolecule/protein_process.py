@@ -2,10 +2,42 @@ from copy import deepcopy
 from ...chem.molecule import Molecule
 from ...chem.atom import Atom
 from ..structure.structure import protein_ring_and_charge_group
-from .protein_utils import template_molecule, amino_acid
+from .protein_utils import template_molecule, amino_acid, modify_groups
 from .protein_prepare import ProteinPrepare
 
-modify_groups = {"Pho":[{"element":"P","atom_name":"MP","atom_type_name":"P","connectivity":["MO1","MO2","MO3"],"bond_type":[2,1,1],"formal_charge":0,"plate":"no","ff_charge":0.328},
+old_modify_groups = {"Pho":[
+    {"element":"P",
+     "atom_name":"MP",
+     "atom_type_name":"P",
+     "connectivity":["MO1","MO2","MO3"],
+     "bond_type":[2,1,1],
+     "formal_charge":0,
+     "plate":"no",
+     "ff_charge":0.328,
+     "has_ring": [],
+     "has_ring_size": [],
+     "has_ring_property": [],
+    "local": "LT",
+    "bond_type_aromatic": [
+                "1",
+                "1",
+                "1",
+                "1"
+            ],
+            "connectivity_type": [
+                "S",
+                "S",
+                "S",
+                "S"
+            ],
+            "bond_type_conjugate": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "partial_formal_charge": 0,
+     },
                         {"element":"O","atom_name":"MO1","atom_type_name":"O2","connectivity":["MP"],"bond_type":[2],"formal_charge":0,"plate":"no","ff_charge":-0.776},
                         {"element":"O","atom_name":"MO2","atom_type_name":"O2","connectivity":["MP"],"bond_type":[1],"formal_charge":-1,"plate":"no","ff_charge":-0.776},
                         {"element":"O","atom_name":"MO3","atom_type_name":"O2","connectivity":["MP"],"bond_type":[1],"formal_charge":-1,"plate":"no","ff_charge":-0.776}],
@@ -27,8 +59,6 @@ class ProteinProcess:
                           "n-met":[{"all":"N",},"MET"],
                           "suf":[{"TYR":"OH"},"Suf"],
                           }
-
-    
 
     def get_group_template(self,group):
         group_template = modify_groups[group]
@@ -204,7 +234,7 @@ class ProteinProcess:
         PP = ProteinPrepare(tmp_protein,n_terminal=n_terminal,c_terminal=c_terminal)
         PP.run()
         protein = PP.protein
-        protein.mole_name = "_".join([target,mutation])
+        protein.mole_name = "_".join([target,residue])
         protein = protein_ring_and_charge_group(protein)
         return protein
 

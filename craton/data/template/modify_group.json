@@ -1,0 +1,316 @@
+{
+    "Pho":[
+        {
+            "element":"P",
+            "atom_name":"MP",
+            "atom_type_name":"P",
+            "connectivity":["MO1","MO2","MO3"],
+            "bond_type":[2,1,1],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":0.328,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LT",
+            "bond_type_aromatic": [
+                "1",
+                "1",
+                "1"
+            ],
+            "connectivity_type": [
+                "S",
+                "S",
+                "S"
+            ],
+            "bond_type_conjugate": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "partial_formal_charge": 0
+        },
+        {
+            "element":"O",
+            "atom_name":"MO1",
+            "atom_type_name":"O2",
+            "connectivity":["MP"],
+            "bond_type":[2],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":-0.776,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "2"
+            ],
+            "connectivity_type": [
+                "D"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": -0.3333333333333333
+        },
+        {
+            "element":"O",
+            "atom_name":"MO2",
+            "atom_type_name":"O2",
+            "connectivity":["MP"],
+            "bond_type":[1],
+            "formal_charge":-1,
+            "plate":"no",
+            "ff_charge":-0.776,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "1"
+            ],
+            "connectivity_type": [
+                "S"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": -0.3333333333333333
+        },
+        {
+            "element":"O",
+            "atom_name":"MO3",
+            "atom_type_name":"O2",
+            "connectivity":["MP"],
+            "bond_type":[1],
+            "formal_charge":-1,
+            "plate":"no",
+            "ff_charge":-0.776,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "1"
+            ],
+            "connectivity_type": [
+                "S"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": -0.3333333333333333
+        }
+    ],
+    "MET":[
+        {
+            "element":"C",
+            "atom_name":"MC",
+            "atom_type_name":"CT",
+            "connectivity":["MH1","MH2","MH3"],
+            "bond_type":[1,1,1],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":-0.3369,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LT",
+            "bond_type_aromatic": [
+                "1",
+                "1",
+                "1"
+            ],
+            "connectivity_type": [
+                "S",
+                "S",
+                "S"
+            ],
+            "bond_type_conjugate": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "partial_formal_charge": 0
+        },
+        {
+            "element":"H",
+            "atom_name":"MH1",
+            "atom_type_name":"HP",
+            "connectivity":["MC"],
+            "bond_type":[1],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":0.1123,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "1"
+            ],
+            "connectivity_type": [
+                "S"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": 0
+       },
+        {
+            "element":"H",
+            "atom_name":"MH2",
+            "atom_type_name":"HP",
+            "connectivity":["MC"],
+            "bond_type":[1],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":0.1123,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "1"
+            ],
+            "connectivity_type": [
+                "S"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": 0
+        },
+        {
+            "element":"H",
+            "atom_name":"MH3",
+            "atom_type_name":"HP",
+            "connectivity":["MC"],
+            "bond_type":[1],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":0.1123,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "1"
+            ],
+            "connectivity_type": [
+                "S"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": 0
+            }
+    ],
+    "Suf":[
+        {
+            "element":"S",
+            "atom_name":"MS",
+            "atom_type_name":"S",
+            "connectivity":["MO1","MO2","MO3"],
+            "bond_type":[2,2,1],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":1.8900,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LT",
+            "bond_type_aromatic": [
+                "2",
+                "2",
+                "1"
+            ],
+            "connectivity_type": [
+                "D",
+                "D",
+                "S"
+            ],
+            "bond_type_conjugate": [
+                "",
+                "",
+                ""
+            ],
+            "partial_formal_charge": 0
+        },
+        {
+            "element":"O",
+            "atom_name":"MO1",
+            "atom_type_name":"O2",
+            "connectivity":["MS"],
+            "bond_type":[2],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":-0.6300,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "2"
+            ],
+            "connectivity_type": [
+                "D"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": -0.333333333
+        },
+        {
+            "element":"O",
+            "atom_name":"MO2",
+            "atom_type_name":"O2",
+            "connectivity":["MS"],
+            "bond_type":[2],
+            "formal_charge":0,
+            "plate":"no",
+            "ff_charge":-0.6300,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "2"
+            ],
+            "connectivity_type": [
+                "D"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": -0.333333333
+        },
+        {
+            "element":"O",
+            "atom_name":"MO3",
+            "atom_type_name":"O2",
+            "connectivity":["MS"],
+            "bond_type":[1],
+            "formal_charge":-1,
+            "plate":"no",
+            "ff_charge":-0.6300,
+            "has_ring": [],
+            "has_ring_size": [],
+            "has_ring_property": [],
+            "local": "LM",
+            "bond_type_aromatic": [
+                "1"
+            ],
+            "connectivity_type": [
+                "S"
+            ],
+            "bond_type_conjugate": [
+                ""
+            ],
+            "partial_formal_charge": -0.333333333
+        }
+    ]
+}

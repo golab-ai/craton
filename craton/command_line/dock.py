@@ -22,14 +22,15 @@ def dock():
 
 @dock.command("pocket")
 @click.option("-i","--inputs",help="protein file",default=".",show_default=True,)
-def pocket_info(inputs):
+@click.option("-o","--output_directory",help="output directory",default=".",show_default=True,)
+def pocket_info(inputs,output_directory):
     """
     get the pocket information of protein
 
     \b
 
     """
-    results = MolDock.pocket(inputs)
+    results = MolDock.pocket(inputs,output_directory=output_directory)
 
 @dock.command("dock")
 @click.option("-p","--protein",help="protein file",default=".",show_default=True,)

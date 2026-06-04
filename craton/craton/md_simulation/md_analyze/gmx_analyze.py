@@ -776,12 +776,9 @@ class GmxAnalyze:
                 datas["left_interactions"] = left_interactions
                 datas["right_interactions"] = right_interactions
                 
-        
-        
+        os.system(f"cp {job_dir}/bfe/job_info/*_atom_mapping.png {output_dir}")
         ddg_datas = self.get_ddg({"job_dir":job_dir,"output_dir":output_dir})
         datas["ddg"] = ddg_datas
-        
-        
         
         if idx == None:
             return datas
