@@ -59,15 +59,16 @@ class LmpSlurm:
         # for ss in hpc_loads:
         #     text += f"{ss}\n"
         # text += "\n\n"
-
-        text = """#!/bin/bash
+        if hpc == "CFFF":
+            text = """#!/bin/bash
 
 module load CentOS/7.9/gcc/14.0.0
 module load CentOS/7.9/LAMMPS/20210630
 source /cpfs01/xingyun/hpc/VASP/Basekit/setvars.sh --force
 
 """
-
+        else:
+            text = "#!/bin/bash\n\n"
         return text, ntasks, cpu_per_task ###,tasks
 
     def _write_slurm_file(self,sm):
@@ -76,7 +77,7 @@ source /cpfs01/xingyun/hpc/VASP/Basekit/setvars.sh --force
         if hpc == "CFFF":
             text += f"srun --mpi=pmi2 -n {ntasks} -c 1 lmp_mpi -in lmp.in"
         else:
-            text += "mpirun -np {ntasks} lmp_mpi < lmp.in > lmp.out"
+            text += f"mpirun -np {ntasks} lmp_mpi < lmp.in > lmp.out"
         text += "\n\n"
         with open(f"{sm.output_dir}/job.sh","w") as outf:
             outf.write(text)
