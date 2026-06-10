@@ -373,7 +373,10 @@ class LmpInputFile:
             text += "compute pair_en all pe pair\n"
         for pp in self.sm.md_setting["property"]:
             if pp == "den":
-                text += f"fix denout all ave/time {n_every} {n_repeat} {block_size} density file denout.log\n"
+                text += f"compute   atom_mass all property/atom mass\n"
+                text += f"compute   total_mass all reduce sum c_atom_mass   # 单位 g/mol，数值上等于总分子量\n"
+                text += f"variable  density equal (c_total_mass / 6.022e23) / (vol * 1e-24)   # g/cm^3\n"
+                text += f"fix denout all ave/time {n_every} {n_repeat} {block_size} v_density file denout.log\n"
             elif pp in ["hov"]:
                 text += f"variable hov equal -c_pair_en/v_nmole+8.314*v_Tref/4184\n"
                 text += f"fix hovout all ave/time {n_every} {n_repeat} {block_size} v_hov file hov.log"
