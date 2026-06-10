@@ -55,8 +55,38 @@ class NormalBuilder:
         if "this_ff" in self.config["ForceFieldSetting"]:
             self.bu_config["this_ff"] = self.config["ForceFieldSetting"]["this_ff"]
         self.ref_density = self.__check_parameter_building_setting(self.building_setting["density"],"density")
-        self.ref_concentration = self.__check_parameter_building_setting(self.building_setting["concentration"],"concentration")    
+        self.ref_concentration = self.__check_parameter_building_setting(self.building_setting["concentration"],"concentration")
+        self.ref_molecules_numbers = self.__check_molecules_numbers_setting(
+            self.building_setting.get("molecules_numbers")
+        )
         self.counter_ion_flag = self.building_setting["counter_ion"]
+
+    def __check_molecules_numbers_setting(self, value):
+        if value is None:
+            return None
+        if isinstance(value, int):
+            if value <= 0:
+                logger.warning("Invalid molecules_numbers setting: must be positive")
+                return None
+            return [value]
+        if isinstance(value, list):
+            if not value:
+                logger.warning("Invalid molecules_numbers setting: empty list")
+                return None
+            if not all(isinstance(rr, int) and rr > 0 for rr in value):
+                logger.warning("Invalid molecules_numbers setting: must be a list of positive integers")
+                return None
+            return value
+        logger.warning("Invalid molecules_numbers setting due to incorrect variable type")
+        return None
+
+    def _resolve_molecules_number(self, index, n_total):
+        ref = self.ref_molecules_numbers
+        if ref is None:
+            return None
+        if len(ref) == 1 or len(ref) != n_total:
+            return int(ref[0])
+        return int(ref[index])
 
     def __check_parameter_building_setting(self,value,pp_name):
         if value is not None:
@@ -699,6 +729,19 @@ class TwoSolutionBuilder(NormalBuilder):
 class SolventBuilder(NormalBuilder):
     def __init__(self, molecules, configure, style="", parallel=True):
         super().__init__(molecules,configure, style,parallel)
+
+    def _run_solution_type_(self, solutes, output_dir="./", solvents=None, simulation_type=None, idx=None, molecule_index=0, n_molecules=1):
+        bu_config = super()._run_solution_type_(
+            solutes, output_dir=output_dir, solvents=solvents,
+            simulation_type=simulation_type, idx=idx,
+        )
+        if self.ref_molecules_numbers is not None and solvents not in (None, "vacuum"):
+            if not isinstance(solvents, list):
+                solvents = [solvents]
+            bu_config["solvent"] = [
+                solvents[0], self._resolve_molecules_number(molecule_index, n_molecules)
+            ]
+        return bu_config
     
     def create_build_config(self):
         """
@@ -712,13 +755,16 @@ class SolventBuilder(NormalBuilder):
                 molecules.extend(self.molecules[attr])
             
         self.bu_configs = []
-        for molecule in molecules:
+        n_molecules = len(molecules)
+        for molecule_index, molecule in enumerate(molecules):
             self.bu_configs.append(
                 self._run_solution_type_(
                     None,
                     solvents=molecule,
                     output_dir=f'{parent_dir}/{molecule.mole_name}',
-                    simulation_type=simulation_type
+                    simulation_type=simulation_type,
+                    molecule_index=molecule_index,
+                    n_molecules=n_molecules,
                 )
             )
 

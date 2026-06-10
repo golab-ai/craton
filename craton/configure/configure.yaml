@@ -45,6 +45,7 @@ BuildingSetting:
   box_size: null
   density: null
   concentration: null
+  molecules_numbers: null
   counter_ion: true
   slab_direction: null
   slab_deepth: null

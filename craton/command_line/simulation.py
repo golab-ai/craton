@@ -34,13 +34,14 @@ QM_SIMULATION_TYPES = ["Q0","Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10","
 @click.option("-t", "--simulation_time", default=None, help="Simulation steps (2fs per step)", show_default=True)
 @click.option("-c", "--charge_method", default=None, help="charge method")
 @click.option("-n", "--molecule_number", default=None, help="the molecule number of auto-qmcalc")
+@click.option("--molecules_numbers", default=None, type=int, help="molecule count for liquid packmol (overrides density-based number)")
 @click.option("-p", "--property", default="normal", help="property, such as density")
 @click.option("-eng", "--mdengine", default="gmx", help="md engine, such as gmx, lmp")
 @click.option("--ncpu", "ncpu", default=None, type=int, help="number of CPUs (EnvironmentSetting.ncpu, e.g. SLURM cpus-per-task)")
 @click.option("-solvent", "--solvent", default=None, help="the solvent for simulation, such as water, octanol, ......")
 @click.option("-f", "--yaml_file", type=click.File("r"), help="if need more fined control, please specify a yaml file")
 def run_simulaiton(
-    simulation_type, ligands, protein, molecules, coligands, repeat, output_directory, simulation_time, charge_method, molecule_number,property,mdengine,ncpu,solvent,yaml_file
+    simulation_type, ligands, protein, molecules, coligands, repeat, output_directory, simulation_time, charge_method, molecule_number, molecules_numbers, property, mdengine, ncpu, solvent, yaml_file
 ):
     """Preparing Gromacs MD molecule_dynamics files, most of setting are defined in the 'default_settings.py' file.
     If need more fined control, you can specify a yaml file, the template of which could
@@ -94,6 +95,8 @@ def run_simulaiton(
         }}
         if solvent is not None:
             _config["task0"]["solvent"] = [xx.strip() for xx in solvent.split(",")]
+        if molecules_numbers is not None:
+            _config["task0"]["molecules_numbers"] = molecules_numbers
 
     total_config = create_repeat_config(_config)
     if ncpu is not None:
