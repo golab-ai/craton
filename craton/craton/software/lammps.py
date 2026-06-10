@@ -342,6 +342,10 @@ class LmpInputFile:
                 text += f'fix {job} all npt temp {self.sm.md_setting["temperature"]["temperature"]} {self.sm.md_setting["temperature"]["temperature"]} 100.0 '
                 text += f'iso {self.sm.md_setting["pressure"]["pressure"]} {self.sm.md_setting["pressure"]["pressure"]} 1000.0\n'
                 text += "timestep        1.0\n"
+            elif job in ["prod_nvt"]:
+                text += f'fix {job} all nvt temp {self.sm.md_setting["temperature"]["temperature"]} {self.sm.md_setting["temperature"]["temperature"]} 100.0\n'
+                text += "timestep        1.0\n"
+                text += f'run      {self.sm.md_setting["nsteps"][ii]}\n'
         text += "\n"
         return text
         
@@ -358,29 +362,32 @@ class LmpInputFile:
         text += "variable Tref equal %.3f\n" %self.sm.md_setting["temperature"]["temperature"]
         text += "variable Pref equal %.3f\n" %self.sm.md_setting["pressure"]["pressure"]
         text += "variable lz equal lz\n"
-        text += "group mole molecule <> 1 %d\n" %sum(self.sm.molecule_number)
+        # text += "group mole molecule <> 1 %d\n" %sum(self.sm.molecule_number)
+        text += "group mole id 1:%d\n" %sum(self.sm.molecule_number)
         #text += "compute inter all inter \n"
 
         flag_0 = True
         flag_1 = True
 
+        if len(set(["hov", "cp","kt","ap","heat capacity","compressibility","thermal expansion"]) & set(self.sm.md_setting["property"])) > 0:
+            text += "compute pair_en all pe pair\n"
         for pp in self.sm.md_setting["property"]:
             if pp == "den":
                 text += f"fix denout all ave/time {n_every} {n_repeat} {block_size} density file denout.log\n"
             elif pp in ["hov"]:
-                text += f"variable hov equal -c_inter[1]/v_nmol+8.314*v_Tref/4184\n"
+                text += f"variable hov equal -c_pair_en/v_nmole+8.314*v_Tref/4184\n"
                 text += f"fix hovout all ave/time {n_every} {n_repeat} {block_size} v_hov file hov.log"
             elif pp in ["cp","kt","ap","heat capacity","compressibility","thermal expansion"]:
                 if flag_0:
-                    text += "variable Hconf equal c_inter[1]+1.01325*0.0014388*v_Pref*v_V\n" 
+                    text += "variable Hconf equal c_pair_en+1.01325*0.0014388*v_Pref*v_V\n" 
                     text += "variable VHconf equal v_V*v_Hconf\n"
-                    text += "variable UHconf equal c_inter[1]*v_Hconf\n"
+                    text += "variable UHconf equal c_pair_en*v_Hconf\n"
 
                     ####cp
                     text += f"variable cpfactor1 equal 2105587.7/v_Tref/v_Tref\n" 
                     text += f"variable cpfactor2 equal v_Pref*30.3188*1.01325/v_Tref/v_Tref\n" 
                     text += f"variable cpfactor3 equal v_nmole\n" 
-                    text += f"fix cpout all ave/time 5 1 5 c_inter[1] v_Hconf v_V v_cpfactor1 v_cpfactor2 v_cpfactor3 file cp.log\n"
+                    text += f"fix cpout all ave/time 5 1 5 c_pair_en v_Hconf v_V v_cpfactor1 v_cpfactor2 v_cpfactor3 file cp.log\n"
                 
                     #### kt
                     text += f"variable          VV equal v_V*v_V\n" 
@@ -394,11 +401,11 @@ class LmpInputFile:
 
             elif pp == "rdf":
                 text += "compute           11rdf  all rdf 100 1 1\n" 
-                text += "fix               rdfout all ave/time $N4$ $N5$ $SAMPLE_RUN$ c_11rdf file rdf_$NAME$_$TEMP$_$PRESS$.log mode vector\n" 
+                text += f"fix               rdfout all ave/time {n_every} {n_repeat} {block_size} c_11rdf file rdf_$NAME$_$TEMP$_$PRESS$.log mode vector\n" 
             elif pp == "rg":
                 text += "compute           chunkrg all chunk/atom molecule nchunk once ids once\n" 
                 text += "compute           rg all gyration/chunk chunkrg\n"
-                text += "fix               rgout all ave/time $N4$ $N5$ $SAMPLE_RUN$ c_rg file rg_$NAME$_$TEMP$_$PRESS$.log mode vector\n"
+                text += f"fix               rgout all ave/time {n_every} {n_repeat} {block_size} c_rg file rg_$NAME$_$TEMP$_$PRESS$.log mode vector\n"
 
             elif pp in ["dc"]:
                 text += f"compute           chunkmsd all chunk/atom molecule nchunk once ids once\n" 
@@ -407,24 +414,25 @@ class LmpInputFile:
                 #text += "#compute           vacf all vacf\n"
                 #text += "#fix               vacfout all ave/time 100 1 100 c_vacf[4] file vacf.log\n"
             elif pp in ["viscosity","vis"]:
-                text += "variable          visfactor equal 0.000000001*0.74397*$N6$*v_V/v_Tref\n"
+                text += f"variable          visfactor equal 0.000000001*0.74397*{n_every}*v_V/v_Tref\n"
                 text += "variable          pxy equal pxy\n"
                 text += "variable          pyz equal pyz\n"
                 text += "variable          pxz equal pxz\n"
                 text += "fix               nonPout all ave/time 5 1 5 v_visfactor  v_pxy v_pyz v_pxz file nonp.log\n"
-                text += "fix               visacfout1 all ave/correlate $N6$ $N7$ $N8$ v_pxy v_pxy type upper file visacf1.log\n" 
-                text += "fix               visacfout2 all ave/correlate $N6$ $N7$ $N8$ v_pyz v_pyz type upper file visacf2.log\n" 
-                text += "fix               visacfout3 all ave/correlate $N6$ $N7$ $N8$ v_pxz v_pxz type upper file visacf3.log\n" 
+                text += f"fix               visacfout1 all ave/correlate {n_every} {n_repeat} {block_size} v_pxy v_pxy type upper file visacf1.log\n" 
+                text += f"fix               visacfout2 all ave/correlate {n_every} {n_repeat} {block_size} v_pyz v_pyz type upper file visacf2.log\n" 
+                text += f"fix               visacfout3 all ave/correlate {n_every} {n_repeat} {block_size} v_pxz v_pxz type upper file visacf3.log\n" 
             elif pp in ["td"]:
                 text += "variable          tdfactor equal 10000000*3.50035*100*v_V/v_Tref/v_Tref\n"
                 text += "compute           ke all ke/atom\n" 
                 text += "compute           pe all pe/atom\n" 
                 text += "compute           stress all stress/atom NULL virial\n" 
                 text += "compute           hflux all heat/flux ke pe stress\n" 
+
                 text += "fix               hfluxout all ave/time 5 1 5 v_tdfactor c_hflux[1] c_hflux[2] c_hflux[3] file hflux.log\n"
-                text += "fix               tdacfout1 all ave/correlate $N6$ $N7$ $N8$ c_hflux[1] c_hflux[1] type upper file tdacf1.log\n" 
-                text += "fix               tdacfout2 all ave/correlate $N6$ $N7$ $N8$ c_hflux[2] c_hflux[2] type upper file tdacf2.log\n" 
-                text += "fix               tdacfout3 all ave/correlate $N6$ $N7$ $N8$ c_hflux[3] c_hflux[3] type upper file tdacf3.log\n" 
+                text += f"fix               tdacfout1 all ave/correlate {n_every} {n_repeat} {block_size} c_hflux[1] c_hflux[1] type upper file tdacf1.log\n" 
+                text += f"fix               tdacfout2 all ave/correlate {n_every} {n_repeat} {block_size} c_hflux[2] c_hflux[2] type upper file tdacf2.log\n" 
+                text += f"fix               tdacfout3 all ave/correlate {n_every} {n_repeat} {block_size} c_hflux[3] c_hflux[3] type upper file tdacf3.log\n" 
             elif pp in ["surface tension","st"]:
                 text += f"variable          st equal 0.01*(lz/2.0)*(pzz-(pxx+pyy)/2.0)*1.01325\n"
                 text += f"fix               stout all ave/time {n_every} {n_repeat} {block_size} v_st file st.log\n"
@@ -432,25 +440,38 @@ class LmpInputFile:
                 if flag_1:
                     text += "variable          svp equal pzz\n"
                     text += "variable          st equal 0.01*(lz/2.0)*(pzz-(pxx+pyy)/2.0)*1.01325\n"
-                    text += "fix               stout all ave/time $N1$ $N2$ $N3$ v_st file st_$NAME$_$TEMP$.log\n"
-                    text += "fix               svpout all ave/time $N1$ $N2$ $N3$ v_svp file svp_$NAME$_$TEMP$.log\n"
-                    text += "fix               vleout all ave/spatial $N4$ $N5$ $SAMPLE_RUN$ z lower 1.0 density/mass ave running file vle_$NAME$_$TEMP$.log\n"
+                    text += f"fix               stout all ave/time {n_every} {n_repeat} {block_size} v_st file st_$NAME$_$TEMP$.log\n"
+                    text += f"fix               svpout all ave/time {n_every} {n_repeat} {block_size} v_svp file svp_$NAME$_$TEMP$.log\n"
+                    text += f"fix               vleout all ave/chunk {n_every} {n_repeat} {block_size} z lower 1.0 density/mass ave running file vle_$NAME$_$TEMP$.log\n"
                     falg_1 = False
 
         text += "\n"
         return text
 
     def write_in_output(self):
-        self.atom_type_element = ["C","C","H","O"]
+        self.get_atom_type_element()
         text = ""
         text += f'thermo          {self.sm.md_setting["output"]["nstenergy"]}\n'
-        text += f"thermo_style    custom step etotal ke pe emol ebond eangle edihed eimp epair ecoul evdwl\n"
+        text += f"thermo_style    custom step press etotal ke pe emol ebond eangle edihed eimp epair ecoul evdwl\n"
         text += f'dump            1 all custom {self.sm.md_setting["output"]["nstxout-compressed"]} dump.lmptrajectory id type x y z element\n'
         text += f"dump_modify     1 sort id \n"   
         text += f'dump_modify     1 element {" ".join(self.atom_type_element)}\n'
         text += f'run             {self.sm.md_setting["nsteps"][-1]}\n'
         text += "\n"
         return text
+    
+    def get_atom_type_element(self):
+        self.atom_type_element = []
+        atomtypes_sorted = sorted(self.sm.ff["atomtype"].items(), key=lambda x: x[1]["type_id"])
+        for at_name, _ in atomtypes_sorted:
+            # 从名称中提取元素符号：
+            # 简单方法：取第一个字符并大写（如 o_2n -> O, n_3o -> N, h_1s -> H）
+            # 特殊处理：cg -> CG (或者保持 C，但根据实际)
+            if at_name.startswith("cg"):
+                element = "C"
+            else:
+                element = at_name[0].upper()
+            self.atom_type_element.append(element)
 
     def write_in(self,file_name="lmp.in"):
         outf = open(f"{self.output_dir}/{file_name}", "w")
