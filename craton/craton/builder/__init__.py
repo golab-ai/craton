@@ -47,9 +47,10 @@ def make_propety_system(sms):
                         this_sm.md_setting["pressure"]["pressure_coupl"] = ["no" for __ in this_sm.md_setting["jobs"]]
                         _tmp_job = []
                         for job in this_sm.md_setting["jobs"]:
-                            if job == "eq_npt":
-                                _tmp_job.append("eq_nvt")
-                            elif job == "prod_npt":
+                            #if job == "eq_npt":
+                            #    _tmp_job.append("eq_nvt")
+                            # elif job == "prod_npt":
+                            if job == "prod_npt":
                                 _tmp_job.append("prod_nvt")
                             else:
                                 _tmp_job.append(job)
