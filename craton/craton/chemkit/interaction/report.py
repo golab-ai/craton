@@ -66,10 +66,10 @@ def merge_interaction_dfs(df1: pd.DataFrame, df2: pd.DataFrame):
     for index in index_all:
         if index not in df1.index:
             interaction_dict = {interaction: 0 for interaction in interaction_all}
-            df1 = df1._append(pd.Series(interaction_dict, name=index))
+            df1 = pd.concat([df1, pd.DataFrame([interaction_dict], index=[index])])
         if index not in df2.index:
             interaction_dict = {interaction: 0 for interaction in interaction_all}
-            df2 = df2._append(pd.Series(interaction_dict, name=index))
+            df2 = pd.concat([df2, pd.DataFrame([interaction_dict], index=[index])])
 
     interaction_remain = interaction_all.difference(df1.columns)
     for interaction in interaction_remain:
