@@ -275,7 +275,10 @@ class MtxData:
             if info[1] == "::":
                 return _tmp
             for rr in info[1:]:
-                tt,ss = rr.split()
+                # tt,ss = rr.split()
+                xx = rr.split()
+                tt = " ".join(xx[1:-1])
+                ss = xx[-1]
                 if ":" not in ss:
                     _tmp[tt] = transfer_data_type(ss.strip())
                 else:

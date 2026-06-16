@@ -257,7 +257,7 @@ class BarForDDG:
         self.number_lambda = df.shape[1]
         self.number_frame = df.shape[0] / df.shape[1]
         self.lambda_name = df.columns.values.tolist()
-        self.groups = df.groupby(level=df.index.names[1:])
+        self.groups = df.groupby(level=df.index.names[1])
 
     @classmethod
     def groupby_xvg(cls, xvg_path, xvg_name="prod_npt.xvg"):
