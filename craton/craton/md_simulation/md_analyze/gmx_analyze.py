@@ -152,7 +152,7 @@ class GmxAnalyze:
                     "block_ddg":[["job_dir","."],["output_dir","."],["pre_fn",""],["block_num",5]],
                     "accum_ddg":[["job_dir","."],["output_dir","."],["pre_fn",""],["block_num",5]],
                     "rbfe":[["job_dir","."],["output_dir","."],["attrs",None],["molecule_dir",None],["molecules",None]],
-                    "all_rbfe":[["job_dir","."],["output_dir","."],["attrs",None],["expt_file",None],["pka_file",None],["parallel",False]],
+                    "all_rbfe":[["job_dir","."],["output_dir","."],["attrs",None],["expt_file",None],["pka_file",None],["parallel",True]],
                     "all_dimer":[["job_dir","."],["output_dir","."],["molecules",None],["molecule_dir",None],["fn",""], ["save_fig",True],["dimer_type","wat_com"],["parallel",True]],
                     
                     }
@@ -497,13 +497,13 @@ class GmxAnalyze:
             import json
             md_setting = json.loads(open(md_setting_file).read())
             try:
-                protein = MX.molecule_create(f"{molecule_path}/{md_setting['protein']}.mtx")[0]
+                protein = MX.molecule_create(f"{molecule_path}/{md_setting['protein']}.mtx", parallel=False)[0]
                 protein = MX.protein_structure(protein)
-                ligand  = MX.molecule_create(f"{molecule_path}/{md_setting['ligand']}.mtx")[0]
+                ligand  = MX.molecule_create(f"{molecule_path}/{md_setting['ligand']}.mtx", parallel=False)[0]
             except:
-                protein = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][1]}.mtx")[0]
+                protein = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][1]}.mtx", parallel=False)[0]
                 protein = MX.protein_structure(protein)
-                ligand  = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][0]}.mtx")[0]
+                ligand  = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][0]}.mtx", parallel=False)[0]
             molecules = [protein,ligand]
             #protein = MX.protein_create(protein_molecule_dir)
             #protein = MX.protein_structure(protein)
@@ -524,7 +524,7 @@ class GmxAnalyze:
                 outf.write("\n\n\n\n")
             os.system(f"{gmx} trjconv -f {job_dir}/prod_npt-pbc.xtc -s {job_dir}/prod_npt.tpr -pbc whole -o {job_dir}/prod_npt-all.gro < {job_dir}/trj.in")
         total_coors = self.parse_gro_file(f"{job_dir}/prod_npt-all.gro")
-        total_interactions = IM.get_interaction_model(protein,ligand,coordinates=total_coors)
+        total_interactions = IM.get_interaction_model(protein,ligand,coordinates=total_coors,parallel=False)
         
         
         model_report = ReportMultipleInteraction(total_interactions)
@@ -777,6 +777,7 @@ class GmxAnalyze:
                 datas["right_interactions"] = right_interactions
                 
         os.system(f"cp {job_dir}/bfe/job_info/*_atom_mapping.png {output_dir}")
+        os.system(f"cp {job_dir}/bfe/job_info/*_atom_mapping_nonH.png {output_dir}")
         ddg_datas = self.get_ddg({"job_dir":job_dir,"output_dir":output_dir})
         datas["ddg"] = ddg_datas
         
@@ -830,6 +831,19 @@ class GmxAnalyze:
             CycleClosureFreeEnergy._add_exp_ddg_column(ddg_df, dg_df)
         cc_ddg_df,cc_dg_df = self.recalculate_cycle_closure(ddg_df,dg_df,pka_file=pka_file)
         WriteExcel.write_rbfe_excel(cc_ddg_df,cc_dg_df,output_dir,exp_file=expt_file,two_stages=False,pic_dir=job_dir)
+
+        image_dir = Path(output_dir, "img")
+        image_dir.mkdir(exist_ok=True)
+        molecules_copied = set()
+        for d_name in dds:
+            lig1, lig2 = d_name.split("_to_")
+            for lig in [lig1, lig2]:
+                if lig not in molecules_copied:
+                    src = Path(job_dir, d_name, "bfe", "job_info", f"{lig}.png")
+                    if src.exists():
+                        shutil.copy(src, image_dir)
+                    molecules_copied.add(lig)
+
         return datas
         
     def get_abfe(self,args, idx=None): #job_dir,output_dir=Path("."),molecule_dir=None,idx = None):
