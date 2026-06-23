@@ -404,11 +404,11 @@ class LmpInputFile:
 
             elif pp == "rdf":
                 text += "compute           11rdf  all rdf 100 1 1\n" 
-                text += f"fix               rdfout all ave/time {n_every} {n_repeat} {block_size} c_11rdf file rdf_$NAME$_$TEMP$_$PRESS$.log mode vector\n" 
+                text += f"fix               rdfout all ave/time {n_every} {n_repeat} {block_size} c_rdf[*] file rdf.log mode vector\n" 
             elif pp == "rg":
                 text += "compute           chunkrg all chunk/atom molecule nchunk once ids once\n" 
                 text += "compute           rg all gyration/chunk chunkrg\n"
-                text += f"fix               rgout all ave/time {n_every} {n_repeat} {block_size} c_rg file rg_$NAME$_$TEMP$_$PRESS$.log mode vector\n"
+                text += f"fix               rgout all ave/time {n_every} {n_repeat} {block_size} c_rg file rg.log mode vector\n"
 
             elif pp in ["dc"]:
                 text += f"compute           chunkmsd all chunk/atom molecule nchunk once ids once\n" 
