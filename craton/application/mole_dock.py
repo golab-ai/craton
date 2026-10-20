@@ -186,3 +186,71 @@ class MolDock:
                 outf.write(f"{ligand.mole_name}, {ligand.smiles}, {score}\n")
         MX.format_convert(self.ligands,otype="sdf",ofilename=f"{self.protein.mole_name}_docked",
                           opath=self.output_directory)
+        self.write_complex_pdb()
+
+    def write_complex_pdb(self, output_file=None,
+                          ligand_chain="L", ligand_resname="LIG", ligand_resnum_start=1):
+        """Write protein ATOM records and docked ligands as HETATM into one PDB.
+
+        Coordinates are already in the same frame. Existing SDF and score CSV
+        outputs are left unchanged.
+        """
+        from craton.craton.chem.format.pdb_parse import PdbData
+
+        if output_file is None:
+            mole_name = self.protein.mole_name.split("/")[-1].replace(".pdb", "")
+            output_file = f"{self.output_directory}/{mole_name}_complex.pdb"
+
+        def _atom_lines(molecule):
+            text = PdbData()._convert(molecule)
+            return [ln for ln in text.splitlines()
+                    if ln.startswith("ATOM") or ln.startswith("HETATM")]
+
+        protein_lines = _atom_lines(self.protein)
+        used_chains = set()
+        for ln in protein_lines:
+            chain_id = ln.ljust(22)[21]
+            if chain_id.strip():
+                used_chains.add(chain_id)
+        if ligand_chain and ligand_chain[0] in used_chains:
+            for cand in "ZYXWVUTSRQPONMLKJIHGFEDCBA":
+                if cand not in used_chains:
+                    ligand_chain = cand
+                    break
+
+        n_ligand_atoms = sum(len(ligand.Atoms) for ligand in self.ligands)
+        if len(protein_lines) + n_ligand_atoms > 99999:
+            raise ValueError(
+                "Complex PDB atom serial would exceed 99999 "
+                f"({len(protein_lines) + n_ligand_atoms} atoms)."
+            )
+
+        serial = len(protein_lines)
+        block = [
+            "COMPND    Complex of %s\n" % self.protein.mole_name,
+            "AUTHOR    craton\n",
+        ]
+        for ln in protein_lines:
+            block.append(ln + "\n")
+
+        for kk, ligand in enumerate(self.ligands):
+            resnum = ligand_resnum_start + kk
+            if resnum > 9999:
+                raise ValueError(
+                    f"Ligand residue number {resnum} exceeds PDB resSeq width 4."
+                )
+            for ln in _atom_lines(ligand):
+                serial += 1
+                chars = list(ln.ljust(80))
+                chars[0:6] = list("HETATM")
+                chars[6:11] = list("%5d" % serial)
+                chars[17:20] = list("%-3s" % ligand_resname[:3])
+                chars[21:22] = list(ligand_chain[0])
+                chars[22:26] = list("%4d" % resnum)
+                block.append("".join(chars).rstrip() + "\n")
+
+        block.append("TER\n")
+        block.append("END\n")
+        with open(output_file, "w") as outf:
+            outf.write("".join(block))
+        return output_file
