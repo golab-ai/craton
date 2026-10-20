@@ -188,23 +188,30 @@ class MolDock:
                           opath=self.output_directory)
         self.write_complex_pdb()
 
-    def write_complex_pdb(self, output_file=None,
+    def write_complex_pdb(self, output_dir=None,
                           ligand_chain="L", ligand_resname="LIG", ligand_resnum_start=1):
-        """Write protein ATOM records and docked ligands as HETATM into one PDB.
+        """Write one PDB per docked ligand: protein ATOM plus that ligand as HETATM.
 
         Coordinates are already in the same frame. Existing SDF and score CSV
         outputs are left unchanged.
         """
+        import re
         from craton.craton.chem.format.pdb_parse import PdbData
 
-        if output_file is None:
-            mole_name = self.protein.mole_name.split("/")[-1].replace(".pdb", "")
-            output_file = f"{self.output_directory}/{mole_name}_complex.pdb"
+        if output_dir is None:
+            output_dir = self.output_directory
+        output_dir = Path(output_dir)
+        output_dir.mkdir(parents=True, exist_ok=True)
 
         def _atom_lines(molecule):
             text = PdbData()._convert(molecule)
             return [ln for ln in text.splitlines()
                     if ln.startswith("ATOM") or ln.startswith("HETATM")]
+
+        def _safe_name(name):
+            text = str(name).split("/")[-1].strip()
+            text = re.sub(r"[^\w.\-]+", "_", text).strip("._")
+            return text or "ligand"
 
         protein_lines = _atom_lines(self.protein)
         used_chains = set()
@@ -218,39 +225,48 @@ class MolDock:
                     ligand_chain = cand
                     break
 
-        n_ligand_atoms = sum(len(ligand.Atoms) for ligand in self.ligands)
-        if len(protein_lines) + n_ligand_atoms > 99999:
+        protein_name = _safe_name(self.protein.mole_name.replace(".pdb", ""))
+        if ligand_resnum_start > 9999:
             raise ValueError(
-                "Complex PDB atom serial would exceed 99999 "
-                f"({len(protein_lines) + n_ligand_atoms} atoms)."
+                f"Ligand residue number {ligand_resnum_start} exceeds PDB resSeq width 4."
             )
 
-        serial = len(protein_lines)
-        block = [
-            "COMPND    Complex of %s\n" % self.protein.mole_name,
-            "AUTHOR    craton\n",
-        ]
-        for ln in protein_lines:
-            block.append(ln + "\n")
-
+        written = []
+        used_names = set()
         for kk, ligand in enumerate(self.ligands):
-            resnum = ligand_resnum_start + kk
-            if resnum > 9999:
+            ligand_lines = _atom_lines(ligand)
+            n_atoms = len(protein_lines) + len(ligand_lines)
+            if n_atoms > 99999:
                 raise ValueError(
-                    f"Ligand residue number {resnum} exceeds PDB resSeq width 4."
+                    "Complex PDB atom serial would exceed 99999 "
+                    f"({n_atoms} atoms)."
                 )
-            for ln in _atom_lines(ligand):
+            ligand_tag = _safe_name(getattr(ligand, "mole_name", "") or f"ligand_{kk + 1}")
+            stem = f"{protein_name}_{ligand_tag}_complex"
+            if stem in used_names:
+                stem = f"{stem}_{kk + 1}"
+            used_names.add(stem)
+            output_file = output_dir / f"{stem}.pdb"
+
+            serial = len(protein_lines)
+            block = [
+                "COMPND    Complex of %s and %s\n" % (self.protein.mole_name, ligand.mole_name),
+                "AUTHOR    craton\n",
+            ]
+            for ln in protein_lines:
+                block.append(ln + "\n")
+            for ln in ligand_lines:
                 serial += 1
                 chars = list(ln.ljust(80))
                 chars[0:6] = list("HETATM")
                 chars[6:11] = list("%5d" % serial)
                 chars[17:20] = list("%-3s" % ligand_resname[:3])
                 chars[21:22] = list(ligand_chain[0])
-                chars[22:26] = list("%4d" % resnum)
+                chars[22:26] = list("%4d" % ligand_resnum_start)
                 block.append("".join(chars).rstrip() + "\n")
-
-        block.append("TER\n")
-        block.append("END\n")
-        with open(output_file, "w") as outf:
-            outf.write("".join(block))
-        return output_file
+            block.append("TER\n")
+            block.append("END\n")
+            with open(output_file, "w") as outf:
+                outf.write("".join(block))
+            written.append(str(output_file))
+        return written
