@@ -272,6 +272,60 @@ class GmxAnalyze:
         parent_1 = job_dir.parent
         if Path(parent_1,"job_info").exists():
             return Path(parent_1,"job_info"), Path(parent_1,"job_info","md_setting.json")
+
+    def _get_protein_ligand_mtx_names(self, md_setting, job_dir):
+        job_dir = Path(job_dir)
+        if "protein" in md_setting and "ligand" in md_setting:
+            return md_setting["protein"], md_setting["ligand"]
+        if "molecules" in md_setting:
+            return md_setting["molecules"][1], md_setting["molecules"][0]
+        if "molecule_name" not in md_setting or "molecule_role" not in md_setting:
+            raise KeyError(
+                "md_setting.json must contain protein/ligand, molecules, or molecule_name/molecule_role"
+            )
+
+        roles = md_setting["molecule_role"]
+        names = md_setting["molecule_name"]
+        protein_idx = next(
+            (idx for idx, role in enumerate(roles) if role == "protein"),
+            None,
+        )
+        if protein_idx is None:
+            raise KeyError("protein not found in md_setting molecule_role")
+        protein_name = names[protein_idx]
+
+        ligand_roles = {"ligands", "ligand"}
+        if (
+            md_setting.get("simulation_type") in ["rbfe", "rhfe"]
+            and "left" in md_setting
+            and Path(job_dir.parent, "job_info", "left.mtx").exists()
+        ):
+            lambda_dirs = [
+                int(dd)
+                for dd in os.listdir(job_dir.parent)
+                if Path(job_dir.parent, dd).is_dir() and dd.isdigit()
+            ]
+            if job_dir.name == "0":
+                ligand_name = "left"
+            elif lambda_dirs and job_dir.name == str(max(lambda_dirs)):
+                ligand_name = "right"
+            else:
+                ligand_idx = next(
+                    (idx for idx, role in enumerate(roles) if role in ligand_roles),
+                    None,
+                )
+                if ligand_idx is None:
+                    raise KeyError("ligand not found in md_setting molecule_role")
+                ligand_name = names[ligand_idx]
+        else:
+            ligand_idx = next(
+                (idx for idx, role in enumerate(roles) if role in ligand_roles),
+                None,
+            )
+            if ligand_idx is None:
+                raise KeyError("ligand not found in md_setting molecule_role")
+            ligand_name = names[ligand_idx]
+        return protein_name, ligand_name
         
     def _set_molecule_dir_old(self,job_dir):
         protein_file = None
@@ -368,11 +422,9 @@ class GmxAnalyze:
             from craton import molxpert as MX
             import json
             md_setting = json.loads(open(md_setting_file).read())
-            molecule1 = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][0]}.mtx",parallel=False)[0]
-            #molecule1 = MX.molecule_structure(molecule1)[0]
-            
-
-            molecule2  = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][1]}.mtx",parallel=False)[0]
+            protein_name, ligand_name = self._get_protein_ligand_mtx_names(md_setting, job_dir)
+            molecule1 = MX.molecule_create(f"{molecule_path}/{ligand_name}.mtx",parallel=False)[0]
+            molecule2  = MX.molecule_create(f"{molecule_path}/{protein_name}.mtx",parallel=False)[0]
             molecule2 = MX.protein_structure(molecule2)
             molecules = [molecule1,molecule2]
         _dimer_types_ = dimer_type.split("_")
@@ -496,14 +548,10 @@ class GmxAnalyze:
             from craton import molxpert as MX
             import json
             md_setting = json.loads(open(md_setting_file).read())
-            try:
-                protein = MX.molecule_create(f"{molecule_path}/{md_setting['protein']}.mtx", parallel=False)[0]
-                protein = MX.protein_structure(protein)
-                ligand  = MX.molecule_create(f"{molecule_path}/{md_setting['ligand']}.mtx", parallel=False)[0]
-            except:
-                protein = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][1]}.mtx", parallel=False)[0]
-                protein = MX.protein_structure(protein)
-                ligand  = MX.molecule_create(f"{molecule_path}/{md_setting['molecules'][0]}.mtx", parallel=False)[0]
+            protein_name, ligand_name = self._get_protein_ligand_mtx_names(md_setting, job_dir)
+            protein = MX.molecule_create(f"{molecule_path}/{protein_name}.mtx", parallel=False)[0]
+            protein = MX.protein_structure(protein)
+            ligand  = MX.molecule_create(f"{molecule_path}/{ligand_name}.mtx", parallel=False)[0]
             molecules = [protein,ligand]
             #protein = MX.protein_create(protein_molecule_dir)
             #protein = MX.protein_structure(protein)

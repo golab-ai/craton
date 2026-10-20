@@ -26,8 +26,8 @@ QM_SIMULATION_TYPES = ["Q0","Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10","
     ),
 )
 @click.option("--ligands", "ligands", help="ligands file, support the format .sdf")
-@click.option("--protein", "protein", help="protein file, support the format .pdb")
-@click.option("--molecules", "molecules", help="molecules, support the format .mol, smiles, ......")
+@click.option("--protein", "protein", help="protein file(complex/rbfe/abfe/...), support the format .pdb. For protein-only MD(), pass the PDB via --molecules instead.")
+@click.option("--molecules", "molecules", help="molecules, support the format .mol, smiles, ......  For protein-only MD, pass the PDB via --molecules instead.")
 @click.option("--coligands", "coligands", help="co-ligands file, suport the format .sdf")
 @click.option("--repeat","repeat", default=1,help="the repeat number of calculation job")
 @click.option("-o", "--output", "output_directory", default="output", help="output directory")
@@ -52,7 +52,8 @@ def run_simulaiton(
         * pure-liquid, smiles or smiles_file
         * vacuum, smiles or smiles_file
         * solution, smiles or smiles_file
-        * biomolecule, protein_file
+        * protein (protein-only MD), PDB passed via --molecules
+        * complex, protein_file (via --protein), ligand_file (via --ligands)
         * complex,  protein_file, ligand_file
         * rbfe(relative binding free energy), protein_file, ligand_file
         * hfe(hydration free energy), smiles or smiles_file
