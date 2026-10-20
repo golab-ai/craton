@@ -422,7 +422,7 @@ class GmxAnalyze:
             from craton import molxpert as MX
             import json
             md_setting = json.loads(open(md_setting_file).read())
-            ligand_name, protein_name = self._get_protein_ligand_mtx_names(md_setting, job_dir)
+            protein_name, ligand_name = self._get_protein_ligand_mtx_names(md_setting, job_dir)
             molecule1 = MX.molecule_create(f"{molecule_path}/{ligand_name}.mtx",parallel=False)[0]
             molecule2  = MX.molecule_create(f"{molecule_path}/{protein_name}.mtx",parallel=False)[0]
             molecule2 = MX.protein_structure(molecule2)
