@@ -19,10 +19,14 @@ class MMCalculation:
         MX.format_convert(molecules,otype="mtx",opath=f"{self.output_directory}/energy",extra_var="all")
 
     
-    def molecule_optimize(self):
-        MX.format_convert(self.molecules,otype="sdf",opath=f"{self.output_directory}/origin_structure")
+    def molecule_optimize(self, ctab="v2000"):
+        ctab = str(ctab).lower()
+        if ctab not in ("v2000", "v3000"):
+            raise ValueError(f"ctab must be v2000 or v3000, got {ctab}")
+        extra_var = {"ctab": ctab}
+        MX.format_convert(self.molecules,otype="sdf",opath=f"{self.output_directory}/origin_structure",extra_var=extra_var)
         molecules = MX._optimize(deepcopy(self.molecules))
-        MX.format_convert(molecules,otype="sdf",opath=f"{self.output_directory}/optimized_structure")
+        MX.format_convert(molecules,otype="sdf",opath=f"{self.output_directory}/optimized_structure",extra_var=extra_var)
         with open(f"{self.output_directory}/rmds.csv",'w') as outf:
             outf.write("name,smiles,rmsd\n")
             for ii,molecule in enumerate(molecules):

@@ -140,6 +140,9 @@ class MolData:
     def _convert(self, molecule, extra_var=None) -> str:
         structure_3d = extra_var["structure_3d"] if extra_var is not None and "structure_3d" in extra_var \
             else True
+        ctab = "v2000" if extra_var is None else str(extra_var.get("ctab", "v2000")).lower()
+        if ctab == "v3000":
+            return self._convert_molecule_v3000(molecule, structure_3d)
         return self._convert_molecule(molecule,structure_3d)
 
     def _convert_molecule(self, molecule, structure_3d) -> str:
@@ -178,6 +181,46 @@ class MolData:
             script += f"> <{k}>\n{v}\n\n"
         return script
 
+    def _convert_molecule_v3000(self, molecule, structure_3d) -> str:
+        """
+        V3000 CTAB. Atom and bond counts are unbounded integers.
+        Line positions match MolData._parse_v3000_script.
+        """
+        molecule_name = getattr(molecule, "molecule_name")
+        natoms = molecule.atom_count
+        nbonds = molecule.bond_count if hasattr(molecule, "Bonds") else 0
+        header = "3D" if structure_3d else "2D"
+        lines = [
+            str(molecule_name),
+            "%10s%12s" % ("DY", header),
+            "",
+            "  0  0  0  0  0  0  0  0  0  0999 V3000",
+            "M  V30 BEGIN CTAB",
+            f"M  V30 COUNTS {natoms} {nbonds} 0 0 0",
+            "M  V30 BEGIN ATOM",
+        ]
+        for atom in molecule.Atoms:
+            element = "D" if hasattr(atom, "atom_type_name") and atom.atom_type_name == "_D" else atom.element
+            x, y, z = atom.coordinates if structure_3d else [0.0, 0.0, 0.0]
+            line = f"M  V30 {atom.ID + 1} {element} {x:.6f} {y:.6f} {z:.6f} 0"
+            charge = getattr(atom, "formal_charge", 0) or 0
+            if charge != 0:
+                line += f" CHG={int(charge)}"
+            lines.append(line)
+        lines.append("M  V30 END ATOM")
+        lines.append("M  V30 BEGIN BOND")
+        if hasattr(molecule, "Bonds") and nbonds > 0:
+            for ii, bond in enumerate(molecule.Bonds, start=1):
+                bond_type = bond.bond_type if hasattr(bond, "bond_type") else bond.get_type(molecule)
+                lines.append(f"M  V30 {ii} {bond_type} {bond.a1 + 1} {bond.a2 + 1}")
+        lines.append("M  V30 END BOND")
+        lines.append("M  V30 END CTAB")
+        lines.append("M  END")
+        script = "\n".join(lines) + "\n"
+        for k, v in getattr(molecule, "associated_data", {}).items():
+            script += f"> <{k}>\n{v}\n\n"
+        return script
+
 
 class SdfData:
     """.mol or .sdf format"""
@@ -202,15 +245,17 @@ class SdfData:
     def _convert(self,molecules,extra_var=None) -> str:
         if not isinstance(molecules,list):
             molecules = [molecules]
-        structure_3d = extra_var["structure_3d"] if extra_var is not None and "structure_3d" in extra_var \
-            else True
-        return self._convert_molecules(molecules,structure_3d)
+        if extra_var is None:
+            extra_var = {}
+        structure_3d = extra_var["structure_3d"] if "structure_3d" in extra_var else True
+        ctab = str(extra_var.get("ctab", "v2000")).lower()
+        return self._convert_molecules(molecules,structure_3d,ctab)
 
-    def _convert_molecules(self,molecules,structure_3d) -> str:
+    def _convert_molecules(self,molecules,structure_3d,ctab="v2000") -> str:
         molf = MolData()
         scripts = []
         for molecule in molecules:
-            script = molf._convert(molecule, extra_var={"structure_3d":structure_3d})
+            script = molf._convert(molecule, extra_var={"structure_3d":structure_3d, "ctab":ctab})
             if script is not None:
                 scripts.append(script)
 
