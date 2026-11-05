@@ -1,5 +1,59 @@
 import re
 
+
+def _pdb_resseq_icode(residu_number):
+    """Split a residue id into a 4-column resSeq and a 1-column insertion code.
+
+    Values such as ``1177A`` must not be written with ``%4s``: that minimum
+    width does not truncate, so the insertion code shifts x/y/z by one column.
+    """
+    text = "" if residu_number is None else str(residu_number).strip()
+    icode = " "
+    if len(text) > 1 and text[-1].isalpha():
+        icode = text[-1]
+        text = text[:-1].strip()
+    if not text:
+        text = "0"
+    if len(text) > 4:
+        text = text[-4:]
+    return "%4s" % text, icode
+
+
+def _pdb_atom_name(name, element=None):
+    """PDB columns 13-16.
+
+    The element symbol is right-justified in columns 13-14. The rest of the
+    atom name is left-justified in columns 15-16. ``%4s`` right-justifies the
+    whole name, so ``N`` becomes ``   N`` and the element sits in column 16.
+    """
+    name = "" if name is None else str(name).strip()
+    element = "" if element is None else str(element).strip()
+    if element.lower() == "zz":
+        element = ""
+    if len(name) >= 4:
+        return name[:4]
+    if not name:
+        name = element or "X"
+    if not element:
+        element = name[:1]
+    element = element[:2]
+    if name.upper().startswith(element.upper()):
+        element = name[: len(element)]
+        rest = name[len(element) :]
+    else:
+        rest = name
+    return "%2s%-2s" % (element, rest[:2])
+
+
+def _pdb_coord(value):
+    """PDB coordinate field: Real(8.3), right-justified."""
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        number = 0.0
+    return "%8.3f" % number
+
+
 class PdbData:
     _name = "PDB"
 
@@ -125,15 +179,17 @@ class PdbData:
         content += "AUTHOR    cpy\n"
         n = len(self.elem)
         for i in range(n):
-            content += "ATOM  %5d %4s %3s %1s%4s    %8.3f%8.3f%8.3f  1.00  0.00    " % (
+            resseq, icode = _pdb_resseq_icode(self.residu_number[i])
+            content += "ATOM  %5d %s %-3.3s %1.1s%s%s   %s%s%s  1.00  0.00    " % (
                 i + 1,
-                self.name[i],
-                self.residu[i],
-                self.chain_name[i],
-                self.residu_number[i],
-                self.coor[i][0],
-                self.coor[i][1],
-                self.coor[i][2],
+                _pdb_atom_name(self.name[i], self.elem[i]),
+                "" if self.residu[i] is None else str(self.residu[i]).strip(),
+                "" if self.chain_name[i] is None else str(self.chain_name[i]),
+                resseq,
+                icode,
+                _pdb_coord(self.coor[i][0]),
+                _pdb_coord(self.coor[i][1]),
+                _pdb_coord(self.coor[i][2]),
             )
             if ff_charge_flag:
                 content += "%6.3f %2s \n" % (self.ff_charge[i], self.atom_type[i])
@@ -178,17 +234,19 @@ class PdbData:
         outf.write("AUTHOR    cpy\n")
         n = len(self.elem)
         for i in range(n):
+            resseq, icode = _pdb_resseq_icode(self.residu_number[i])
             outf.write(
-                "ATOM  %5d %4s %3s %1s%4d    %8.3f%8.3f%8.3f  1.00  0.00    "
+                "ATOM  %5d %s %-3.3s %1.1s%s%s   %s%s%s  1.00  0.00    "
                 % (
                     i + 1,
-                    self.name[i],
-                    self.residu[i],
-                    self.chain_name[i],
-                    self.residu_number[i],
-                    self.coor[i][0],
-                    self.coor[i][1],
-                    self.coor[i][2],
+                    _pdb_atom_name(self.name[i], self.elem[i]),
+                    "" if self.residu[i] is None else str(self.residu[i]).strip(),
+                    "" if self.chain_name[i] is None else str(self.chain_name[i]),
+                    resseq,
+                    icode,
+                    _pdb_coord(self.coor[i][0]),
+                    _pdb_coord(self.coor[i][1]),
+                    _pdb_coord(self.coor[i][2]),
                 )
             )
             if ff_charge_flag:

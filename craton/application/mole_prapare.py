@@ -84,7 +84,10 @@ class MolPrepare:
         MX.format_convert(protein2,otype="pdb",ofilename=ofilename,opath=opath)
 
     @staticmethod
-    def ligand_prepare(inputs,ph_min=7.4,ph_max=7.4,ofilename=None,output_directory="."):
+    def ligand_prepare(inputs,ph_min=7.4,ph_max=7.4,ofilename=None,output_directory=".",ctab="v2000"):
+        ctab = str(ctab).lower()
+        if ctab not in ("v2000", "v3000"):
+            raise ValueError(f"ctab must be v2000 or v3000, got {ctab}")
         molecules = MX.molecule_create(inputs)
         molecules2 = MX.molecule_prepare(molecules,ph_min=ph_min,ph_max=ph_max)
         for ii,molecule in enumerate(molecules2):
@@ -97,4 +100,4 @@ class MolPrepare:
             molecule.associated_data["origin_smiles"] = molecules[ii].smiles
             molecule.associated_data["inchi_key"] = molecule.inchi_key
 
-        MX.format_convert(molecules2,otype="sdf",ofilename=ofilename,opath=output_directory)
+        MX.format_convert(molecules2,otype="sdf",ofilename=ofilename,opath=output_directory,extra_var={"ctab":ctab})

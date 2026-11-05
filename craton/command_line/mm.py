@@ -50,7 +50,8 @@ def calculate_energy(prop,inputs,output_dir):
 @mm.command("opt")
 @click.option("-i","--inputs",help="file or directory",default=".",show_default=True,)
 @click.option("-o","--output_dir",help="save path",default=".",show_default=True)
-def save_info(inputs,output_dir):
+@click.option("--ctab", type=click.Choice(["v2000", "v3000"], case_sensitive=False), default="v2000", show_default=True, help="SDF CTAB version. v3000 has no 999 atom/bond limit; the file suffix stays .sdf")
+def save_info(inputs,output_dir,ctab):
     """
     create descript of a molecule, and save as a file
 
@@ -59,7 +60,7 @@ def save_info(inputs,output_dir):
     output_dir: the path for save file
     """
     mm_calculator = MMC(inputs,output_directory=output_dir)
-    mm_calculator.molecule_optimize()
+    mm_calculator.molecule_optimize(ctab=ctab)
 
 @mm.command("scan")
 @click.option("-i","--inputs",help="file or directory",default=".",show_default=True,)

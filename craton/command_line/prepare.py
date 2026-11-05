@@ -45,11 +45,12 @@ def molecule_info(inputs,in_type,output_dir):
 @click.option("-pa","--ph_max",help="maxmum value of ph",default=7.4,show_default=True,)
 @click.option("-of","--output_file",help="output pdb file",default=None,show_default=True,)
 @click.option("-o","--output_dir",help="save path",default=".",show_default=True)
-def ligand_prepare(inputs,ph_min,ph_max,output_file,output_dir):
+@click.option("--ctab", type=click.Choice(["v2000", "v3000"], case_sensitive=False), default="v2000", show_default=True, help="SDF CTAB version. v3000 has no 999 atom/bond limit; the file suffix stays .sdf")
+def ligand_prepare(inputs,ph_min,ph_max,output_file,output_dir,ctab):
     """
     small molecule prepare, including ionization et al
     """
-    MP.ligand_prepare(inputs,ph_min=ph_min,ph_max=ph_max,ofilename=output_file,output_directory=output_dir)
+    MP.ligand_prepare(inputs,ph_min=ph_min,ph_max=ph_max,ofilename=output_file,output_directory=output_dir,ctab=ctab)
 
 @prepare.command("uniprot")
 @click.option("-t","--target",help="the name of target protein",default=None,show_default=True,)

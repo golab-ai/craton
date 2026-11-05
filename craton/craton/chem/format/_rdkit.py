@@ -80,8 +80,10 @@ class RdkitMol:
         elif highlighttype == "label":
             drawer = rdMolDraw2D.MolDraw2DSVG(500, 500)
             AllChem.Compute2DCoords(self.rdkm, canonOrient=True)
+            atom_labels = rdMolDraw2D.IntStringMap()
             for i in range(len(self.rdkm.GetAtoms())):
-                self.rdkm.GetAtomWithIdx(i).SetProp("molAtomMapNumber", highlightarrs[i])
+                atom_labels[i] = str(highlightarrs[i]) if i < len(highlightarrs) else ""
+            drawer.drawOptions().atomLabels = atom_labels
             drawer.DrawMolecule(self.rdkm,legend=mole_name)
             drawer.FinishDrawing()
             svg = drawer.GetDrawingText()

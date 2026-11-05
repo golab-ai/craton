@@ -48,6 +48,23 @@ def LmpFF(style,para):
 
     return _Func[style](para)
 
+def lammps_timestep_fs(md_setting, index):
+    """配置 timestep 与 GROMACS 相同，单位 ps。LAMMPS units real 的 timestep 单位是 fs。"""
+    timesteps = md_setting.get("timestep") if isinstance(md_setting, dict) else None
+    dt_ps = None
+    if isinstance(timesteps, (int, float)):
+        dt_ps = float(timesteps)
+    elif isinstance(timesteps, (list, tuple)) and 0 <= index < len(timesteps):
+        dt_ps = float(timesteps[index])
+    if dt_ps is None or dt_ps <= 0:
+        dt_ps = 0.001
+    dt_fs = float(dt_ps) * 1000.0
+    text = f"{dt_fs:.6f}".rstrip("0").rstrip(".")
+    if "." not in text:
+        text += ".0"
+    return text
+
+
 class LmpInputFile:
     # default properties: Head_arr, Body_dict
 
@@ -326,7 +343,7 @@ class LmpInputFile:
                 text += f'minimize 1.0e-4 1.0e-6 100 {self.sm.md_setting["nsteps"][ii]}\n'
             elif job in ["eq_nvt"]:
                 text += f'fix {job} all nvt temp {self.sm.md_setting["temperature"]["temperature"]} {self.sm.md_setting["temperature"]["temperature"]} 100.0\n'
-                text += f"timestep        1.0\n"
+                text += f"timestep        {lammps_timestep_fs(self.sm.md_setting, ii)}\n"
                 if velocity_flag:
                     text += f'velocity       all create {self.sm.md_setting["temperature"]["temperature"]} 1166140691 mom yes rot yes dist gaussian\n'
                     velocity_flag = False
@@ -335,16 +352,16 @@ class LmpInputFile:
             elif job in ["eq_npt"]:
                 text += f'fix {job} all npt temp {self.sm.md_setting["temperature"]["temperature"]} {self.sm.md_setting["temperature"]["temperature"]} 100.0 '
                 text += f'iso {self.sm.md_setting["pressure"]["pressure"]} {self.sm.md_setting["pressure"]["pressure"]} 1000.0\n'
-                text += "timestep        1.0\n"
+                text += f"timestep        {lammps_timestep_fs(self.sm.md_setting, ii)}\n"
                 text += f'run      {self.sm.md_setting["nsteps"][ii]}\n'
                 text += f"unfix {job}\n"
             elif job in ["prod_npt"]:
                 text += f'fix {job} all npt temp {self.sm.md_setting["temperature"]["temperature"]} {self.sm.md_setting["temperature"]["temperature"]} 100.0 '
                 text += f'iso {self.sm.md_setting["pressure"]["pressure"]} {self.sm.md_setting["pressure"]["pressure"]} 1000.0\n'
-                text += "timestep        1.0\n"
+                text += f"timestep        {lammps_timestep_fs(self.sm.md_setting, ii)}\n"
             elif job in ["prod_nvt"]:
                 text += f'fix {job} all nvt temp {self.sm.md_setting["temperature"]["temperature"]} {self.sm.md_setting["temperature"]["temperature"]} 100.0\n'
-                text += "timestep        1.0\n"
+                text += f"timestep        {lammps_timestep_fs(self.sm.md_setting, ii)}\n"
                 text += f'run      {self.sm.md_setting["nsteps"][ii]}\n'
         text += "\n"
         return text

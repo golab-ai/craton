@@ -3,6 +3,12 @@ from collections import defaultdict
 
 import numpy as np
 
+from craton.craton.chem.format.pdb_parse import (
+    _pdb_atom_name,
+    _pdb_coord,
+    _pdb_resseq_icode,
+)
+
 
 class FlexibleBond:
     """
@@ -160,15 +166,20 @@ class PdbqtData:
         
         self.atom_index_mapping[connect_atom] = self.atom_index
 
-        return ("ATOM  %5d %4s %3s %1s%4s    %8.3f%8.3f%8.3f  " "1.00  0.00    %6.3f %2s \n") % (
+        resseq, icode = _pdb_resseq_icode(self.residu_number[connect_atom])
+        return (
+            "ATOM  %5d %s %-3.3s %1.1s%s%s   %s%s%s  "
+            "1.00  0.00    %6.3f %2s \n"
+        ) % (
             self.atom_index,
-            self.name[connect_atom],
-            self.residu[connect_atom],
-            self.chain_name[connect_atom],
-            str(self.residu_number[connect_atom]),
-            self.coor[connect_atom][0],
-            self.coor[connect_atom][1],
-            self.coor[connect_atom][2],
+            _pdb_atom_name(self.name[connect_atom], self.elem[connect_atom]),
+            "" if self.residu[connect_atom] is None else str(self.residu[connect_atom]).strip(),
+            "" if self.chain_name[connect_atom] is None else str(self.chain_name[connect_atom]),
+            resseq,
+            icode,
+            _pdb_coord(self.coor[connect_atom][0]),
+            _pdb_coord(self.coor[connect_atom][1]),
+            _pdb_coord(self.coor[connect_atom][2]),
             self.ff_charge[connect_atom],
             self.atom_type_name[connect_atom],
         )
